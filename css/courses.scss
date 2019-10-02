@@ -1,0 +1,446 @@
+.courses {
+  //min-height: 100vh;
+  background: url('../img/Bg@3x.jpg') left bottom no-repeat;
+  background-size: 80%;
+
+  .container {
+    justify-content: flex-end;
+    
+    align-items: flex-start;
+    //min-height: 100vh;
+    position: relative;   
+
+  }
+
+  .main-title {
+    margin-top: 100px;
+    //margin-bottom: 220px;
+  }
+
+  &__photo {
+    display: none;
+  }
+
+  &__info {
+    display: flex;
+    //flex-wrap: wrap;
+    justify-content: flex-end;
+    padding: 180px 0;
+    position: relative;
+  }
+
+  &__cities {
+    position: relative;
+    flex-basis: 200px;
+    flex-shrink: 0;
+    margin-right: 45px;
+    margin-bottom: 40px;
+    z-index: 20;
+  }
+
+  &__list {
+    flex-basis: 660px;
+    max-width: 660px;
+
+    .owl-item {
+      opacity: 0;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+
+    .owl-nav {
+      top: -90px;
+      right: 10px;
+      left: auto;
+    }
+    
+  }
+
+  &__item {
+    display: flex;
+  }
+
+  &__desc {
+    
+    margin-right: 30px;
+    margin-bottom: 40px;
+    flex-shrink: 1;
+
+    .banner__link {
+      font-weight: 400;
+      font-size: 16px;
+      color: #00489c;
+      line-height: 1.19;
+      margin-bottom: 62px;
+      display: inline-block;
+      position: relative;
+      padding-right: 50px;
+
+      a {
+        color: #00489c;
+      }
+
+    }
+
+
+  }
+
+  &__link {
+    display: inline-block;
+    color: #595f6f;
+    font-size: 16px;
+    line-height: 19px;
+    margin-right: 8px;
+
+    &--phone, &--whatsapp {
+      width: 16px;
+      height: 16px;
+      background-position: center;
+      background-size: contain;
+    }
+
+    &--phone {
+      background-image: url('../img/icons/Phone.svg');
+    }
+
+    &--whatsapp {
+      background-image: url('../img/icons/Whatsapp.svg');
+    }
+  }
+
+  &__signup {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    .courses__text {
+      flex-basis: 100%;
+    }
+  }
+
+  &__calendar {
+    
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    color: #00489c;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-size: 16px;
+    line-height: 1.19;
+    color: #595f6f;
+    margin-bottom: 15px;
+  }
+}
+
+.cities {
+  &__title {
+
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 23px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      background: url('../img/icons/locate.svg') center center no-repeat;
+      background-size: contain;
+      width: 12px;
+      height: 16px;
+      position: absolute;
+      left: 0;
+      top: 3px;
+    }
+
+    select {
+      border: none;
+      background: transparent;
+      font-size: 16px;
+      line-height: 1.19;
+      letter-spacing: normal;
+      text-align: left;
+      color: #00489c;
+      padding-right: 20px;
+      width: 100%;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: 15px;
+    padding-left: 23px;
+    font-size: 16px;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-align: left;
+    color: #595f6f;
+    position: relative;
+    display: block;
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #b8d2ff;
+      overflow: hidden;
+      display: block;
+      left: 0;
+      top: 50%;
+      margin-top: -3px;
+    }
+
+    &:hover {
+      color: #00489c;
+      &:before {
+        background: #00489c;
+
+      }
+
+    }
+  }
+}
+
+.select-side {
+  pointer-events: none;
+  width: 20px;
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  right: 0px;
+  background: url('../img/icons/arrow-down.svg') center center no-repeat;
+  background-size: 6px 3px;
+}
+
+.datepicker {
+  width: 300px;
+  padding: 30px;
+}
+
+.datepicker-inline .datepicker {
+  border-radius: 5px;
+  box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border: none;
+  position: relative;
+}
+
+.datepicker--nav {
+  border: none;
+}
+
+.datepicker--nav-action {
+  position: absolute;
+  top: -90px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-size: contain;
+  background-position: top left;
+  box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+  display: none;
+
+  &:hover {
+    background: transparent;
+    background-size: contain;
+  }
+
+  svg {
+    //background: #fff url('../img/icons/arrow-slider.svg') center center no-repeat;
+
+    //
+    width: 100%;
+    height: 100%;
+
+    path {
+      display: none;
+    }
+  }
+
+  &:first-child {
+    right: 40px;
+    background-image: url('../img/icons/slider-left.svg');
+  }
+
+  &:last-child {
+    right: 0px;
+    background-image: url('../img/icons/slider-right.svg');
+  }
+}
+
+.datepicker--nav-title {
+  font-size: 18px;
+  line-height: 21px;
+  font-family: 'Circe';
+  color: #373c48;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+
+}
+
+.datepicker--day-name {
+  font-size: 10px;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  text-align: center;
+  color: #1a47b0;
+  font-family: 'Circe';
+
+}
+
+.datepicker--content {
+  padding: 0;
+}
+
+.datepicker--cell.-selected-, .datepicker--cell.-selected-.-current-, .datepicker--cell.-in-range- {
+  background-color: #e6eff5;
+  border-radius: 0;
+  color: #00489c;
+}
+
+.datepicker--cell.-range-from- {
+  border-radius: 5px 0 0 5px;
+}
+
+.datepicker--cell.-range-to- {
+  border-radius: 0 5px 5px 0;
+}
+
+.datepicker--cell {
+  height: 22px;
+  margin: 7px 0;
+}
+
+@media screen and (max-width: 1050px) {
+  .courses {
+    background: transparent;
+    .container {
+      padding: 0 50px;
+      position: relative;
+      
+    }
+
+    .main-title {
+      margin-bottom: 120px;
+    }
+
+    &__info {
+      padding-top: 0px;
+      max-width: 100%;
+      padding-bottom: 70px;
+    }
+
+    .datepicker--nav-action {
+      top: 30px;
+
+      &:first-child {
+        right: 70px;
+      }
+
+      &:last-child {
+        right: 30px;
+      }
+    }
+
+    &__item {
+      width: 100%;
+    }
+
+    .datepicker {
+      width: 240px;
+    }
+
+    &__cities {
+      display: none;
+    }
+
+    &__list {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .courses {
+    &__cities {
+      display: none;
+    }
+
+    &__list {
+      .owl-nav {
+        top: auto;
+        right: 10px;
+      }
+    }
+
+    &__desc {
+      margin-right: 0;
+    }
+
+    &__info {
+      padding-bottom: 0;
+    }
+
+    .main-title {
+      margin-top: 29px;
+      margin-bottom: 24px;
+    }
+
+    &__calendar {
+      flex-basis: 100%;
+      margin-bottom: 42px;
+    }
+
+    &__photo {
+      display: block;
+      width: 100%;
+      margin-bottom: 26px;
+
+      img {
+        width: 100%;
+        display: block;
+        border-radius: 5px;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.12);
+      }
+    }
+
+    .datepicker {
+      width: 100%;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    &__title {
+      color: #1f1f1f;
+      font-weight: 700;
+    }
+
+    &__item {
+      flex-wrap: wrap;
+
+      .banner__link {
+        margin-bottom: 24px;
+      }
+
+    }
+  }
+}
+
+

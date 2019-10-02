@@ -1,0 +1,224 @@
+.cosmetology {
+    &-page {
+        
+        .banners .main-title {
+            margin-top: 0;
+        }
+
+        .banners__slider {
+            width: 100%;
+
+            img {
+                width: 100%;
+                display: block;
+            }
+
+            display: block;
+            width: 100%;
+        }
+
+        
+
+        .brends__list {
+            padding-bottom: 9px;
+        }
+        .individual {
+            background: url(../img/cosm-ind-bg.png) top right no-repeat;
+            background-size: cover;
+        }
+
+        .owl-nav {
+            top: 45px;
+            right: auto;
+            left: calc(50% + 500px);
+        }
+
+        .owl-prev {
+            background-image: url(../img/icons/slider-light-l.svg) !important;
+        }
+
+        .owl-next {
+            background-image: url(../img/icons/slider-light-r.svg) !important;
+        }
+    }
+}
+
+.complex {
+
+    background: url(../img/complex-bg.png) no-repeat;
+    background-position: 0% -10%;
+    background-size: 80%;
+    
+    .main-title {
+        margin-top: 100px;
+        margin-bottom: 60px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 100px;
+    }
+
+    &__left, &__right {
+        flex-basis: calc(50% - 15px);
+        position: relative;
+    }
+
+    &__photo {
+        margin-bottom: 30px;
+        border-radius: 5px;
+        box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__photo:last-child {
+        position: absolute;
+    }
+
+
+}
+
+.individual {
+    background: url(../img/individual-bg.png) top left no-repeat;
+    background-size: cover;
+
+    .main-title {
+        color: #fff;
+        margin-bottom: 40px;
+        margin-top: 294px;
+    }
+
+    &__form {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__input {
+        margin-bottom: 20px;
+        padding: 16px 30px;
+        font-size: 14px;
+        color: #709be7;
+        border-radius: 5px;
+        border: solid 1px #dddfe7;
+        background: transparent;
+        @include placeholder(#709be7);
+        flex-basis: calc(25% - 22px);
+        max-width: calc(25% - 22px);
+
+
+    }
+
+    &__btn {
+
+        font-size: 16px;
+        line-height: 1.19;
+        color: #00489c;
+        border-radius: 5px;
+        box-shadow: 20px 20px 60px 0 rgba(0, 0, 0, 0.4);
+        background-color: #ffffff;
+        border: none;
+        padding: 15px;
+        margin-bottom: 20px;
+        text-align: center;
+
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .cosmetology-page .owl-nav {
+        left: auto;
+        right: 150px;
+    }
+
+}
+
+@media screen and (max-width: 1050px) {
+    .cosmetology-page {
+        .owl-nav {
+            right: 50px;
+            top: 25px;
+        }
+    }
+
+    .cosmetology-page {
+        .complex, .individual {
+            .container {
+                padding: 0 50px;
+            }
+        }        
+    }
+
+    .individual .main-title {
+        margin-top: 220px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .individual {
+        &__form {
+            flex-wrap: wrap;
+        }
+
+        &__input {
+            flex-basis: calc(50% - 15px);
+            max-width: calc(50% - 15px);
+        }
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .cosmetology-page {
+        .complex {
+
+            &__list {
+                flex-wrap: wrap;
+            }
+            &__left, &__right {
+                flex-basis: 100%;
+            }
+
+            &__photo {
+                position: relative;
+            }
+        }
+
+        
+    }
+    .individual {
+        .main-title {
+            margin-top: 60px;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .cosmetology-page {
+        .banners {
+            display: none;
+        }
+
+        .complex {
+            .main-title {
+                margin-top: 0;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .individual {
+        &__input {
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+    }
+}

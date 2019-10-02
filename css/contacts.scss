@@ -1,0 +1,259 @@
+.contacts {
+  .main-title {
+    margin-top: 100px;
+    margin-bottom: 40px;
+  }
+
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    div.contacts__text {
+      flex-basis: 100%;
+      margin-bottom: 40px;
+    }
+
+    > label {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap:wrap;
+      margin-bottom: 60px;
+      position: relative;
+      align-items: flex-end;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url('../img/icons/tel.svg') center center no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: calc(35% + 8px);
+        bottom: 0;
+      }
+
+      .contacts__field {
+        display: block;
+      }
+    }
+  }
+
+  &__field {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #bfc4ce;
+    color: #595f6f;
+
+
+    min-width: 150px;
+
+    @include placeholder(#bfc4ce);
+
+    font-size: 14px;
+    line-height: 18px;
+    padding: 2px 0;
+    margin-bottom: 30px;
+
+    &.error {
+      border-bottom: 1px solid red;
+      color: red;
+      @include placeholder(red);
+    }
+
+    &--half {
+      flex-basis: 35%;
+    }
+
+    &--big {
+      resize: none;
+      flex-basis: 100%;
+      width: 100%;
+      margin-bottom: 60px;
+    }
+
+    &--phone {
+      margin-bottom: 0;
+    }
+  }
+
+  &__text {
+    flex-basis: 50%;
+    font-size: 20px;
+    text-align: left;
+    color: #595f6f;
+
+    &--icon {
+      padding-left: 34px;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        background: url('../img/icons/mail.svg') center center no-repeat;
+        background-size: contain;
+        width: 24px;
+        height: 19px;
+        left: 0;
+      }
+    }
+  }
+
+
+
+  &__btn {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.19;
+    text-align: center;
+    color: #ffffff;
+    padding: 16px 64px;
+    border-radius: 5px;
+    box-shadow: 20px 20px 60px 0 rgba(0, 0, 0, 0.4);
+    background-color: #00489c;
+  }
+
+  &__checking {
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+
+  &__personal {
+
+    position: relative;
+    padding-right: 26px;
+    margin-right: 20px;
+
+    .contacts__text {
+      flex-basis: calc(100% - 26px);
+      font-size: 14px;
+      line-height: 1.29;
+      font-weight: 400;
+    }
+
+    .personal__checked {
+      font-size: 14px;
+      line-height: 1.29;
+      text-align: left;
+      color: #595f6f;
+    }
+
+    #personal-checked {
+      display: none;
+    }
+
+    .form__checkmark {
+      width: 16px;
+      height: 16px;
+      border: 2px solid #595f6f;
+      border-radius: 2px;
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      &--checked {
+        background: url('../img/icons/checkbox.svg') center center no-repeat;
+        background-size: 16px;
+      }
+    }
+
+  }
+
+  &__checkbox {
+    width: 17px;
+    height: 17px;
+    background: #fff;
+    border: 2px solid #595f6f;
+    display: inline-block;
+
+    input {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .contacts .container {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  .contacts {
+    .main-title {
+      margin-bottom: 20px;
+    }
+
+    &__field--half {
+      flex-basis: 100%;
+    }
+
+    &__form {
+      div.contacts__text {
+        margin-bottom: 16px;
+      }
+    }
+
+    &__form > label {
+      margin-bottom: 24px;
+      &:before {
+        right: auto;
+        left: 0;
+      }
+    } 
+
+    &__field--phone {
+      margin-left: 32px;
+    }
+
+    &__field--big {
+      margin-bottom: 36px;
+    }
+
+    &__text { 
+      flex-basis: 100%;
+      margin-bottom: 18px;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+
+      &--icon {
+        padding-left: 0;
+        &:before {
+          display: none;
+        }
+      }
+    }
+
+    &__checking {
+      flex-wrap: wrap;
+      margin-bottom: 42px;
+    }
+
+    &__personal {
+      width: auto;
+      margin-bottom: 32px;
+    }
+
+    &__btn {
+      width:  100%;
+    }
+  }  
+}
+
+@media screen and (max-width: 650px) {
+  .contacts {
+    .main-title {
+      margin-top: 32px;
+      margin-bottom: 10px;
+    }
+  }
+}

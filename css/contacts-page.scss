@@ -1,0 +1,126 @@
+.contacts {
+    &__map {
+        min-height: 680px;
+        width: 100%;
+
+        .map {
+            &__text {
+                font-size: 16px;
+                line-height: 1.38;
+                color: #595f6f;
+                margin-bottom: 5px;
+            }
+
+            &__city {
+                font-size: 18px;
+                color: #1a47b0;
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    &__filters {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__input {
+        
+        flex-basis: calc(33% - 13px);
+        padding-bottom: 20px;
+        position: relative;
+        
+
+        input, select {
+            background: #fff;
+            border-radius: 5px;
+            color: #595f6f;
+            border: 1px solid #bfc4ce;
+            padding: 16px 30px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        select, button {
+            width: 100%;
+            height: 100%;
+            max-height: 50px;
+        }
+
+        .mainbtn {
+            color: #fff;
+        }
+
+      
+    }
+
+    &__search {
+
+        input {
+            padding-left: 40px;
+        }
+        &:before {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: url('../img/icons/search.svg') center center no-repeat;
+            background-size: contain;
+            top: 15px;
+            left: 10px;
+            display: block;
+        }
+    }
+
+    &__select {
+        position: relative;        
+    }
+
+    &__arrow {
+        position: absolute;
+        pointer-events: none;
+        width: 20px;
+        height: calc(100% - 22px);
+        background: #fff url(../img/icons/arrow-down.svg) center center no-repeat;
+        background-size: 10px 6px;
+        right: 1px;
+        top: 1px;
+        border-radius: 5px;
+    }
+}
+
+#dealer {
+    display: none;
+}
+
+.contacts-page {
+    .brends__list {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .service__addresses, .contacts__dealer {
+        .container {
+            padding: 0 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .contacts {
+        &__filters {
+            flex-wrap: wrap;
+        }
+
+        &__input {
+
+            .mainbtn {
+                padding: 16px 30px;
+            }
+            flex-basis: 100%;
+            
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1475.214" height="2143.213" viewBox="0 0 1475.214 2143.213">
+    <defs>
+        <style>
+            .cls-1{opacity:.07}.cls-2,.cls-3{opacity:.5;fill:url(#linear-gradient)}.cls-3{opacity:.6}
+        </style>
+        <linearGradient id="linear-gradient" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#0061c5"/>
+            <stop offset="1" stop-color="#00489c"/>
+        </linearGradient>
+    </defs>
+    <g id="Background_rectangles" class="cls-1" data-name="Background rectangles" transform="translate(-342 -874)">
+        <rect id="Rectangle" width="1000" height="1000" class="cls-2" rx="100" transform="rotate(45 -1379.939 2141.518)"/>
+        <rect id="Rectangle-2" width="1000" height="1000" class="cls-3" data-name="Rectangle" rx="100" transform="rotate(45 -530.458 1703.384)"/>
+    </g>
+</svg>

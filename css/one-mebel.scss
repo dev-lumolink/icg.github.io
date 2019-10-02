@@ -1,0 +1,162 @@
+.onemebel-page {
+    .brends__list {
+        padding-bottom: 9px;
+    }
+
+    .sales__slider {
+        .owl-item {
+            opacity: 0;
+
+            &.active {
+                opacity: 1;
+            }
+        }
+    }
+
+    
+}
+
+.onemebel {
+
+    &__main {
+        .main-title {
+            margin: 0 0 5px 0;
+
+        }
+
+        .course__block {
+            position: relative;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .course__photos {
+            border-radius: 5px;
+            box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            padding: 17px 15px 20px 15px;
+            position: relative;
+            flex-basis: calc(45% - 100px);
+        }
+
+        .course__info {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: flex-start;
+
+        }
+
+    }
+
+    &__short {
+        font-size: 16px;
+        line-height: 1.19;
+        color: #595f6f;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 40px;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    &__pic {
+        border-radius: 5px;
+        overflow: hidden;
+        background: #00489c;
+        box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.15);
+        flex-basis: calc(25% - 10px);
+
+
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    }
+
+    &__big {
+        margin-bottom: 20px;
+    }
+
+    &__photos {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__additional {
+        .main-title {
+            margin-bottom: 40px;
+        }
+
+        .sales__slider {
+            margin-bottom: 0;
+        }
+
+        .offers__item {
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+
+        .slider__control {
+            &--left {
+                background-image: url(../img/icons/slider-left.svg);
+            }
+
+            &--right {
+                background-image: url(../img/icons/slider-right.svg);
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1050px) {
+    .onemebel__main {
+        .container {
+            padding: 0 50px;
+        }
+
+        .course__info {
+            flex-basis: 62%;
+        }
+    }
+
+    .onemebel__additional .container {
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .onemebel__main {
+        .course {
+            &__block {
+                flex-wrap: wrap;
+            }
+
+            &__photos, &__info {
+                flex-basis: 100%;
+                margin-bottom: 20px;
+            }
+
+            
+        }
+
+        .onemebel__short {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .onemebel__main {
+        .mainbtn {
+            width: 100%;
+            a {
+                padding: 15px;
+            }
+        } 
+    }
+}

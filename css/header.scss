@@ -1,0 +1,314 @@
+.header {
+
+  .container {
+    padding: 10px 150px;
+    padding-left: 35px;
+    position: relative;
+    z-index: 50;
+  }
+
+  &__logo {
+    margin-right: 30px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__search {
+
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .search__icon {
+      width: 22px;
+      height: 22px;
+      background: url(../img/icons/search.svg) center center no-repeat;
+      background-size: contain;
+      //margin-right: 20px;
+    }
+
+    .search {
+      &__popup {
+        position: absolute;
+        top: 80%;
+        display: none;
+        width: 300px;
+        right: 0;
+        box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+        background: #fff;
+        border-radius: 5px;
+      }
+
+      &__form {
+        position: relative;
+        padding: 10px;
+        
+      }
+
+      &__field {
+        padding: 6px 12px 6px 36px;
+        border-radius: 5px;
+        outline: none;
+        width: 100%;
+        font-size: 14px;
+        border: 2px solid #c9ccd4;
+        color: #595f6f;
+      }
+
+      &__submit {
+        background: url(../img/icons/search.svg);
+        background-size: cover;
+        width: 18px;
+        height: 18px;
+        display: block;
+        border: none;
+        position: absolute;
+        padding: 0px;
+        top: 50%;
+        left: 20px;
+        margin-top: -9px;
+      }
+    }
+  }
+
+  &__cities {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+
+    .cities__list, .phone__list {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+      margin-right: 20px;
+      font-size: 12px;
+      line-height: 19px;
+      font-weight: 700;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    margin-right: 85px;
+  }
+
+  &__burger {
+    width: 30px;
+    height: 24px;
+    background: #fff url('../img/icons/burger.svg') center center no-repeat;
+    background-size: contain;
+  }
+
+  &__popup {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+
+    background: #fff;
+    box-shadow: 20px 10px 10px 0 rgba(6, 9, 13, 0.03);
+    z-index: 5;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding: 60px 135px 40px 150px;
+  }
+
+  &__close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: url('../img/icons/Close.svg') center center no-repeat;
+    background-size: 15px;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+  }
+
+  &__nav {
+    margin-bottom: 230px;
+  }
+
+  &__item {
+
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.96;
+    margin-bottom: 10px;
+    letter-spacing: 0.45px;
+
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: #1f1f1f;
+      text-shadow: 13.1px -23.6px 125px var(--black-6);
+      text-transform: uppercase;
+    }
+  }
+
+  &__text {
+    text-shadow: 13.1px -23.6px 125px var(--black-6);
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 2.2;
+    letter-spacing: 0.4px;
+    color: #bfc4ce;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  &__social-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__social {
+
+
+    a {
+      background-size: contain;
+      background-position: center;
+      display: block;
+      width: 30px;
+      height: 30px;
+    }
+
+    &--vk {
+      a {
+        background-image: url('../img/icons/VK.svg');
+
+        &:hover {
+          background-image: url('../img/icons/VK-active.svg');
+        }
+      }
+    }
+
+    &--fb {
+      a {
+        background-image: url('../img/icons/Facebook.svg');
+
+        &:hover {
+          background-image: url('../img/icons/Facebook-active.svg');
+        }
+      }
+    }
+
+    &--inst {
+      a {
+        background-image: url('../img/icons/Insta.svg');
+
+        &:hover {
+          background-image: url('../img/icons/Insta-active.svg');
+        }
+      }
+    }
+  }
+}
+
+.cities {
+
+  &__list {
+    color: #1f1f1f;
+
+  }
+
+  &__phone {
+    a {
+      color: #00489c;
+    }
+  }
+
+  &__name {
+    padding-left: 12px;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 7px;
+      height: 9px;
+      background: url(../img/icons/locate.svg) center center no-repeat;
+      background-size: contain;
+      top: 50%;
+      margin-top: -5px;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .header {
+    .container {
+      padding-right: 35px;
+    }
+
+    &__nav {
+      margin-bottom: 180px;
+    }
+  } 
+}
+
+@media screen and (max-width: 870px) {
+  .header {
+    box-shadow: 0 0.5px 0 0 rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .header {
+    &__cities {
+      display: none;
+    }
+
+    &__logo {
+      margin-right: 0;
+      width: 40px;
+      height: 40px;
+    }
+
+    &__menu {
+      margin-right: 0;
+    }
+
+    .container {
+      padding: 10px 36px;
+    }
+
+    &__nav {
+      margin-bottom: 100px;
+    }
+
+    &__popup {
+      width: 80%;
+    }
+
+    &__wrapper {
+      padding: 24px 30px 39px 30px; 
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__logo {
+    order: 1;
+  }
+
+  .header__search {
+    order: 2;
+  }
+
+  .header__cities {
+    order: 3;
+    flex-basis: 100%;
+    justify-content: space-between;
+  }
+}

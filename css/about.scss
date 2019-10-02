@@ -1,0 +1,158 @@
+.about {
+
+  .container {
+    padding: 0 100px;
+    padding-bottom: 130px;
+  }
+
+  &__info {
+    img {
+      width: 100%;
+    }
+
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    //flex-wrap: wrap;
+    width: 100%;
+  }
+
+  &__item {
+    flex-grow: 1;
+    flex-basis: 20%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    height: 150px;
+    background: url('../img/border.svg') left top no-repeat;
+    background-size: contain;
+    margin: 10px;
+  }
+
+  &__number {
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 0.84;
+    letter-spacing: -1.15px;
+    text-align: left;
+    color: #000000;
+    white-space: nowrap;
+    flex-basis: 100%;
+    position: absolute;
+    top: 30%;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.1;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #595f6f;
+    margin-left: 60px;
+    white-space: nowrap;
+    position: absolute;
+    top: 80%;
+
+    &--empty {
+      opacity: 0;
+      position: relative;
+
+    }
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .about {
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      flex-basis: 33%;
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .about {
+    .container {
+      padding: 0 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about {
+
+    br {
+      display: none;
+    }
+    &__item {
+      background: none;
+      height: auto;
+      padding-left: 40px;
+      display: block;
+      flex-basis: 100%;
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        width: 21px;
+        height: 21px;
+        top: 0px;
+        background: url(../img/icons/Shape.svg) center center no-repeat;
+        background-size: contain;
+      }
+
+    }
+
+    &__number {
+      font-size: 16px;
+      color: #595f6f;
+      display: inline;
+      position: relative;
+      top: 0;
+      font-family: 'Circe';
+      font-weight: 400;
+    }
+
+    &__text {
+      position: relative;
+      font-size: 16px;
+      line-height: 19px;
+      display: inline;
+      top: 0;
+      margin-left: 0;
+      white-space: normal;
+
+      &--empty {
+        display: none;
+      }
+    }
+  }
+  
+}
+
+@media screen and (max-width: 650px) {
+  .about {
+
+    .main-title {
+      margin-top: 27px;
+      margin-bottom: 17px;
+    }
+
+    
+
+    &__info {
+      display: none;
+    }
+    
+  }
+}

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="30"
+   height="30"
+   viewBox="0 0 30 30"
+   version="1.1"
+   id="svg22"
+   sodipodi:docname="slider-left.svg"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)">
+  <metadata
+     id="metadata26">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview24"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:snap-global="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="1.9666667"
+     inkscape:cx="103.30508"
+     inkscape:cy="5"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg22" />
+  <defs
+     id="defs15">
+    <style
+       id="style2">
+            .cls-1{fill:#00489c}.cls-2{fill:#fff}.cls-3{filter:url(#Еліпс_4)}
+        </style>
+    <filter
+       id="Еліпс_4"
+       width="120"
+       height="120"
+       x="0"
+       y="0"
+       filterUnits="userSpaceOnUse">
+      <feOffset
+         dx="10"
+         dy="10"
+         id="feOffset4" />
+      <feGaussianBlur
+         result="blur"
+         stdDeviation="15"
+         id="feGaussianBlur6" />
+      <feFlood
+         flood-opacity=".302"
+         id="feFlood8" />
+      <feComposite
+         in2="blur"
+         operator="in"
+         id="feComposite10"
+         result="result1" />
+      <feComposite
+         in="SourceGraphic"
+         in2="result1"
+         id="feComposite12" />
+    </filter>
+  </defs>
+  <g
+     id="_"
+     data-name="&gt;"
+     transform="rotate(180,664,1485.5)">
+    <g
+       class="cls-3"
+       transform="rotate(180,681.5,1503)"
+       id="g18">
+      <circle
+         id="Еліпс_4-2"
+         cx="15"
+         cy="15"
+         r="15"
+         class="cls-1"
+         data-name="Еліпс 4"
+         transform="rotate(180,32.5,32.5)"
+         style="fill:#00489c" />
+    </g>
+    <path
+       id="arrow_right"
+       d="m 1312.143,2950 -1.137,1.124 4.757,4.883 -0.721,0.734 -4,4.115 1.12,1.141 c 1.659,-1.69 4.292,-4.408 5.841,-5.986 -1.15,-1.178 -0.063,-0.07 -5.86,-6.011 z"
+       class="cls-2"
+       inkscape:connector-curvature="0"
+       style="fill:#ffffff" />
+  </g>
+</svg>

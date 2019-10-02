@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="7" height="9" viewBox="0 0 7 9">
+    <defs>
+        <style>
+            .cls-1{fill:#0061c5}
+        </style>
+    </defs>
+    <g id="locate" transform="translate(-808.01 -4649.988)">
+        <path id="pin_sharp_circle" d="M811.51 4649.987a3.339 3.339 0 0 0-3.5 3.15c0 1.739 3.5 5.85 3.5 5.85s3.5-4.11 3.5-5.85a3.339 3.339 0 0 0-3.5-3.15zm0 7.65s-2.5-3.15-2.5-4.5a2.514 2.514 0 0 1 5 0c0 1.35-2.5 4.501-2.5 4.501zm1-4.4a1.006 1.006 0 1 1-1-.9.954.954 0 0 1 1 .898z" class="cls-1"/>
+    </g>
+</svg>

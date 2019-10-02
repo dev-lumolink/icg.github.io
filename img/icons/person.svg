@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210.91mm" height="210.15mm" version="1.1" viewBox="0 0 210.91 210.15" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <defs>
+  <clipPath id="clipPath3727">
+   <rect x="6.8036" y="96.673" width="189.74" height="98.274" stroke-width=".26458"/>
+  </clipPath>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-.22678 -28.788)">
+  <ellipse cx="105.68" cy="133.87" rx="105.46" ry="105.08" fill="#00489c" stroke-width=".15109"/>
+  <circle cx="104.7" cy="95.539" r="41.955" fill="#fff" stroke-width=".26458"/>
+  <ellipse transform="translate(3.0238 6.8036)" cx="102.81" cy="210.82" rx="66.524" ry="66.524" clip-path="url(#clipPath3727)" fill="#fff" stroke-width=".28095"/>
+ </g>
+</svg>

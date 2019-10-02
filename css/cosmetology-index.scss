@@ -1,0 +1,57 @@
+.cosmetology-directions {
+    .main-title {
+        margin-top: 0px;
+    }
+}
+
+.direction {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__item {
+        flex-basis: calc(33% - 13px);
+        border-radius: 5px;
+        box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+        background-color: #ffffff;
+        margin-bottom: 15px;
+        display: inline-block;
+        position: relative;
+    }
+
+    &__photo {
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__desc {
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        left: 0;
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__title {
+        flex-basis: 100%;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.17;
+        letter-spacing: -0.5px;
+        color: #fff;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    &__btn {
+        padding: 10px 20px;
+        color: #00489c;
+    }
+}
