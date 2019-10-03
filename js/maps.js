@@ -25,7 +25,7 @@ function mapsInit() {
     
             myMap.geoObjects.add(myGeoObject);
 
-            window.addEventListener("orientationchange", function() {
+            window.addEventListener("resize", function() {
                 setTimeout(function() {
                  myMap.container.fitToViewport();
                 }, 1000)
@@ -62,7 +62,7 @@ function mapsInit() {
     
             myMap.geoObjects.add(myGeoObject);
 
-            window.addEventListener("orientationchange", function() {
+            window.addEventListener("resize", function() {
                 setTimeout(function() {
                  myMap.container.fitToViewport();
                 }, 1000)
@@ -98,7 +98,7 @@ function mapsInit() {
     
             myMap.geoObjects.add(myGeoObject);
 
-            window.addEventListener("orientationchange", function() {
+            window.addEventListener("resize", function() {
                 setTimeout(function() {
                  myMap.container.fitToViewport();
                 }, 1000)

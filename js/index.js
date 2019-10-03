@@ -115,14 +115,14 @@ function calcSlider() {
   calcPage();
 })
 
-  $('.datepicker-here').datepicker( {
-    toggleSelected: false,
-    language: 'ru',
-
-    navTitles: {
-     days: 'MM',
-   },
- });
+//   var datepicker = $('.datepicker-here').datepicker({
+//     toggleSelected: false,
+//     language: 'ru',
+//     range: false,
+//     navTitles: {
+//     days: 'MM'
+//   }
+//  });
 
 
  function scrollToMonth(i) {
@@ -197,4 +197,3 @@ function calcPage() {
     calcSlider();
   });
 }
-

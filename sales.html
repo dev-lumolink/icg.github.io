@@ -173,9 +173,9 @@
             <div class="sales-page__slider-item">
 
               <div class="sales-page__left">
-                <a href=""><img src="img/sales-slider.jpg" srcset="img/sales-slider@2x.jpg 900w, img/sales-slider@3x.jpg 1200w"
-                  alt=""></a>
-                
+                <a href=""><img src="img/sales-slider.jpg"
+                    srcset="img/sales-slider@2x.jpg 900w, img/sales-slider@3x.jpg 1200w" alt=""></a>
+
               </div>
 
               <div class="sales-page__right">
@@ -261,12 +261,30 @@
         <div class="main-title">
           Хочу специальные условия
         </div>
-        <form action="" class="individual__form">
-          <input type="text" class="individual__input" placeholder="Имя">
-          <input type="text" class="individual__input" placeholder="Фамилия">
-          <input type="text" class="individual__input" placeholder="E-mail">
-          <input type="submit" class="individual__input individual__btn" value="Получить предложение">
-
+        <form action="" enctype="multipart/form-data" method="post" class="individual__form">
+          <!-- component -->
+          <div class="component component--input input--text input--bordered mb-3">
+            <input type="text" name="name" id="name" required>
+            <label for="name">Имя</label>
+          </div>
+          <!-- component -->
+          <div class="component component--input input--text input--bordered mb-3">
+            <input type="text" name="surname" id="surname" required>
+            <label for="surname">Фамилия</label>
+          </div>
+          <!-- component -->
+          <div class="component component--input input--email input--bordered mb-3">
+            <input type="email" name="email" id="email" required>
+            <label for="email">E-mail</label>
+          </div>
+          <!-- component -->
+          <div class="component component--input input--submit mb-3">
+            <input type="submit" value="Получить предложение" class="component component--button button--big button--stretch button--white bordered">
+          </div>
+          <!-- <input type="text" class="individual__input" placeholder="Имя" required>
+          <input type="text" class="individual__input" placeholder="Фамилия" required>
+          <input type="email" class="individual__input" placeholder="E-mail" required> -->
+          <!-- <input type="submit" class="individual__input individual__btn" value="Получить предложение"> -->
         </form>
       </div>
     </section>
@@ -278,103 +296,108 @@
         </div>
 
         <div class="sales__news-list owl-carousel">
+
           <div class="sales__news-item">
-            <div class="sales__news-photo">
-              <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
+            <a href="">
+              <div class="sales__news-photo">
 
+                <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
 
-              <div class="sales__news-city">
-                <div class="sales__news-wrapper">
-                  Санкт-Петербург
+                <div class="sales__news-city">
+                  <div class="sales__news-wrapper">
+                    Санкт-Петербург
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="sales__news-signature">
+                <div class="sales__news-block">
+                  Оборудование
                 </div>
 
-              </div>
-            </div>
-
-            <div class="sales__news-signature">
-              <div class="sales__news-block">
-                Оборудование
+                <div class="sales__news-date">
+                  14.02.2019
+                </div>
               </div>
 
-              <div class="sales__news-date">
-                14.02.2019
+              <div class="sales__news-title">
+                Заголовок новостей
               </div>
-            </div>
 
-            <div class="sales__news-title">
-              Заголовок новостей
-            </div>
-
-            <div class="sales__news-text">
-              Краткий анонс новости.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
-            </div>
+              <div class="sales__news-text">
+                Краткий анонс новости.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
+              </div>
+            </a>
           </div>
-
           <div class="sales__news-item">
-            <div class="sales__news-photo">
-              <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
+            <a href="">
+              <div class="sales__news-photo">
 
+                <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
 
-              <div class="sales__news-city">
-                <div class="sales__news-wrapper">
-                  Санкт-Петербург
+                <div class="sales__news-city">
+                  <div class="sales__news-wrapper">
+                    Санкт-Петербург
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="sales__news-signature">
+                <div class="sales__news-block">
+                  Оборудование
                 </div>
 
-              </div>
-            </div>
-
-            <div class="sales__news-signature">
-              <div class="sales__news-block">
-                Оборудование
+                <div class="sales__news-date">
+                  14.02.2019
+                </div>
               </div>
 
-              <div class="sales__news-date">
-                14.02.2019
+              <div class="sales__news-title">
+                Заголовок новостей
               </div>
-            </div>
 
-            <div class="sales__news-title">
-              Заголовок новостей
-            </div>
-
-            <div class="sales__news-text">
-              Краткий анонс новости.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
-            </div>
+              <div class="sales__news-text">
+                Краткий анонс новости.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
+              </div>
+            </a>
           </div>
-
           <div class="sales__news-item">
-            <div class="sales__news-photo">
-              <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
+            <a href="">
+              <div class="sales__news-photo">
 
+                <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
 
-              <div class="sales__news-city">
-                <div class="sales__news-wrapper">
-                  Санкт-Петербург
+                <div class="sales__news-city">
+                  <div class="sales__news-wrapper">
+                    Санкт-Петербург
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="sales__news-signature">
+                <div class="sales__news-block">
+                  Оборудование
                 </div>
 
-              </div>
-            </div>
-
-            <div class="sales__news-signature">
-              <div class="sales__news-block">
-                Оборудование
+                <div class="sales__news-date">
+                  14.02.2019
+                </div>
               </div>
 
-              <div class="sales__news-date">
-                14.02.2019
+              <div class="sales__news-title">
+                Заголовок новостей
               </div>
-            </div>
 
-            <div class="sales__news-title">
-              Заголовок новостей
-            </div>
-
-            <div class="sales__news-text">
-              Краткий анонс новости.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
-            </div>
+              <div class="sales__news-text">
+                Краткий анонс новости.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
+              </div>
+            </a>
           </div>
 
 
@@ -435,14 +458,14 @@
             placeholder="Сообщение"></textarea>
 
           <div class="contacts__checking">
-              <!-- component -->
-              <div class="component component--label_with_checkbox mb-3">
-                <label>
-                  <span>Согласие на обработку персональных данных</span>
-                  <input type="checkbox" hidden required>
-                  <i></i>
-                </label>
-              </div>
+            <!-- component -->
+            <div class="component component--label_with_checkbox mb-3">
+              <label>
+                <span>Согласие на обработку персональных данных</span>
+                <input type="checkbox" hidden required>
+                <i></i>
+              </label>
+            </div>
 
             <!-- <div class="contacts__personal">
               <label for="personal-checked" class="personal__checked">Согласие на обработку персональных данных</label>

@@ -52,11 +52,11 @@ function calcSliderPopular() {
 }
 
 
-// $(window).resize(function() {
-//     calcSlider();
-//     calcSliderPopular();
-//     calcPage();
-//   })
+$(window).resize(function() {
+    calcSlider();
+    calcSliderPopular();
+    calcPage();
+  })
 
   function scrollToMonth(i) {
     var list = $(".news__section .news__scroll");

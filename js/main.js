@@ -1,17 +1,17 @@
 //меню в хедере
-$(window).on('click', function(e) {
+// $(window).on('click', function(e) {
 
-  if ( e.target.closest('.header__popup') === null && $('.header__popup').css('display') == 'block' ) {
-    if ( !$('.header__burger').is(e.target) ) {
-      $('.header__popup').slideToggle();
-    }    
-  }  
+//   if ( e.target.closest('.header__popup') === null && $('.header__popup').css('display') == 'block' ) {
+//     if ( !$('.header__burger').is(e.target) ) {
+//       $('.header__popup').slideToggle();
+//     }    
+//   }  
 
-  if ( e.target.closest('.header__search')===null && e.target != $('.search__popup') && e.target.closest('.search__popup') === null && $('.search__popup').css('display') == 'block' ) {
-    $('.search__popup').slideToggle();
-  }  
+//   if ( e.target.closest('.header__search')===null && e.target != $('.search__popup') && e.target.closest('.search__popup') === null && $('.search__popup').css('display') == 'block' ) {
+//     $('.search__popup').slideToggle();
+//   }  
  
-})
+// })
 
 $('.header__burger').on('click', function(e) {
   e.preventDefault();
@@ -38,42 +38,21 @@ $('.header__search').on('click', function(e) {
 
 //слайдер брендов
 $(".brends__list").owlCarousel({
- 
-  //autoPlay: 8000, //Set AutoPlay to 8 seconds
-
-  items : 6,
-  loop:true,
-  nav:false,
+  loop: true,
+  nav: false,
   margin: 16,
-  center: true,
-  autoWidth: true,
-  //itemsDesktop : [1199,3],
-  //itemsDesktopSmall : [979,3]
-
   responsive: {
-    0: {
-      items: 1,
-      
+    320: {
+      items: 1
     },
-
-    650: {
-      items: 2,
+    640: {
+      items: 3
     },
-
-    850: {
-      items: 4,
-      autoWidth: false,
-      margin: 0,
-
-    },
-
-    1050: {
-      items: 6,
+    960: {
+      items: 6
     }
   }
-}); 
-
-
+});
 
 //переключатель checkbox в блоке Свяжитесь с нами
 
@@ -151,6 +130,45 @@ $(document).ready(function(){
   })
 });
 
-
-
-
+// wiedemann scripts start here. Code above is not mine
+// events slider
+$(document).ready(function(){
+  $('[data-slider="events"]').owlCarousel({
+    loop: false,
+    responsive: {
+      320: {
+        items: 1,
+        touchDrag: true,
+        mouseDrag: true
+      },
+      640: {
+        items: 2,
+        margin: 30,
+        touchDrag: false,
+        mouseDrag: false
+      }
+    }
+  });
+  // popular news slider
+  $('[data-slider="popular-news"]').owlCarousel({
+    loop: false,
+    responsive: {
+      320: {
+        items: 1,
+        touchDrag: true,
+        mouseDrag: true
+      },
+      640: {
+        items: 3,
+        margin: 30,
+        touchDrag: true,
+        mouseDrag: true
+      },
+      960: {
+        items: 6,
+        touchDrag: false,
+        mouseDrag: false
+      }
+    }
+  });
+})
