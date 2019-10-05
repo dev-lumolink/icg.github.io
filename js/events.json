@@ -2,7 +2,7 @@
     {
         "id":"1",
         "title":"Название семинара",
-        "city":"moscow",
+        "city":"Москва",
         "direction":"nails",
         "level":"1",
         "dates": [
@@ -18,7 +18,7 @@
     {
         "id":"2",
         "title":"Название семинара 2",
-        "city":"spb",
+        "city":"Санкт-Петербург",
         "direction":"massage",
         "level":"2",
         "dates": [
@@ -34,7 +34,7 @@
     {
         "id":"3",
         "title":"Название семинара 3",
-        "city":"ekb",
+        "city":"Екатеринбург",
         "direction":"nails",
         "level":"3",
         "dates": [
@@ -50,7 +50,7 @@
     {
         "id":"4",
         "title":"Название семинара 4",
-        "city":"ekb",
+        "city":"Екатеринбург",
         "direction":"nails",
         "level":"4",
         "dates": [
@@ -66,7 +66,7 @@
     {
         "id":"5",
         "title":"Название семинара 5",
-        "city":"moscow",
+        "city":"Москва",
         "direction":"massage",
         "level":"1",
         "dates": [
@@ -82,7 +82,7 @@
     {
         "id":"6",
         "title":"Название семинара 6",
-        "city":"spb",
+        "city":"Санкт-Петербург",
         "direction":"nails",
         "level":"2",
         "dates": [

@@ -103,7 +103,8 @@ $(document).ready(function(){
 });
 
 $(function() {
-  $('.contacts__field--phonemask').mask("+ 9 999 999-99-99", {autoclear: false});
+  window.tel_1 = $('.phone-1').mask("+ 9 999 999-99-99", {autoclear: true});
+  window.tel_2 = $('.phone-2').mask("+ 9 999 999-99-99", {autoclear: true});
 });
 
 //валидация email
@@ -132,7 +133,7 @@ $(document).ready(function(){
 
 // wiedemann scripts start here. Code above is not mine
 // events slider
-$(document).ready(function(){
+var eventsSlider = $(document).ready(function(){
   $('[data-slider="events"]').owlCarousel({
     loop: false,
     responsive: {
@@ -150,7 +151,7 @@ $(document).ready(function(){
     }
   });
   // popular news slider
-  $('[data-slider="popular-news"]').owlCarousel({
+  var popularNewsSlider = $('[data-slider="popular-news"]').owlCarousel({
     loop: false,
     responsive: {
       320: {
@@ -171,4 +172,28 @@ $(document).ready(function(){
       }
     }
   });
+  //form tel toggle
+  var requiredFields = function(){
+    $('.contacts__form').find('.phone-2').attr('required','');
+    $('.contacts__form').find('input[type="email"]').attr('required','');
+    window.tel_1.unmask();
+  };
+
+  $('.phone-1').on('click focus', function(){
+    $('.contacts__form').find('input').removeAttr('required');
+    $('.contacts__form').find('input:not([type="submit"]):not(.phone-1)').each(function(i, input) {
+      $(input).val('');
+    })
+  })
+
+  $('.phone-1').on('blur focusout', function(){
+    if($(tel_1).val() === "") {
+      requiredFields()
+    } else return;
+  })
+
+  $(document).on('input change click focus focusout', function(){
+    if($('.contacts__form').find('[required]:valid')) $('.contacts__form input[type="submit"]').prop('disabled', false);
+    if(!$('.contacts__form').find('[required]:valid')) $('.contacts__form input[type="submit"]').prop('disabled', true);
+  })
 })

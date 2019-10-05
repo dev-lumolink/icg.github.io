@@ -8,12 +8,8 @@ if (jQuery && wiedemann_data_parser) {
     var that    = this;
     this.params = params;
     this.widget = document.getElementById(this.params.widget);
-    this.defaulState = (function(){
-      return wiedemann_data_parser.show('item', {
-        from: 'id',
-        value: that.params.defaultState.eventID
-      })
-    })();
+    this.defaulState = {};
+    this.dataParser = window.wiedemann_data_parser;
 
     // DOM nodes
     this.DOM = {
@@ -59,8 +55,31 @@ if (jQuery && wiedemann_data_parser) {
 
     // methods
 
+    this.createState = function(state){
+      var cities = this.dataParser.show('city', {});
+      $(cities).each(function(index, element){
+        that.createANDplace().setinside(document.querySelector('[data-entity="city-selector"]'), 'option', {
+          attributes: {
+            value: element
+          },
+          html: element
+        })
+        if (element == state.city) $(that.DOM.selectors.city).find('option[value="' + element + '"]').attr('selected',true);
+        console.log(element, state.city)
+      })
+      console.log(cities, that.DOM.selectors.city)
+    }
+
     // begin
     this.init = function () {
+      // set default state
+      this.defaulState = (function(){
+        return wiedemann_data_parser.show('item', {
+          from: 'id',
+          value: that.params.defaultState.eventID
+        })
+      })();
+      this.createState(this.defaulState[0]);
       // event listeners
       $(this.DOM.selectors.city).on('change', function () {
         //that.DOM.directions.list
@@ -79,7 +98,7 @@ if (jQuery && wiedemann_data_parser) {
     window.wiedemann_calendar_widget = new WIEDEMANN_CALENDAR_WIDGET({
       widget: 'calendar-widget',
       defaultState: {
-        eventID: '3'
+        eventID: '1'
       }
     })
   })

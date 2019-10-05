@@ -1,7 +1,6 @@
 function calcNav() {
   var height = $('.courses__calendar .datepicker').height();
   $('.courses__list .owl-nav').css('bottom', height + 10 + 'px');
-
 }
 
 function calcSlider() {
@@ -51,17 +50,7 @@ function calcSlider() {
             nav: true,
           }
         }    
-    });
-
-    $(".courses__slider").owlCarousel({
-
-      items : 1,
-      loop:true,
-      nav:true,
     });    
-
-
-    
 
     $(".brends__list").owlCarousel({
  

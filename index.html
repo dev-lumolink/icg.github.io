@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,6 +14,7 @@
   <link rel="stylesheet" href="css/main.css">
 
 </head>
+
 <body>
 
   <div class="wrapper main-page">
@@ -90,13 +92,13 @@
         <div class="header__cities">
           <ul class="cities__list">
             <li class="cities__name">
-                Москва
+              Москва
             </li>
             <li class="cities__name">
-                Санкт-Петербург
+              Санкт-Петербург
             </li>
             <li class="cities__name">
-                Екатеринбург
+              Екатеринбург
             </li>
           </ul>
           <ul class="phone__list">
@@ -169,7 +171,7 @@
             <img src="img/chair.png" srcset="img/chair@2x.png 900w, img/chair@3x.png 1200w" alt="">
             <img src="img/chair.png" srcset="img/chair@2x.png 900w, img/chair@3x.png 1200w" alt="">
 
-            
+
           </div>
 
 
@@ -193,9 +195,9 @@
           </div>
         </div>
 
-        
 
-        
+
+
       </div>
 
 
@@ -208,7 +210,7 @@
           <li class="brends__item">
             <a href="#" class="brends__link--desktop">IONTO Comed</a>
             <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
-          </li>            
+          </li>
           <li class="brends__item">
             <a href="#" class="brends__link--desktop">Suda</a>
             <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
@@ -218,16 +220,16 @@
             <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
           <li class="brends__item">
-              <a href="#" class="brends__link--desktop">MyStyle</a>
-              <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
+            <a href="#" class="brends__link--desktop">MyStyle</a>
+            <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
           <li class="brends__item">
-              <a href="#" class="brends__link--desktop">Bernand Cassiere</a>
-              <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
+            <a href="#" class="brends__link--desktop">Bernand Cassiere</a>
+            <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
           <li class="brends__item">
-              <a href="#" class="brends__link--desktop">Profillers</a>
-              <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
+            <a href="#" class="brends__link--desktop">Profillers</a>
+            <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
         </ul>
 
@@ -241,7 +243,7 @@
               <div class="service__text">
                 lonto, llooda, Proffilers
               </div>
-  
+
               <div class="service__everything">
                 <a href="" class="service__line">
                   Все разделы
@@ -256,11 +258,11 @@
                   Филлеры
                 </a>
               </div>
-  
+
               <a href="" class="banner__link banner__link--small">
                 Узнать больше
               </a>
-            </div>            
+            </div>
 
           </li>
 
@@ -273,7 +275,7 @@
               <div class="service__text">
                 Suda
               </div>
-  
+
               <div class="service__everything">
                 <a href="" class="service__line">
                   Все разделы
@@ -285,11 +287,11 @@
                   Косметика
                 </a>
               </div>
-  
+
               <a href="" class="banner__link banner__link--small">
                 Узнать больше
               </a>
-            </div>            
+            </div>
 
           </li>
 
@@ -303,7 +305,7 @@
               <div class="service__text">
                 My Style
               </div>
-  
+
               <div class="service__everything">
                 <a href="" class="service__line">
                   Все разделы
@@ -315,11 +317,11 @@
                   Расходные материалы
                 </a>
               </div>
-  
+
               <a href="" class="banner__link banner__link--small">
                 Узнать больше
               </a>
-            </div>            
+            </div>
 
           </li>
 
@@ -332,7 +334,7 @@
               <div class="service__text">
                 Bernard Cassiere, lonto
               </div>
-  
+
               <div class="service__everything">
                 <a href="" class="service__line">
                   Все разделы
@@ -344,12 +346,12 @@
                   Косметика
                 </a>
               </div>
-  
+
               <a href="" class="banner__link banner__link--small">
                 Узнать больше
               </a>
             </div>
-            
+
 
           </li>
         </ul>
@@ -423,146 +425,111 @@
 
     </section>
 
-    <section class="courses">
 
+
+
+
+
+
+    <!-- courses -->
+    <section class="courses">
       <div class="container">
+        <!-- section title -->
         <div class="main-title">
           Наши курсы
         </div>
-
-        <div class="courses__info">
-
-          <div class="courses__cities">
-
-            <div class="cities__title">
-
-              <select name="cities-list" id="">
-                <option value="msk">Все города</option>
-                <option value="msk">Москва</option>
-                <option value="spb">Санкт-Петербург</option>
-                <option value="msk">Екатеринбург</option>
-              </select>
-
-              <div class="select-side">
-
+        <!-- calendar widget -->
+        <div id="calendar-widget"> <!-- widget id-->
+          <div class="courses__info">
+            <!-- left block -->
+            <div class="courses__cities">
+              <!-- city selector -->
+              <div class="cities__title">
+                <select name="cities-list" data-entity="city-selector">
+                  <option value="all" data-entity="city">Все города</option>
+                </select>
+                <div class="select-side"></div> <!--arrow-->
               </div>
-
+              <!-- directions list -->
+              <ul class="cities__list" data-entity="directions">
+                <!-- direction template -->
+                <li
+                  class="cities__item"
+                  data-entity="direction"
+                  data-direction="">
+                  Загрузка...
+                </li>
+              </ul>
             </div>
-
-            <ul class="cities__list">
-              <li class="cities__item">
-                lonto
-              </li>
-              <li class="cities__item">
-                Pronails
-              </li>
-              <li class="cities__item">
-                SUDA
-              </li>
-              <li class="cities__item">
-                MyStyle
-              </li>
-              <li class="cities__item">
-                Bernard Cassiere
-              </li>
-              <li class="cities__item">
-                Profillers
-              </li>
-            </ul>
-          </div>
-
-          <div class="courses__list">
-
-            <div class="courses__slider owl-carousel">
-                <div class="courses__item">
-                    <div class="courses__desc">
-                        <div class="courses__photo">
-                            <img src="img/course1.jpg" srcset="img/course1@2x.jpg 900w, img/course1@3x.jpg 1200w" alt="">
+            <!-- right block -->
+            <div class="courses__list">
+              <div class="cities__title event-level">
+                <select data-entity="event-level">
+                  <option
+                    value=""
+                    data-entity="event-level-item"
+                    data-url="#">Уровень 1. Базовые курсы для начинающих</option>
+                </select>
+                <div class="select-side"></div>
+              </div>
+              <div class="courses__item">
+                <div class="courses__desc">
+                  <div class="courses__photo">
+                    <img src="img/course1.jpg" srcset="img/course1@2x.jpg 900w, img/course1@3x.jpg 1200w" alt="">
   
-                        </div>
-                        <div class="courses__title">
-                          Перманентный макияж
-                        </div>
-            
-                        <div class="courses__text">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi. Ut placerat quam lectus. Curabitur dictum velit non lacus ornare tempor. Nullam quis augue in leo aliquet malesuada
-                          sit amet eget eros. Sed laoreet posuere
-                          velit sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </div>
-            
-                        <div class="banner__link banner__link--small">
-                          <a href="#">Подробнее</a>
-                        </div>
-            
-                        <div class="courses__signup">
-            
-                          <div class="courses__text">
-                            Записаться на курс
-                          </div>
-            
-                          <a href="#" class="courses__link">+7 495 229 37 70</a>
-                          <a href="#" class="courses__link courses__link--phone"></a>
-                          <a href="#" class="courses__link courses__link--whatsapp"></a>
-                        </div>
-                      </div>
-            
-                      <div class="courses__calendar">
-            
-                        <div class="datepicker-here" data-range="false"></div>
-            
-                      </div>
+                  </div>
+                  <div class="cities__title event-list">
+                    <select data-entity="event-list">
+                      <option
+                        value=""
+                        data-entity="event-list-item"
+                        data-url="#">Название семинара</option>
+                    </select>
+                    <div class="select-side"></div>
+                  </div>
+  
+                  <div class="courses__text" data-entity="event-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi. Ut placerat quam
+                    lectus. Curabitur dictum velit non lacus ornare tempor. Nullam quis augue in leo aliquet malesuada
+                    sit amet eget eros. Sed laoreet posuere
+                    velit sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  </div>
+  
+                  <div class="banner__link banner__link--small">
+                    <a href="#" data-entity="event-url">Подробнее</a>
+                  </div>
+  
+                  <div class="courses__signup">
+  
+                    <div class="courses__text">
+                      Записаться на курс
+                    </div>
+  
+                    <a href="#" class="courses__link">+7 495 229 37 70</a>
+                    <a href="#" class="courses__link courses__link--phone"></a>
+                    <a href="#" class="courses__link courses__link--whatsapp"></a>
+                  </div>
                 </div>
-
-                <div class="courses__item">
-                    <div class="courses__desc">
-
-                      <div class="courses__photo">
-                          <img src="img/course1.jpg" srcset="img/course1@2x.jpg 900w, img/course1@3x.jpg 1200w" alt="">
-
-                      </div>
-                        <div class="courses__title">
-                          Перманентный макияж
-                        </div>
-            
-                        <div class="courses__text">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi. Ut placerat quam lectus. Curabitur dictum velit non lacus ornare tempor. Nullam quis augue in leo aliquet malesuada
-                          sit amet eget eros. Sed laoreet posuere
-                          velit sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </div>
-            
-                        <div class="banner__link banner__link--small">
-                          <a href="#">Подробнее</a>
-                        </div>
-            
-                        <div class="courses__signup">
-            
-                          <div class="courses__text">
-                            Записаться на курс
-                          </div>
-            
-                          <a href="#" class="courses__link">+7 495 229 37 70</a>
-                          <a href="#" class="courses__link courses__link--phone"></a>
-                          <a href="#" class="courses__link courses__link--whatsapp"></a>
-                        </div>
-                      </div>
-            
-                      <div class="courses__calendar">
-            
-                        <div class="datepicker-here" data-range="true"></div>
-            
-                      </div>
+  
+                <div class="courses__calendar">
+  
+                  <!-- <div class="datepicker-here" data-range="false"></div> -->
+  
+  
                 </div>
+              </div>
+  
             </div>
-            
           </div>
-
-          
-
         </div>
-
       </div>
-
     </section>
+    <!-- /courses -->
+
+
+
+
+
 
     <section class="factory">
 
@@ -616,213 +583,214 @@
       </div>
 
       <div class="news__time">
-          <div class="news__month"><a href="#">Май</a></div>
-          <div class="news__month news__month--active"><a href="#">Июнь</a></div>
-          <div class="news__month"><a href="#">Июль</a></div>
-          <div class="news__month"><a href="#">Август</a></div>
+        <div class="news__month"><a href="#">Май</a></div>
+        <div class="news__month news__month--active"><a href="#">Июнь</a></div>
+        <div class="news__month"><a href="#">Июль</a></div>
+        <div class="news__month"><a href="#">Август</a></div>
       </div>
 
       <div class="news__container">
-          <div class="container">
+        <div class="container">
 
-              
 
-            <div class="news__outer">
 
-                <div class="news__scroll owl-carousel">
-                    
-                        <a href="" class="news__item">
-              
-                          <div class="news__img">
-                            <img src="img/new1.jpg" srcset="img/new1@2x.jpg 900w, img/new1@3x.jpg 1200w" alt="">
-                          </div>
-              
-                          <div class="news__date">
-                            7 MAY 2015
-                          </div>
-              
-                          <div class="news__title">
-                            Weekend plans
-                          </div>
-              
-                          <div class="news__text">
-                            It’s nearly friday and we’re already planning
-                            for the weekend… start with waffles
-                          </div>
-              
-                        </a>
-              
-                        <a href="" class="news__item">
-              
-                          <div class="news__img">
-                            <img src="img/new2.jpg" srcset="img/new2@2x.jpg 900w, img/new2@3x.jpg 1200w" alt="">
-                          </div>
-              
-                          <div class="news__date">
-                            7 MAY 2015
-                          </div>
-              
-                          <div class="news__title">
-                            Weekend plans
-                          </div>
-              
-                          <div class="news__text">
-                            It’s nearly friday and we’re already planning
-                            for the weekend… start with waffles
-                          </div>
-              
-                        </a>
-                    
-      
-                   
-                      <a href="" class="news__item">
-            
-                        <div class="news__img">
-                          <img src="img/new1.jpg" srcset="img/new1@2x.jpg 900w, img/new1@3x.jpg 1200w" alt="">
-                        </div>
-            
-                        <div class="news__date">
-                          7 JUN 2015
-                        </div>
-            
-                        <div class="news__title">
-                          Weekend plans
-                        </div>
-            
-                        <div class="news__text">
-                          It’s nearly friday and we’re already planning
-                          for the weekend… start with waffles
-                        </div>
-            
-                      </a>
-            
-                      <a href="" class="news__item">
-            
-                        <div class="news__img">
-                          <img src="img/new2.jpg" srcset="img/new2@2x.jpg 900w, img/new2@3x.jpg 1200w" alt="">
-                        </div>
-            
-                        <div class="news__date">
-                          7 JUN 2015
-                        </div>
-            
-                        <div class="news__title">
-                          Weekend plans
-                        </div>
-            
-                        <div class="news__text">
-                          It’s nearly friday and we’re already planning
-                          for the weekend… start with waffles
-                        </div>
-            
-                      </a>
-               
-      
-                      <a href="" class="news__item">
-            
-                        <div class="news__img">
-                          <img src="img/new1.jpg" srcset="img/new1@2x.jpg 900w, img/new1@3x.jpg 1200w" alt="">
-                        </div>
-            
-                        <div class="news__date">
-                          7 JUL 2015
-                        </div>
-            
-                        <div class="news__title">
-                          Weekend plans
-                        </div>
-            
-                        <div class="news__text">
-                          It’s nearly friday and we’re already planning
-                          for the weekend… start with waffles
-                        </div>
-            
-                      </a>
-            
-                      <a href="" class="news__item">
-            
-                        <div class="news__img">
-                          <img src="img/new2.jpg" srcset="img/new2@2x.jpg 900w, img/new2@3x.jpg 1200w" alt="">
-                        </div>
-            
-                        <div class="news__date">
-                          7 JUL 2015
-                        </div>
-            
-                        <div class="news__title">
-                          Weekend plans
-                        </div>
-            
-                        <div class="news__text">
-                          It’s nearly friday and we’re already planning
-                          for the weekend… start with waffles
-                        </div>
-            
-                      </a>
-                    
-      
-                    
-                      <a href="" class="news__item">
-            
-                        <div class="news__img">
-                          <img src="img/new1.jpg" srcset="img/new1@2x.jpg 900w, img/new1@3x.jpg 1200w" alt="">
-                        </div>
-            
-                        <div class="news__date">
-                          7 AUG 2015
-                        </div>
-            
-                        <div class="news__title">
-                          Weekend plans
-                        </div>
-            
-                        <div class="news__text">
-                          It’s nearly friday and we’re already planning
-                          for the weekend… start with waffles
-                        </div>
-            
-                      </a>
-            
-                      <a href="" class="news__item">
-            
-                        <div class="news__img">
-                          <img src="img/new2.jpg" srcset="img/new2@2x.jpg 900w, img/new2@3x.jpg 1200w" alt="">
-                        </div>
-            
-                        <div class="news__date">
-                          7 AUG 2015
-                        </div>
-            
-                        <div class="news__title">
-                          Weekend plans
-                        </div>
-            
-                        <div class="news__text">
-                          It’s nearly friday and we’re already planning
-                          for the weekend… start with waffles
-                        </div>
-            
-                      </a>
-                   
-                </div> 
+          <div class="news__outer">
+
+            <div class="news__scroll owl-carousel">
+
+              <a href="" class="news__item">
+
+                <div class="news__img">
+                  <img src="img/new1.jpg" srcset="img/new1@2x.jpg 900w, img/new1@3x.jpg 1200w" alt="">
+                </div>
+
+                <div class="news__date">
+                  7 MAY 2015
+                </div>
+
+                <div class="news__title">
+                  Weekend plans
+                </div>
+
+                <div class="news__text">
+                  It’s nearly friday and we’re already planning
+                  for the weekend… start with waffles
+                </div>
+
+              </a>
+
+              <a href="" class="news__item">
+
+                <div class="news__img">
+                  <img src="img/new2.jpg" srcset="img/new2@2x.jpg 900w, img/new2@3x.jpg 1200w" alt="">
+                </div>
+
+                <div class="news__date">
+                  7 MAY 2015
+                </div>
+
+                <div class="news__title">
+                  Weekend plans
+                </div>
+
+                <div class="news__text">
+                  It’s nearly friday and we’re already planning
+                  for the weekend… start with waffles
+                </div>
+
+              </a>
+
+
+
+              <a href="" class="news__item">
+
+                <div class="news__img">
+                  <img src="img/new1.jpg" srcset="img/new1@2x.jpg 900w, img/new1@3x.jpg 1200w" alt="">
+                </div>
+
+                <div class="news__date">
+                  7 JUN 2015
+                </div>
+
+                <div class="news__title">
+                  Weekend plans
+                </div>
+
+                <div class="news__text">
+                  It’s nearly friday and we’re already planning
+                  for the weekend… start with waffles
+                </div>
+
+              </a>
+
+              <a href="" class="news__item">
+
+                <div class="news__img">
+                  <img src="img/new2.jpg" srcset="img/new2@2x.jpg 900w, img/new2@3x.jpg 1200w" alt="">
+                </div>
+
+                <div class="news__date">
+                  7 JUN 2015
+                </div>
+
+                <div class="news__title">
+                  Weekend plans
+                </div>
+
+                <div class="news__text">
+                  It’s nearly friday and we’re already planning
+                  for the weekend… start with waffles
+                </div>
+
+              </a>
+
+
+              <a href="" class="news__item">
+
+                <div class="news__img">
+                  <img src="img/new1.jpg" srcset="img/new1@2x.jpg 900w, img/new1@3x.jpg 1200w" alt="">
+                </div>
+
+                <div class="news__date">
+                  7 JUL 2015
+                </div>
+
+                <div class="news__title">
+                  Weekend plans
+                </div>
+
+                <div class="news__text">
+                  It’s nearly friday and we’re already planning
+                  for the weekend… start with waffles
+                </div>
+
+              </a>
+
+              <a href="" class="news__item">
+
+                <div class="news__img">
+                  <img src="img/new2.jpg" srcset="img/new2@2x.jpg 900w, img/new2@3x.jpg 1200w" alt="">
+                </div>
+
+                <div class="news__date">
+                  7 JUL 2015
+                </div>
+
+                <div class="news__title">
+                  Weekend plans
+                </div>
+
+                <div class="news__text">
+                  It’s nearly friday and we’re already planning
+                  for the weekend… start with waffles
+                </div>
+
+              </a>
+
+
+
+              <a href="" class="news__item">
+
+                <div class="news__img">
+                  <img src="img/new1.jpg" srcset="img/new1@2x.jpg 900w, img/new1@3x.jpg 1200w" alt="">
+                </div>
+
+                <div class="news__date">
+                  7 AUG 2015
+                </div>
+
+                <div class="news__title">
+                  Weekend plans
+                </div>
+
+                <div class="news__text">
+                  It’s nearly friday and we’re already planning
+                  for the weekend… start with waffles
+                </div>
+
+              </a>
+
+              <a href="" class="news__item">
+
+                <div class="news__img">
+                  <img src="img/new2.jpg" srcset="img/new2@2x.jpg 900w, img/new2@3x.jpg 1200w" alt="">
+                </div>
+
+                <div class="news__date">
+                  7 AUG 2015
+                </div>
+
+                <div class="news__title">
+                  Weekend plans
+                </div>
+
+                <div class="news__text">
+                  It’s nearly friday and we’re already planning
+                  for the weekend… start with waffles
+                </div>
+
+              </a>
+
             </div>
-
-            
           </div>
+
+
+        </div>
 
       </div>
 
       <div class="news__btn">
-          <div class="mainbtn">
-            <a href="news.html">Все события</a>
+        <div class="mainbtn">
+          <a href="news.html">Все события</a>
 
-          </div>
         </div>
+      </div>
 
-      
+
 
     </section>
 
+    <!-- contacts form -->
     <section class="contacts">
 
       <div class="container">
@@ -830,26 +798,32 @@
           Свяжитесь с нами
         </div>
 
-        <fprm method="post" class="contacts__form">
+        <form method="post" action="" enctype="multipart/form-data" class="contacts__form">
           <label>
             <span class="contacts__text">Оставьте ваш телефон чтобы мы перезвонили</span>
-            <input type="text" class="contacts__field contacts__field--half contacts__field--phone contacts__field--phonemask" placeholder="8 900 123-45-56">
+            <input type="tel"
+              class="contacts__field contacts__field--half contacts__field--phone contacts__field--phonemask phone-1"
+              placeholder="8 900 123-45-56">
           </label>
 
-          <div class="contacts__text contacts__text--icon">Или пишите нам, наши менеджеры свяжутся с вами в ближайшее время:</div>
+          <div class="contacts__text contacts__text--icon">Или пишите нам, наши менеджеры свяжутся с вами в ближайшее
+            время:</div>
 
           <input type="text" class="contacts__field contacts__field--half" placeholder="Имя">
           <input type="text" class="contacts__field contacts__field--half" placeholder="Ваш город">
-          <input type="text" class="contacts__field contacts__field--half contacts__field--phonemask" placeholder="Телефон">
+          <input type="tel" class="contacts__field contacts__field--half contacts__field--phonemask phone-2"
+            placeholder="Телефон" required>
           <input type="text" class="contacts__field contacts__field--half" placeholder="Направление">
-          <input type="email" class="contacts__field contacts__field--half" placeholder="Email">
+          <input type="email" class="contacts__field contacts__field--half" placeholder="Email" required>
           <input type="text" class="contacts__field contacts__field--half" placeholder="Бренд">
-          <textarea name="" id="" cols="30" rows="1" class="contacts__field contacts__field--big" placeholder="Сообщение"></textarea>
+          <textarea name="" id="" cols="30" rows="3" class="contacts__field contacts__field--big"
+            placeholder="Сообщение"></textarea>
 
           <div class="contacts__checking">
             <div class="contacts__personal">
               <label for="personal-checked" class="personal__checked">Согласие на обработку персональных данных</label>
-              <input type="checkbox" id="personal-checked" name="personal-personal-checked" class="form__checked" checked>
+              <input type="checkbox" id="personal-checked" name="personal-personal-checked" class="form__checked"
+                checked required>
               <span class="form__checkmark form__checkmark--checked">
               </span>
             </div>
@@ -857,7 +831,7 @@
           </div>
 
 
-        </div>
+        </form>
       </div>
 
     </section>
@@ -877,7 +851,13 @@
   <!-- <script src="js/datepicker.en.js"></script> -->
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.maskedinput.js"></script>
+  <script src="js/wiedemann.data.parser.js"></script>
+  <script src="js/wiedemann.calendar.widget.js"></script>
   <script src="js/main.js"></script>
   <script src="js/index.js"></script>
+  <!-- invisible -->
+  <div id="invisible">
+  </div>
 </body>
+
 </html>
