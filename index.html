@@ -439,7 +439,8 @@
           Наши курсы
         </div>
         <!-- calendar widget -->
-        <div id="calendar-widget"> <!-- widget id-->
+        <div id="calendar-widget">
+          <!-- widget id-->
           <div class="courses__info">
             <!-- left block -->
             <div class="courses__cities">
@@ -448,15 +449,13 @@
                 <select name="cities-list" data-entity="city-selector">
                   <option value="all" data-entity="city">Все города</option>
                 </select>
-                <div class="select-side"></div> <!--arrow-->
+                <div class="select-side"></div>
+                <!--arrow-->
               </div>
               <!-- directions list -->
               <ul class="cities__list" data-entity="directions">
                 <!-- direction template -->
-                <li
-                  class="cities__item"
-                  data-entity="direction"
-                  data-direction="">
+                <li class="cities__item" data-entity="direction" data-direction="">
                   Загрузка...
                 </li>
               </ul>
@@ -464,61 +463,53 @@
             <!-- right block -->
             <div class="courses__list">
               <div class="cities__title event-level">
-                <select data-entity="event-level">
-                  <option
-                    value=""
-                    data-entity="event-level-item"
-                    data-url="#">Уровень 1. Базовые курсы для начинающих</option>
+                <select data-entity="level-selector">
+                  <option value="" data-entity="level">Загрузка...</option>
                 </select>
                 <div class="select-side"></div>
               </div>
               <div class="courses__item">
                 <div class="courses__desc">
-                  <div class="courses__photo">
-                    <img src="img/course1.jpg" srcset="img/course1@2x.jpg 900w, img/course1@3x.jpg 1200w" alt="">
-  
-                  </div>
                   <div class="cities__title event-list">
-                    <select data-entity="event-list">
-                      <option
-                        value=""
-                        data-entity="event-list-item"
-                        data-url="#">Название семинара</option>
+                    <select data-entity="event-selector">
+                      <option value="" data-entity="event">Загрузка...</option>
                     </select>
                     <div class="select-side"></div>
                   </div>
-  
+                  <!-- <div class="courses__photo">
+                    <img src="img/course1.jpg" srcset="img/course1@2x.jpg 900w, img/course1@3x.jpg 1200w" alt="">
+                  </div> -->
                   <div class="courses__text" data-entity="event-text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi. Ut placerat quam
                     lectus. Curabitur dictum velit non lacus ornare tempor. Nullam quis augue in leo aliquet malesuada
                     sit amet eget eros. Sed laoreet posuere
                     velit sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </div>
-  
+
                   <div class="banner__link banner__link--small">
                     <a href="#" data-entity="event-url">Подробнее</a>
                   </div>
-  
+
                   <div class="courses__signup">
-  
+
                     <div class="courses__text">
                       Записаться на курс
                     </div>
-  
+
                     <a href="#" class="courses__link">+7 495 229 37 70</a>
                     <a href="#" class="courses__link courses__link--phone"></a>
                     <a href="#" class="courses__link courses__link--whatsapp"></a>
                   </div>
                 </div>
-  
-                <div class="courses__calendar">
-  
+
+                <div class="courses__calendar owl-carousel" data-entity="event-calendar">
+
                   <!-- <div class="datepicker-here" data-range="false"></div> -->
-  
-  
+
+
                 </div>
               </div>
-  
+
             </div>
           </div>
         </div>
@@ -851,13 +842,23 @@
   <!-- <script src="js/datepicker.en.js"></script> -->
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.maskedinput.js"></script>
-  <script src="js/wiedemann.data.parser.js"></script>
+  <!-- <script src="js/wiedemann.data.parser.js"></script> -->
   <script src="js/wiedemann.calendar.widget.js"></script>
   <script src="js/main.js"></script>
   <script src="js/index.js"></script>
-  <!-- invisible -->
-  <div id="invisible">
-  </div>
+
+  <script>
+    $(document).ready(function () {
+      wiedemann_data_parser.jqFetch('js/demo.json', function (data) {
+        window.wiedemann_calendar_widget = new WIEDEMANN_CALENDAR_WIDGET({
+          widget: 'calendar-widget',
+          defaultState: {
+            eventID: '10'
+          }
+        }).init(data)
+      })
+    })
+  </script>
 </body>
 
 </html>

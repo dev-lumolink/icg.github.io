@@ -1,0 +1,342 @@
+[
+  {
+    "id": 1,
+    "title": "Название семинара 13",
+    "city": "Carbonville",
+    "direction": "Velit qui in voluptate eiusmod eiusmod adipisicing.",
+    "level": {
+      "value": 1,
+      "text": "Уровень 5. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Fugiat et occaecat proident ullamco ex veniam veniam do culpa quis qui Lorem aute pariatur. Laboris anim Lorem aliqua eiusmod pariatur Lorem qui culpa. Ea exercitation consectetur in minim velit nostrud deserunt.",
+    "image": "/image/38.jpg",
+    "url": "/url10/url1/"
+  },
+  {
+    "id": 2,
+    "title": "Название семинара 7",
+    "city": "Fillmore",
+    "direction": "Qui mollit qui nisi in duis non amet enim pariatur do cupidatat proident ipsum anim.",
+    "level": {
+      "value": 5,
+      "text": "Уровень 5. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Pariatur duis culpa laborum commodo anim deserunt nostrud eiusmod ullamco. Tempor consectetur exercitation anim velit veniam adipisicing et ad mollit qui fugiat in aliquip officia. Do ea et ad nulla nulla aute quis sit cillum aliqua reprehenderit dolore duis.",
+    "image": "/image/26.jpg",
+    "url": "/url14/url19/"
+  },
+  {
+    "id": 3,
+    "title": "Название семинара 20",
+    "city": "Emerald",
+    "direction": "In in cupidatat mollit ut ad adipisicing do voluptate.",
+    "level": {
+      "value": 2,
+      "text": "Уровень 3. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Eiusmod ex consequat fugiat ad. Aliquip elit laboris quis labore culpa. Proident veniam sunt cupidatat voluptate nulla deserunt officia aliqua ipsum laborum dolore sunt et.",
+    "image": "/image/71.jpg",
+    "url": "/url5/url8/"
+  },
+  {
+    "id": 4,
+    "title": "Название семинара 11",
+    "city": "Belmont",
+    "direction": "Non nostrud dolore fugiat non qui culpa aliquip reprehenderit aliquip aliqua do sit.",
+    "level": {
+      "value": 3,
+      "text": "Уровень 3. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Dolore fugiat qui sunt ipsum et ea aute irure nisi irure veniam exercitation. Nostrud eu laboris commodo pariatur id consequat voluptate nostrud eiusmod qui adipisicing sint enim. Laboris mollit dolor est officia do consequat ad eiusmod non.",
+    "image": "/image/96.jpg",
+    "url": "/url8/url12/"
+  },
+  {
+    "id": 5,
+    "title": "Название семинара 3",
+    "city": "Biddle",
+    "direction": "Magna id elit amet do pariatur officia occaecat qui.",
+    "level": {
+      "value": 4,
+      "text": "Уровень 3. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Id nulla qui officia laboris exercitation voluptate. Exercitation labore consectetur quis et minim sint qui et mollit. Et enim exercitation laborum duis.",
+    "image": "/image/3.jpg",
+    "url": "/url5/url7/"
+  },
+  {
+    "id": 6,
+    "title": "Название семинара 16",
+    "city": "Tolu",
+    "direction": "Non reprehenderit pariatur nostrud pariatur elit sit ex ex laboris laborum qui nulla ut.",
+    "level": {
+      "value": 3,
+      "text": "Уровень 5. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Consectetur in qui et officia amet adipisicing elit proident. Sit est dolor cupidatat exercitation consectetur in deserunt adipisicing cupidatat id reprehenderit amet aliqua. Magna eu tempor id irure ad reprehenderit deserunt proident eiusmod excepteur velit non culpa.",
+    "image": "/image/2.jpg",
+    "url": "/url3/url13/"
+  },
+  {
+    "id": 7,
+    "title": "Название семинара 8",
+    "city": "Riegelwood",
+    "direction": "Tempor minim ullamco culpa do ut commodo voluptate.",
+    "level": {
+      "value": 5,
+      "text": "Уровень 4. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Lorem labore consequat dolor aliquip non in. Commodo mollit aliquip nulla id ea enim esse ex. Est dolor exercitation ex dolore non duis eiusmod culpa deserunt irure ipsum occaecat ex anim.",
+    "image": "/image/15.jpg",
+    "url": "/url14/url15/"
+  },
+  {
+    "id": 8,
+    "title": "Название семинара 0",
+    "city": "Bath",
+    "direction": "Cupidatat id nostrud nulla ad exercitation sint cupidatat officia amet Lorem magna incididunt.",
+    "level": {
+      "value": 5,
+      "text": "Уровень 2. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Et duis consequat aute laboris dolor deserunt excepteur consectetur ea tempor commodo pariatur occaecat. Esse minim eiusmod esse sunt ipsum pariatur pariatur occaecat sit est occaecat nostrud est laboris. Mollit deserunt ad deserunt eu irure enim est do cupidatat aliqua esse dolor aliquip.",
+    "image": "/image/53.jpg",
+    "url": "/url2/url9/"
+  },
+  {
+    "id": 9,
+    "title": "Название семинара 1",
+    "city": "Bancroft",
+    "direction": "Irure occaecat adipisicing aute elit culpa exercitation pariatur id.",
+    "level": {
+      "value": 2,
+      "text": "Уровень 3. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Consectetur cupidatat commodo ipsum reprehenderit mollit et qui aute. Adipisicing dolore veniam cillum eu deserunt. Ea consequat deserunt id incididunt.",
+    "image": "/image/23.jpg",
+    "url": "/url19/url3/"
+  },
+  {
+    "id": 10,
+    "title": "Название семинара 15",
+    "city": "Sisquoc",
+    "direction": "Pariatur enim exercitation ea et.",
+    "level": {
+      "value": 3,
+      "text": "Уровень 4. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Eu eiusmod est ullamco voluptate non sit mollit quis aliquip amet est culpa duis ex. Mollit quis incididunt eu nisi consequat mollit. Ullamco labore veniam enim laborum esse incididunt qui amet deserunt adipisicing.",
+    "image": "/image/81.jpg",
+    "url": "/url13/url6/"
+  },
+  {
+    "id": 11,
+    "title": "Название семинара 1",
+    "city": "Dante",
+    "direction": "Proident id voluptate eiusmod anim.",
+    "level": {
+      "value": 2,
+      "text": "Уровень 5. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Consectetur qui reprehenderit voluptate ex minim incididunt. Commodo qui officia id duis excepteur. Excepteur ut minim laborum laborum minim nostrud laboris.",
+    "image": "/image/90.jpg",
+    "url": "/url7/url10/"
+  },
+  {
+    "id": 12,
+    "title": "Название семинара 10",
+    "city": "Noblestown",
+    "direction": "Laborum incididunt dolore aute proident tempor Lorem qui.",
+    "level": {
+      "value": 2,
+      "text": "Уровень 3. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Occaecat eiusmod occaecat ut enim amet est voluptate labore consequat eiusmod occaecat consequat. Aliqua adipisicing dolore anim esse et deserunt ea do. Minim anim ut enim laborum.",
+    "image": "/image/56.jpg",
+    "url": "/url4/url1/"
+  },
+  {
+    "id": 13,
+    "title": "Название семинара 3",
+    "city": "Kaka",
+    "direction": "Reprehenderit ut officia Lorem ut ea anim consectetur excepteur nostrud.",
+    "level": {
+      "value": 4,
+      "text": "Уровень 1. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Nulla qui veniam eu eiusmod aliquip adipisicing mollit esse id. Nulla ut sunt quis do id ullamco cupidatat mollit velit. Dolore ipsum commodo et occaecat magna mollit ea culpa aute.",
+    "image": "/image/95.jpg",
+    "url": "/url4/url3/"
+  },
+  {
+    "id": 14,
+    "title": "Название семинара 9",
+    "city": "Waterloo",
+    "direction": "In voluptate voluptate aliquip aliquip.",
+    "level": {
+      "value": 2,
+      "text": "Уровень 3. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Sunt eu ea occaecat nostrud sit officia nisi sit nulla aute minim. Dolore cillum est incididunt occaecat laboris irure do. Nostrud velit sit tempor sint non nisi ipsum elit culpa nostrud.",
+    "image": "/image/62.jpg",
+    "url": "/url2/url16/"
+  },
+  {
+    "id": 15,
+    "title": "Название семинара 1",
+    "city": "Forbestown",
+    "direction": "Exercitation consequat ut nostrud nisi sint consequat labore cupidatat excepteur esse.",
+    "level": {
+      "value": 3,
+      "text": "Уровень 5. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Exercitation in in deserunt sint occaecat. Esse sit minim nisi officia ex. Ea labore do irure velit est dolor ullamco minim ea reprehenderit minim ut nulla.",
+    "image": "/image/4.jpg",
+    "url": "/url8/url5/"
+  },
+  {
+    "id": 16,
+    "title": "Название семинара 7",
+    "city": "Brogan",
+    "direction": "Sit ipsum sunt magna et do sit.",
+    "level": {
+      "value": 1,
+      "text": "Уровень 4. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Et eiusmod adipisicing irure Lorem cillum sit sunt sint id adipisicing ea do cupidatat laborum. Dolore enim laborum ipsum commodo qui non sint ex in laboris do anim do. Veniam et aute culpa irure nisi irure irure elit elit culpa excepteur aliquip.",
+    "image": "/image/60.jpg",
+    "url": "/url7/url16/"
+  },
+  {
+    "id": 17,
+    "title": "Название семинара 5",
+    "city": "Lutsen",
+    "direction": "Ipsum id cillum consequat aliqua ipsum quis occaecat voluptate.",
+    "level": {
+      "value": 1,
+      "text": "Уровень 5. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Ad dolor laboris pariatur tempor dolore dolore est eu Lorem eiusmod. Eu est est incididunt ullamco nisi minim. Do dolore duis reprehenderit adipisicing sit nisi cillum pariatur ea laboris duis proident.",
+    "image": "/image/11.jpg",
+    "url": "/url17/url14/"
+  },
+  {
+    "id": 18,
+    "title": "Название семинара 15",
+    "city": "Bethpage",
+    "direction": "Elit do et nisi fugiat mollit reprehenderit fugiat amet laboris ullamco laborum est enim fugiat.",
+    "level": {
+      "value": 3,
+      "text": "Уровень 3. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Consequat ullamco deserunt cillum fugiat nostrud adipisicing in. Consectetur pariatur officia laborum excepteur laboris aliquip esse consequat dolor tempor ut. Ex non consectetur ad sit adipisicing id ex do cillum nisi est pariatur do.",
+    "image": "/image/13.jpg",
+    "url": "/url8/url12/"
+  },
+  {
+    "id": 19,
+    "title": "Название семинара 14",
+    "city": "Drummond",
+    "direction": "Elit quis ut voluptate consectetur.",
+    "level": {
+      "value": 5,
+      "text": "Уровень 3. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Velit cupidatat consectetur Lorem et nostrud excepteur Lorem veniam Lorem ad nulla velit. Dolor cillum sunt nisi incididunt laboris eu duis enim eiusmod veniam. Exercitation culpa amet esse mollit sit dolore irure aute tempor Lorem eu pariatur consectetur ea.",
+    "image": "/image/93.jpg",
+    "url": "/url18/url12/"
+  },
+  {
+    "id": 20,
+    "title": "Название семинара 14",
+    "city": "Drummond",
+    "direction": "Elit quis ut voluptate consectetur.",
+    "level": {
+      "value": 5,
+      "text": "Уровень 3. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Velit cupidatat consectetur Lorem et nostrud excepteur Lorem veniam Lorem ad nulla velit. Dolor cillum sunt nisi incididunt laboris eu duis enim eiusmod veniam. Exercitation culpa amet esse mollit sit dolore irure aute tempor Lorem eu pariatur consectetur ea.",
+    "image": "/image/93.jpg",
+    "url": "/url18/url12/"
+  }
+]

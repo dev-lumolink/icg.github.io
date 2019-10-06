@@ -133,6 +133,10 @@ h6 {
   align-items: stretch;
 }
 
+.courses .container {
+  display: block;
+}
+
 .main-title {
   font-size: 48px;
   font-weight: 300;
@@ -565,6 +569,11 @@ h6 {
 .cities__list {
   color: #1f1f1f;
   cursor: pointer;
+  display: flex;
+  flex-flow: row wrap;
+}
+.cities__list li {
+  flex: 0 1 33%;
 }
 
 .cities__phone a {
@@ -598,6 +607,13 @@ h6 {
   .header__nav {
     margin-bottom: 180px;
   }
+  .cities__list {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .cities__list li {
+    flex: 0 1 calc(100% / 3)
+  }
 }
 
 @media screen and (max-width: 870px) {
@@ -610,6 +626,10 @@ h6 {
 @media screen and (max-width: 650px) {
   .header__cities {
     display: none;
+  }
+
+  .cities__list li {
+    flex: 0 1 50%;
   }
 
   .header__logo {
@@ -646,6 +666,10 @@ h6 {
     order: 1;
   }
 
+  .cities__list li {
+    flex: 1 0 100%;
+  }
+
   .header__search {
     -webkit-box-ordinal-group: 3;
     -ms-flex-order: 2;
@@ -676,6 +700,9 @@ h6 {
 @media (min-width: 1025px) {
   .banner {
     padding-bottom: 200px
+  }
+  .cities__list {
+    flex-flow: column;
   }
 }
 
@@ -1571,6 +1598,7 @@ h6 {
   position: relative;
   -ms-flex-preferred-size: 200px;
   flex-basis: 200px;
+  min-width: 200px;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-right: 45px;
@@ -1593,15 +1621,22 @@ h6 {
 }
 
 .courses__list .owl-nav {
-  top: -90px;
-  right: 10px;
-  left: auto;
+  position: absolute;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 12px;
+  padding: 0 33px;
 }
 
 .courses__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: flex-start;
 }
 
 .courses__desc {
@@ -1726,6 +1761,83 @@ h6 {
   padding: 1em;
 }
 
+[data-entity="event-calendar"] {
+  flex: 1 0 50%;
+  max-width: 50%;
+  border-radius: 5px;
+  -webkit-box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border: none;
+  position: relative;
+  margin: 0;
+  padding: 20px 30px 30px 30px;
+  cursor: default;
+  user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+@media screen and (max-width:650px){
+  [data-entity="event-calendar"] {
+    width: 100%;
+    flex: 1 0 100%;
+    max-width: 360px;
+    padding: 15px
+  }
+  .courses__cities {
+    margin: 0;
+    flex: 0 1 auto;
+  }
+}
+.calendar-body {
+  display: flex;
+  flex-flow: column;
+  padding-top: 10px;
+}
+.cblock {
+  display: flex;
+}
+.title--month{
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+  top: -8px;
+}
+.cblock--list {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.cblock--weekdays {
+  flex-wrap: nowrap;
+}
+.cblock--weekdays li {
+  font-size: 10px;
+  line-height: 1.1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #1a47b0;
+  font-family: 'Circe';
+}
+.cblock--days {
+  flex-wrap: wrap;
+}
+.cblock--list li {
+  flex: 1 0 calc(100% / 7);
+  max-width: calc(100% / 7);
+  line-height: 2.6em;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+.cblock--list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #b8d2ff;
+  color: #00489c;
+}
 .cities__title select {
   border: none;
   background: transparent;
@@ -1771,11 +1883,13 @@ h6 {
   margin-top: -3px;
 }
 
-.cities__item:hover {
+.cities__item:hover,
+.cities__item.active {
   color: #00489c;
 }
 
-.cities__item:hover:before {
+.cities__item:hover:before,
+.cities__item.active:before {
   background: #00489c;
 }
 
@@ -1907,6 +2021,7 @@ h6 {
     padding-top: 0px;
     max-width: 100%;
     padding-bottom: 70px;
+    flex-flow: column;
   }
 
   .courses .datepicker--nav-action {
@@ -1923,6 +2038,7 @@ h6 {
 
   .courses__item {
     width: 100%;
+    align-items: flex-start;
   }
 
   .courses .datepicker {
@@ -1930,7 +2046,7 @@ h6 {
   }
 
   .courses__cities {
-    display: none;
+    flex: 0 1 auto;
   }
 
   .courses__list {
@@ -1942,12 +2058,11 @@ h6 {
 
 @media screen and (max-width: 650px) {
   .courses__cities {
-    display: none;
+    flex: 0 1 auto;
   }
 
   .courses__list .owl-nav {
-    top: auto;
-    right: 10px;
+    padding: 0 18px;
   }
 
   .courses__desc {
@@ -1956,6 +2071,8 @@ h6 {
 
   .courses__info {
     padding-bottom: 0;
+    flex-flow: column;
+    flex: 0 1 auto;
   }
 
   .courses .main-title {
@@ -1998,6 +2115,7 @@ h6 {
   .courses__item {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    align-items: flex-start;
   }
 
   .courses__item .banner__link {

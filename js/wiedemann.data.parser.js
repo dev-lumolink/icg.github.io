@@ -44,6 +44,9 @@ var WIEDEMANN_DATA_PARSER = function (options) {
           case "level":
             return item.level == filterBy.value
             break;
+          case "levelID":
+            return item.level.value == filterBy.value
+            break;
           case "dates":
             return item.dates == filterBy.value
             break;
@@ -74,6 +77,9 @@ var WIEDEMANN_DATA_PARSER = function (options) {
             break;
           case "level":
             return item.level;
+            break;
+          case "levelID":
+            return item.level.value;
             break;
           case "text":
             return item.text;
