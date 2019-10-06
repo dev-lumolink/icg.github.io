@@ -644,3 +644,14 @@ if (jQuery && wiedemann_data_parser) {
     };
   }
 };
+
+$(document).ready(function () {
+  wiedemann_data_parser.jqFetch('js/events.json', function (data) {
+    window.wiedemann_calendar_widget = new WIEDEMANN_CALENDAR_WIDGET({
+      widget: 'calendar-widget',
+      defaultState: {
+        eventID: '3'
+      }
+    }).init(data)
+  })
+})
