@@ -35,6 +35,10 @@
   font-style: normal;
 }
 
+select {
+  cursor: pointer;
+}
+
 select::-ms-expand {
   display: none;
 }

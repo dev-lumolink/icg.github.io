@@ -134,9 +134,7 @@ var WIEDEMANN_DATA_PARSER = function (options) {
       .done(function (data) {
         that.data = data
         done(data);
-      })
-      .then(function () {
-        that.formatData()
+        console.log(JSON.stringify(data))
       })
   }
 }
@@ -644,14 +642,3 @@ if (jQuery && wiedemann_data_parser) {
     };
   }
 };
-
-$(document).ready(function () {
-  wiedemann_data_parser.jqFetch('js/events.json', function (data) {
-    window.wiedemann_calendar_widget = new WIEDEMANN_CALENDAR_WIDGET({
-      widget: 'calendar-widget',
-      defaultState: {
-        eventID: '3'
-      }
-    }).init(data)
-  })
-})
