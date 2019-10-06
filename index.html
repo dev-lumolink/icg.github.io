@@ -839,21 +839,19 @@
 
   <script src="js/jquery-3.4.1.js"></script>
   <script src="js/datepicker.js"></script>
-  <!-- <script src="js/datepicker.en.js"></script> -->
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.maskedinput.js"></script>
-  <!-- <script src="js/wiedemann.data.parser.js"></script> -->
   <script src="js/wiedemann.calendar.widget.js"></script>
   <script src="js/main.js"></script>
   <script src="js/index.js"></script>
 
   <script>
     $(document).ready(function () {
-      wiedemann_data_parser.jqFetch('js/demo.json', function (data) {
+      wiedemann_data_parser.jqFetch('js/events.json', function (data) {
         window.wiedemann_calendar_widget = new WIEDEMANN_CALENDAR_WIDGET({
           widget: 'calendar-widget',
           defaultState: {
-            eventID: '10'
+            eventID: '3'
           }
         }).init(data)
       })

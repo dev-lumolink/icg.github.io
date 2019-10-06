@@ -324,7 +324,24 @@
   },
   {
     "id": 20,
-    "title": "Название семинара 14",
+    "title": "Название семинара 15",
+    "city": "Drummond",
+    "direction": "Elit quis ut voluptate consectetur.",
+    "level": {
+      "value": 5,
+      "text": "Уровень 3. Продвинутые курсы для начинающих"
+    },
+    "dates": [
+      {"from": "2019-10-06T21:00:00.000Z","to": "2019-10-20T21:00:00.000Z"},
+      {"from": "2019-11-19T21:00:00.000Z","to": "2019-11-22T21:00:00.000Z"}
+  ],
+    "text": "Velit cupidatat consectetur Lorem et nostrud excepteur Lorem veniam Lorem ad nulla velit. Dolor cillum sunt nisi incididunt laboris eu duis enim eiusmod veniam. Exercitation culpa amet esse mollit sit dolore irure aute tempor Lorem eu pariatur consectetur ea.",
+    "image": "/image/93.jpg",
+    "url": "/url18/url12/"
+  },
+  {
+    "id": 21,
+    "title": "Название семинара 16",
     "city": "Drummond",
     "direction": "Elit quis ut voluptate consectetur.",
     "level": {

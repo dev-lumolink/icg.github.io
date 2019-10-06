@@ -28,6 +28,22 @@ var WIEDEMANN_DATA_PARSER = function (options) {
     return unique;
   }
 
+  this.compare = function (arr) {
+    var counts = arr.reduce((result, value) => {
+      if (typeof result[value] === 'undefined') {
+        result[value] = 0;
+      }
+      return ++result[value], result;
+    }, {});
+    var values = Object.getOwnPropertyNames(counts).sort((a, b) => a - b);
+    var start = 0;
+    for (let value of values) {
+      let end = counts[value] + start;
+      arr.fill(+value, start, end);
+      start = end;
+    }
+  }
+
   // get field by smart filter
   this.show = function (filterTo, filterBy) {
     return this.makeUnique(this.data.filter(function (item) {
@@ -393,14 +409,6 @@ if (jQuery && wiedemann_data_parser) {
       return $(select).find('option:selected').val()
     }
 
-    this.makeUnique = function (array) {
-      var unique = [];
-      for (var i = 0, length = array.length; i < length; i++) {
-        if (!unique.includes(array[i])) unique.push(array[i]);
-      };
-      return unique;
-    }
-
     this.getDirections = function (city) {
       if (city == "all") {
         that.directions = that.dataParser.show('direction', {})
@@ -420,9 +428,11 @@ if (jQuery && wiedemann_data_parser) {
         } else {
           if (item.direction == that.direction) return item
         }
-      }).map(function (item) {
+      })
+      .map(function (item) {
         return item.level
-      });
+      })
+      .reduce(function(acc, el){ return el.value == acc.value ? el : null });
       return this;
     }
 
@@ -433,7 +443,8 @@ if (jQuery && wiedemann_data_parser) {
         } else {
           if ((item.direction == that.direction) && (item.level.value == that.level)) return item
         }
-      });
+      })
+      // .reduce(function(acc, el){ return el.id != acc.id ? acc : null });
       return this;
     }
 
@@ -556,7 +567,7 @@ if (jQuery && wiedemann_data_parser) {
         })
       })
 
-      if (defaultID) $(that.DOM.selectors.level).find('option[value="' + defaultID + '"]').prop('selected',true);
+      if (defaultID) $(that.DOM.selectors.level).find('option[value="' + defaultID + '"]').prop('selected', true);
     };
 
     this.eventSelect = function (node, defaultID) {
@@ -579,7 +590,7 @@ if (jQuery && wiedemann_data_parser) {
       });
       // refresh owl.carousel
       $(calendar.DOM_ELEMENT).trigger('refresh.owl.carousel');
-      if (defaultID) $(that.DOM.selectors.event).find('option[value="' + defaultID + '"]').prop('selected',true);
+      if (defaultID) $(that.DOM.selectors.event).find('option[value="' + defaultID + '"]').prop('selected', true);
     };
 
     // create calendar
@@ -609,19 +620,27 @@ if (jQuery && wiedemann_data_parser) {
           value: that.params.defaultState.eventID
         })
       })();
-
-      console.log(that)
       // set default state
       this.createState(this.defaulState[0]);
       // event listeners
       // city selector
-      $(this.DOM.selectors.city).on('change', function () { that.citySelect($(this)) })
+      $(this.DOM.selectors.city).on('change', function () {
+        that.citySelect($(this))
+      })
       // direction list
-      $(this.DOM.directions.list).on('click', function (e) { that.directionSelect($(e.target)); });
+      $(this.DOM.directions.list).on('click', function (e) {
+        that.directionSelect($(e.target));
+      });
       // level selector
-      $(this.DOM.selectors.level).on('change', function () { that.levelSelect($(this)); });
+      $(this.DOM.selectors.level).on('change', function () {
+        if(that.getSelectedValue($(this)) == "all") return;
+        that.levelSelect($(this));
+      });
       // event selector
-      $(this.DOM.selectors.event).on('change', function () { that.eventSelect($(this)); });
+      $(this.DOM.selectors.event).on('change', function () {
+        if(that.getSelectedValue($(this)) == "all") return;
+        that.eventSelect($(this));
+      });
     };
   }
 };

@@ -1225,7 +1225,7 @@ h6 {
   display: inline-block;
   position: absolute;
   width: 42px;
-  right: 0;
+  right: -30px;
   top: 50%;
   margin-top: -4px;
   background: url("../img/icons/arrow-blue.svg") center center no-repeat;
@@ -2354,6 +2354,8 @@ h6 {
 .news__item {
   display: flex;
   flex-flow: column;
+  align-content: center;
+  align-items: center;
 }
 
 .news__img {
