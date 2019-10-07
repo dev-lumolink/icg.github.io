@@ -116,9 +116,11 @@ var WIEDEMANN_DATA_PARSER = function () {
         }
       })
       .done(function (data) {
-      	var parsedData = $.parseJSON(data);
-        that.data = parsedData;
-        done(parsedData);
+      	// var parsedData = $.parseJSON(data);
+        // that.data = parsedData;
+        // done(parsedData);
+        that.data = data;
+        done(data)
       })
   }
 }
@@ -564,12 +566,27 @@ if (jQuery && wiedemann_data_parser) {
       $(calendar.DOM_ELEMENT).find('.owl-stage .owl-item').each(function (index, element) {
         $(calendar.DOM_ELEMENT).trigger('remove.owl.carousel', index);
       });
-      // appending new calendar
-      $.each(that.event[0].dates, function (index, dates) {
-        that.createCalendar(dates);
-      });
-      // refresh owl.carousel
+      if (that.event[0].dates && that.event[0].dates.length != 0) {
+        // appending new calendar
+        $.each(that.event[0].dates, function (index, dates) {
+          that.createCalendar(dates);
+        });
+        // refresh owl.carousel
+        // $(calendar.DOM_ELEMENT).trigger('refresh.owl.carousel');
+      } else {
+        var text = that.farm().set('div', {
+          attributes: {
+            class: 'calendar-warning'
+          },
+          html: 'Дату&nbsp;уточните&nbsp;по&nbsp;телефонам:<br/>'+
+          '<a href="tel:+78125655257">Спб&nbsp;(812)&nbsp;565-52-57</a>'+
+          '<a href="tel:+74954453771">Мск&nbsp;(495)&nbsp;445-37-71</a>'+
+          '<a href="tel:+73433638438">Екб&nbsp;(343)&nbsp;363-84-38</a>'
+        });
+        $(calendar.DOM_ELEMENT).trigger('add.owl.carousel', text, [0]);
+      }
       $(calendar.DOM_ELEMENT).trigger('refresh.owl.carousel');
+    
       if (defaultID) $(that.DOM.selectors.event).find('option[value="' + defaultID + '"]').prop('selected', true);
     };
 

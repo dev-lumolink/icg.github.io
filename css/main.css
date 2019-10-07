@@ -830,7 +830,7 @@ h6 {
   -ms-flex-pack: start;
   justify-content: flex-start;*/
   position: relative;
-  max-width: 100%;
+  max-width: 85%;
   z-index: 5;
 }
 
@@ -1039,6 +1039,7 @@ h6 {
 
   .banner__left {
     width: 100%;
+    max-width: auto;
     padding-right: 0;
   }
 
@@ -1612,7 +1613,7 @@ h6 {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  padding: 180px 0;
+  padding: 0 0 180px;
   position: relative;
 }
 
@@ -1896,6 +1897,20 @@ h6 {
   background-color: #b8d2ff;
   color: #00489c;
 }
+.calendar-warning {
+  display: flex;
+  flex-flow: column;
+  height: 250px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: #595f6f;
+}
+.calendar-warning a {
+  color: #00489c;
+  line-height: 2em;
+}
+
 .cities__title select {
   border: none;
   background: transparent;
