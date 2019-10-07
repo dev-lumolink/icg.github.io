@@ -1,23 +1,6 @@
-var WIEDEMANN_DATA_PARSER = function (options) {
-  this.options = options;
-  this.data = [];
-  this.cities = [];
-  this.directions = [];
-  this.events = [];
+var WIEDEMANN_DATA_PARSER = function () {
 
   var that = this;
-
-  this.formatData = function () {
-    this.cities = this.data.map(function (item) {
-      return item.city
-    });
-    this.directions = this.data.map(function (item) {
-      return item.direction
-    });
-    this.events = this.data.map(function (item) {
-      return item.title
-    })
-  }
 
   // makeUnique fnc
   this.makeUnique = function (array) {
@@ -124,6 +107,7 @@ var WIEDEMANN_DATA_PARSER = function (options) {
 
   this.jqFetch = function (url, done) {
     $.ajax(url, {
+        dataType: 'json',
         beforeSend: function () {
           console.log('loading data...')
         },
@@ -132,16 +116,14 @@ var WIEDEMANN_DATA_PARSER = function (options) {
         }
       })
       .done(function (data) {
-        that.data = data
-        done(data);
-        console.log(JSON.stringify(data))
+      	var parsedData = $.parseJSON(data);
+        that.data = parsedData;
+        done(parsedData);
       })
   }
 }
 
-window.wiedemann_data_parser = new WIEDEMANN_DATA_PARSER({
-  fetch: 'js/events.json'
-});
+window.wiedemann_data_parser = new WIEDEMANN_DATA_PARSER();
 /*
  * CALENDAR ISO 8601
  */
