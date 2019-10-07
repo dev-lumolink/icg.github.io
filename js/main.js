@@ -1,17 +1,17 @@
 //меню в хедере
-$(window).on('click', function(e) {
+// $(window).on('click', function(e) {
 
-  if ( e.target.closest('.header__popup') === null && $('.header__popup').css('display') == 'block' ) {
-    if ( !$('.header__burger').is(e.target) ) {
-      $('.header__popup').slideToggle();
-    }    
-  }  
+//   if ( e.target.closest('.header__popup') === null && $('.header__popup').css('display') == 'block' ) {
+//     if ( !$('.header__burger').is(e.target) ) {
+//       $('.header__popup').slideToggle();
+//     }    
+//   }  
 
-  if ( e.target.closest('.header__search')===null && e.target != $('.search__popup') && e.target.closest('.search__popup') === null && $('.search__popup').css('display') == 'block' ) {
-    $('.search__popup').slideToggle();
-  }  
+//   if ( e.target.closest('.header__search')===null && e.target != $('.search__popup') && e.target.closest('.search__popup') === null && $('.search__popup').css('display') == 'block' ) {
+//     $('.search__popup').slideToggle();
+//   }  
  
-})
+// })
 
 $('.header__burger').on('click', function(e) {
   e.preventDefault();
