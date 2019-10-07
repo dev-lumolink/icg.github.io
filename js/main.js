@@ -43,7 +43,9 @@ $(".brends__list").owlCarousel({
   margin: 16,
   responsive: {
     320: {
-      items: 1
+      items: 2,
+      center: true,
+      margin: 10
     },
     640: {
       items: 3
@@ -134,6 +136,14 @@ $(document).ready(function(){
 // wiedemann scripts start here. Code above is not mine
 // events slider
 $(document).ready(function(){
+  $(window).on('scroll', function(){
+    if(window.pageYOffset > 200) {
+      $('body').addClass('fixed');
+    } else {
+      $('body').removeClass('fixed')
+    }
+  })
+
   var eventsSlider = $('[data-slider="events"]').owlCarousel({
     loop: false,
     responsive: {

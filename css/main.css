@@ -82,6 +82,7 @@ body {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  margin-top: 95px;
 }
 
 ul {
@@ -106,6 +107,8 @@ a {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   outline: none;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
 }
 
 h1,
@@ -116,6 +119,68 @@ h5,
 h6 {
   margin: 0;
   padding: 0;
+}
+
+header.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-animation-name: slideOut;
+          animation-name: slideOut;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
+}
+@-webkit-keyframes slideIn {
+  from {
+    top: -100%;
+  } to {
+    top: 0;
+  }
+}
+@keyframes slideIn {
+  from {
+    top: -100%;
+  } to {
+    top: 0;
+  }
+}
+@-webkit-keyframes slideOut {
+  from {
+    top: 0;
+  } to {
+    top: -100%;
+  }
+}
+@keyframes slideOut {
+  from {
+    top: 0;
+  } to {
+    top: -100%;
+  }
+}
+
+body.fixed header.header {
+  position: fixed;
+  z-index: 99;
+  -webkit-animation-name: slideIn;
+          animation-name: slideIn;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: .3s;
+          animation-duration: .3s;
 }
 
 .container {
@@ -354,11 +419,10 @@ h6 {
 
 .header__logo {
   margin-right: 30px;
-  height: 50px;
 }
 
 .header__logo img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -464,6 +528,7 @@ h6 {
   height: 24px;
   background: #fff url("../img/icons/burger.svg") center center no-repeat;
   background-size: contain;
+  cursor: pointer;
 }
 
 .header__popup {
@@ -655,6 +720,14 @@ h6 {
   .header__logo {
     margin-right: 0;
     width: 40px;
+    /* height: 40px; */
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-left: 20px;
+    padding: 17px 0;
+  }
+  .header__logo img {
     height: 40px;
   }
 
@@ -1132,6 +1205,9 @@ h6 {
   .banner__title {
     font-size: 24px;
     line-height: 32px;
+  }
+  .brends__list .owl-stage-outer {
+    overflow:visible!important;
   }
 }
 
@@ -1655,10 +1731,7 @@ h6 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   top: 0;
-  left: 0;
-  width: 100%;
   margin-top: 12px;
-  padding: 0 33px;
 }
 
 .courses__item {
@@ -1845,9 +1918,9 @@ h6 {
 }
 .title--month{
   position: relative;
-  text-transform: uppercase;
-  text-align: center;
   top: -8px;
+  font-variant: all-small-caps;
+  color: #595f6f;
 }
 .cblock--list {
   -webkit-box-orient: horizontal;
@@ -1867,7 +1940,7 @@ h6 {
   line-height: 1.1;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #1a47b0;
+  color: #1a47b0!important;
   font-family: 'Circe';
 }
 .cblock--days {
@@ -1889,21 +1962,33 @@ h6 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: #595f6f;
 }
 .cblock--list li a {
-  display: block;
-  width: 100%;
-  height: 100%;
+  display: inline-block;
+  width: 2em;
+  line-height: 2em;
   background-color: #b8d2ff;
   color: #00489c;
+  border-radius: 5px;
 }
 .calendar-warning {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   height: 250px;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
   color: #595f6f;
 }
 .calendar-warning a {

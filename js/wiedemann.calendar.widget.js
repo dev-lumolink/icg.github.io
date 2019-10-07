@@ -116,7 +116,7 @@ var WIEDEMANN_DATA_PARSER = function () {
         }
       })
       .done(function (data) {
-      	// var parsedData = $.parseJSON(data);
+        // var parsedData = $.parseJSON(data);
         // that.data = parsedData;
         // done(parsedData);
         that.data = data;
@@ -405,16 +405,16 @@ if (jQuery && wiedemann_data_parser) {
 
     this.getLevels = function () {
       that.levels = that.dataParser.data.filter(function (item) {
-        if (that.city !== "all") {
-          if ((item.city == that.city) && (item.direction == that.direction)) return item
-        } else {
-          if (item.direction == that.direction) return item
-        }
-      })
-      .map(function (item) {
-        return item.level
-      })
-      .reduce(function(acc, el){ return el.value == acc.value ? el : null });
+          if (that.city !== "all") {
+            if ((item.city == that.city) && (item.direction == that.direction)) return item
+          } else {
+            if (item.direction == that.direction) return item
+          }
+        })
+        .map(function (item) {
+          return item.level
+        })
+        
       return this;
     }
 
@@ -557,7 +557,7 @@ if (jQuery && wiedemann_data_parser) {
       // text
       that.DOM.eventContent.text.innerText = that.event[0].text;
       // image
-      
+
       // url
       that.DOM.eventContent.url.href = that.event[0].url;
 
@@ -578,15 +578,15 @@ if (jQuery && wiedemann_data_parser) {
           attributes: {
             class: 'calendar-warning'
           },
-          html: 'Дату&nbsp;уточните&nbsp;по&nbsp;телефонам:<br/>'+
-          '<a href="tel:+78125655257">Спб&nbsp;(812)&nbsp;565-52-57</a>'+
-          '<a href="tel:+74954453771">Мск&nbsp;(495)&nbsp;445-37-71</a>'+
-          '<a href="tel:+73433638438">Екб&nbsp;(343)&nbsp;363-84-38</a>'
+          html: 'Дату&nbsp;уточните&nbsp;по&nbsp;телефонам:<br/>' +
+            '<a href="tel:+78125655257">Спб&nbsp;(812)&nbsp;565-52-57</a>' +
+            '<a href="tel:+74954453771">Мск&nbsp;(495)&nbsp;445-37-71</a>' +
+            '<a href="tel:+73433638438">Екб&nbsp;(343)&nbsp;363-84-38</a>'
         });
         $(calendar.DOM_ELEMENT).trigger('add.owl.carousel', text, [0]);
       }
       $(calendar.DOM_ELEMENT).trigger('refresh.owl.carousel');
-    
+
       if (defaultID) $(that.DOM.selectors.event).find('option[value="' + defaultID + '"]').prop('selected', true);
     };
 
@@ -630,12 +630,12 @@ if (jQuery && wiedemann_data_parser) {
       });
       // level selector
       $(this.DOM.selectors.level).on('change', function () {
-        if(that.getSelectedValue($(this)) == "all") return;
+        if (that.getSelectedValue($(this)) == "all") return;
         that.levelSelect($(this));
       });
       // event selector
       $(this.DOM.selectors.event).on('change', function () {
-        if(that.getSelectedValue($(this)) == "all") return;
+        if (that.getSelectedValue($(this)) == "all") return;
         that.eventSelect($(this));
       });
     };
