@@ -555,7 +555,7 @@ if (jQuery && wiedemann_data_parser) {
       // text
       that.DOM.eventContent.text.innerText = that.event[0].text;
       // image
-
+      
       // url
       that.DOM.eventContent.url.href = that.event[0].url;
 
