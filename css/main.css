@@ -1324,7 +1324,7 @@ body.fixed header.header {
   display: inline-block;
   position: absolute;
   width: 42px;
-  right: -30px;
+  /* right: -30px; */
   top: 50%;
   margin-top: -4px;
   background: url("../img/icons/arrow-blue.svg") center center no-repeat;
