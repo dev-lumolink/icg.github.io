@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
   <title>ICG Group</title>
 
   <link rel="stylesheet" href="css/normalize.css">
@@ -838,7 +838,6 @@
   </footer>
 
   <script src="js/jquery-3.4.1.js"></script>
-  <script src="js/datepicker.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.maskedinput.js"></script>
   <script src="js/wiedemann.calendar.widget.js"></script>
@@ -846,16 +845,6 @@
   <script src="js/index.js"></script>
 
   <script>
-    $(document).ready(function () {
-      wiedemann_data_parser.jqFetch('js/events.json', function (data) {
-        window.wiedemann_calendar_widget = new WIEDEMANN_CALENDAR_WIDGET({
-          widget: 'calendar-widget',
-          defaultState: {
-            eventID: '3'
-          }
-        }).init(data)
-      })
-    })
   </script>
 </body>
 

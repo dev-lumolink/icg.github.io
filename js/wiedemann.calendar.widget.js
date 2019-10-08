@@ -6,25 +6,13 @@ var WIEDEMANN_DATA_PARSER = function () {
   this.makeUnique = function (array) {
     var unique = [];
     for (var i = 0, length = array.length; i < length; i++) {
-      if (!unique.includes(array[i])) unique.push(array[i]);
+      if(Array.prototype.includes) {
+        if (!unique.includes(array[i])) unique.push(array[i]);
+      } else {
+        unique.push(array[i])
+      }
     };
     return unique;
-  }
-
-  this.compare = function (arr) {
-    var counts = arr.reduce((result, value) => {
-      if (typeof result[value] === 'undefined') {
-        result[value] = 0;
-      }
-      return ++result[value], result;
-    }, {});
-    var values = Object.getOwnPropertyNames(counts).sort((a, b) => a - b);
-    var start = 0;
-    for (let value of values) {
-      let end = counts[value] + start;
-      arr.fill(+value, start, end);
-      start = end;
-    }
   }
 
   // get field by smart filter
@@ -148,27 +136,27 @@ var CALENDAR = function (options) {
     return this;
   }
 
-  this.year = function (format = this.DEFAULT_LOCALE_FORMAT) {
+  this.year = function (format) {
     return this.get({
-      year: format
+      year: format ? format : this.DEFAULT_LOCALE_FORMAT
     }); // "numeric", "2-digit"
   };
 
-  this.month = function (format = this.DEFAULT_LOCALE_FORMAT) {
+  this.month = function (format) {
     return this.get({
-      month: format
+      month: format ? format : this.DEFAULT_LOCALE_FORMAT
     }); // "numeric", "2-digit", "narrow", "short", "long"
   };
 
-  this.day = function (format = this.DEFAULT_LOCALE_FORMAT) {
+  this.day = function (format) {
     return this.get({
-      day: format
+      day: format ? format : this.DEFAULT_LOCALE_FORMAT
     }); // "numeric", "2-digit"
   };
 
-  this.weekday = function (format = 'long') {
+  this.weekday = function (format) {
     return this.get({
-      weekday: format
+      weekday: format ? format : 'long'
     }); // "narrow", "short", "long"
   };
 
@@ -237,11 +225,11 @@ var CALENDAR = function (options) {
             that.cnode().setinside(cheader, 'button', {
               attributes: {
                 type: 'button',
-                class: `cbutton button--${i == 0 ? 'prev' : 'next'}`
+                class: 'cbutton button--' +  i == 0 ? 'prev' : 'next'
               },
               html: that.cnode().set('i', {
                 attributes: {
-                  class: `fa fa-arrow-${i == 0 ? 'left' : 'right'}`
+                  class: 'fa fa-arrow-' + i == 0 ? 'left' : 'right'
                 }
               })
             })
@@ -256,7 +244,7 @@ var CALENDAR = function (options) {
           // weekdays iterator
           for (zeroOffset = 1; zeroOffset <= 7; zeroOffset++) {
             that.cnode().setinside(cblock_weekdays, 'li', {
-              html: new Date(`2019, 07, ${zeroOffset}`).toLocaleDateString('RU-ru', {
+              html: new Date('2019, 07, ' + zeroOffset).toLocaleDateString('RU-ru', {
                 weekday: 'short'
               })
             });
@@ -286,7 +274,7 @@ var CALENDAR = function (options) {
               attributes: {
                 'aria-details': day + 1
               },
-              html: options ? (day + 1) >= json_dates.from && (day + 1) <= json_dates.to ? '<a href="' + options.event.url + '">' + (day + 1) + '</a>' : day + 1 : null
+              html: options ? (day + 1) >= json_dates.from && (day + 1) <= json_dates.to ? '<a ' + ( ((day + 1) == json_dates.from) ? 'class="edge-from"' : ((day + 1) == json_dates.to) ? 'class="edge-to"' : '') + 'href="' + options.event.url + '">' + (day + 1) + '</a>' : day + 1 : null
             });
           };
 
@@ -300,7 +288,7 @@ var CALENDAR = function (options) {
     return (function () {
       var node, attribute;
       return {
-        set: function (DOMnode = 'div', options = {}) {
+        set: function (DOMnode, options) {
           if (typeof DOMnode == 'object') return DOMnode;
 
           node = document.createElement(DOMnode);
@@ -313,7 +301,7 @@ var CALENDAR = function (options) {
           options.html ? node.innerHTML = options.html : null;
           return node;
         },
-        setinside: function (ParentDOMElement, DOMnode, options = {}) {
+        setinside: function (ParentDOMElement, DOMnode, options) {
           ParentDOMElement.appendChild(this.set(DOMnode, options));
         }
       }
@@ -441,7 +429,7 @@ if (jQuery && wiedemann_data_parser) {
       return (function () {
         var node, attribute;
         return {
-          set: function (DOMnode = 'div', params = {}) {
+          set: function (DOMnode, params) {
             if (typeof DOMnode == 'object') return DOMnode;
 
             node = document.createElement(DOMnode);
@@ -454,7 +442,7 @@ if (jQuery && wiedemann_data_parser) {
             params.html ? node.innerHTML = params.html : null;
             return node;
           },
-          setinside: function (ParentDOMElement, DOMnode, params = {}) {
+          setinside: function (ParentDOMElement, DOMnode, params) {
             ParentDOMElement.appendChild(this.set(DOMnode, params));
           },
           clear: function (DOMnode) {
@@ -638,6 +626,20 @@ if (jQuery && wiedemann_data_parser) {
         if (that.getSelectedValue($(this)) == "all") return;
         that.eventSelect($(this));
       });
+
+      // $('[data-entity="event-calendar"]').trigger('refresh.owl.carousel')
     };
   }
 };
+$(document).ready(function () {
+  if(window.wiedemann_data_parser) {
+    window.wiedemann_data_parser.jqFetch('js/events.json', function (data) {
+      window.wiedemann_calendar_widget = new WIEDEMANN_CALENDAR_WIDGET({
+        widget: 'calendar-widget',
+        defaultState: {
+          eventID: '9'
+        }
+      }).init(data)
+    })
+  }
+})

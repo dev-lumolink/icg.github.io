@@ -205,12 +205,5 @@ $(document).ready(function(){
   $(document).on('input change click focus focusout', function(){
     if($('.contacts__form').find('[required]:valid')) $('.contacts__form input[type="submit"]').prop('disabled', false);
     if(!$('.contacts__form').find('[required]:valid')) $('.contacts__form input[type="submit"]').prop('disabled', true);
-  })
-})
-
-window.addEventListener('orientationchange', function(e){
-  $('owl-carousel').reinit({
-    autoWidth: false,
-    autoHeight: false
-  })
+  });
 })
