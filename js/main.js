@@ -11,7 +11,7 @@ $(document).ready(function ($) {
     })
   };
   // course calendar
-  $.ajax('/js/events.json').done(function (data) {
+  $.ajax('/icg.github.io/js/events.json').done(function (data) {
     var dates = data.filter(function (item) {
       return item.id == $('#datepicker').data('course-id')
     }).map(function (item) {
