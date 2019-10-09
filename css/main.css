@@ -1675,7 +1675,7 @@ section.courses {
 }
 
 .courses {
-  background: url("../img/Bg@3x.jpg") left bottom no-repeat;
+  background: url("../img/Bg.jpg") left bottom no-repeat;
   background-size: 80%;
 }
 
@@ -2714,9 +2714,7 @@ section.courses {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
+  /* position: absolute; */
   -webkit-transition: .3s;
   transition: .3s;
 }
