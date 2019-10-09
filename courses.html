@@ -7,35 +7,24 @@
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>ICG Group</title>
-
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link href="css/datepicker.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/main.css">
-
 </head>
 
 <body>
-
   <div class="wrapper courses-page">
-
     <!-- header -->
     <header class="header">
-
       <div class="container">
-
         <div class="header__menu">
           <div class="header__burger">
-
           </div>
-
           <div class="header__popup">
-
             <div class="header__wrapper">
               <a href="#" class="header__close">
-
               </a>
-
               <nav class="header__nav">
                 <ul class="header__list">
                   <li class="header__item">
@@ -64,12 +53,10 @@
                   </li>
                 </ul>
               </nav>
-
               <div class="header__contacts">
                 <div class="header__text">
                   ICG В СОЦИАЛЬНЫХ СЕТЯХ
                 </div>
-
                 <ul class="header__social-list">
                   <li class="header__social header__social--vk">
                     <a href="#"></a>
@@ -82,9 +69,7 @@
                   </li>
                 </ul>
               </div>
-
             </div>
-
           </div>
         </div>
         <div class="header__logo">
@@ -114,22 +99,18 @@
             </li>
           </ul>
         </div>
-
         <div class="header__search">
           <div class="search__icon">
-
           </div>
           <div class="search__popup">
-              <form action="" method="POST" class="search__form">
-                <input type="text" placeholder="Поиск" class="search__field" id="search__field">
-                <input type="submit" class="search__submit" value="">
-              </form>
-            </div>
+            <form action="" method="POST" class="search__form">
+              <input type="text" placeholder="Поиск" class="search__field" id="search__field">
+              <input type="submit" class="search__submit" value="">
+            </form>
+          </div>
         </div>
       </div>
-
     </header>
-
     <!-- brand slider -->
     <section class="brends">
       <div class="container">
@@ -161,15 +142,23 @@
         </ul>
       </div>
     </section>
-
     <!-- breadcrumbs -->
-    <nav class="breadcrumbs">
+    <div class="breadcrumbs">
       <div class="container">
-        <a href="index.html" class="breadcrumbs__link">Главная</a>
-        <a href="courses.html" class="breadcrumbs__link">Учебный центр ICG</a>
+        <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="#">
+              <span itemprop="name">главная</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="#">
+              <span itemprop="name">учебный центр ICG</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+        </ol>
       </div>
-    </nav>
-
+    </div>
     <!-- banners -->
     <section class="banners courses-page">
       <div class="container">
@@ -183,9 +172,7 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
             </div>
           </div>
-
         </div>
-
         <div class="offers__item">
           <div class="offers__photo" style="background-image: url('img/courses2@2x.jpg');"></div>
           <div class="offers__desc">
@@ -196,80 +183,64 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
             </div>
           </div>
-
         </div>
       </div>
     </section>
-
-    <!-- education -->
-    <section class="education">
+    <!-- education features -->
+    <section class="education education-features">
       <div class="container">
-        <div class="main-title">
+        <h1 class="main-title">
           Образовательный центр ICG
-        </div>
-
+        </h1>
         <div class="education__desc">
           Обучаем 1285 студентов со всей России по 7 направлениям в год
         </div>
-
         <div class="education__list">
           <div class="education__item">
             <div class="education__photo education__photo--study">
-
             </div>
-
             <div class="education__text">
               Бесплатное обучение при покупке
             </div>
           </div>
-
           <div class="education__item">
             <div class="education__photo">
-
             </div>
-
             <div class="education__text">
               Бесплатное обучение при покупке
             </div>
           </div>
-
           <div class="education__item">
             <div class="education__photo">
-
             </div>
-
             <div class="education__text">
               Бесплатное обучение при покупке
             </div>
           </div>
-
           <div class="education__item">
             <div class="education__photo">
-
             </div>
-
             <div class="education__text">
               Бесплатное обучение при покупке
             </div>
           </div>
         </div>
-
+      </div>
+    </section>
+    <!-- education-courses -->
+    <section class="education education-courses">
+      <div class="container">
         <div class="education__filters">
           <div class="cities__title">
-
             <select name="cities-list" id="eduction-city">
               <option value="msk">Все города</option>
               <option value="msk">Москва</option>
               <option value="spb">Санкт-Петербург</option>
               <option value="msk">Екатеринбург</option>
             </select>
-
             <div class="select-side">
-
             </div>
-
           </div>
-
           <!-- categories -->
           <div class="education__courses">
             <a href="#" class="education__name">
@@ -291,116 +262,80 @@
               Идёт набор
             </a>
           </div>
-
         </div>
-
         <!-- courses -->
         <div class="education__areas">
-
           <div class="education__area" data-popular="true" data-direction="cosmetologia" data-profession="cosmetolog"
             data-author="true">
             <div class="education__subject">
-
               <div class="control">
-
               </div>
               <a href="#" class="education__title">
                 Аппаратный педикюр
               </a>
-
               <div class="calendar">
-
               </div>
             </div>
-
             <div class="education__content">
               <div class="education__items">
                 <div class="education__course">
                   <div class="course__photo">
                     <img src="img/pedicure1.jpg" srcset="img/pedicure1@2x.jpg 900w, img/pedicure1@3x.jpg 1200w" alt="">
                   </div>
-
                   <div class="course__info">
-
                     <div class="course__name">
                       Педикюр
                     </div>
-
                     <div class="course__date">
                       12.09.2019
                     </div>
-
                     <div class="course__city">
                       Cанкт-Петербург
                     </div>
-
                   </div>
-
                   <div class="course__places">
                     Осталось <span>2</span> места
                   </div>
-
                   <div class="course__link">
-
                   </div>
                 </div>
-
                 <div class="education__course">
                   <div class="course__photo">
                     <img src="img/pedicure2.jpg" srcset="img/pedicure2@2x.jpg 900w, img/pedicure2@3x.jpg 1200w" alt="">
                   </div>
-
                   <div class="course__info">
-
                     <div class="course__name">
                       Педикюр
                     </div>
-
                     <div class="course__date">
                       12.09.2019
                     </div>
-
                     <div class="course__city">
                       Москва
                     </div>
-
                   </div>
-
                   <div class="course__places">
                     Осталось <span>2</span> места
                   </div>
-
                   <div class="course__link">
-
                   </div>
                 </div>
               </div>
-
               <div class="education__btn">
-
                 <div class="mainbtn">
                   <a href="#">Все курсы</a>
                 </div>
-
               </div>
             </div>
-
-
           </div>
-
-
           <div class="education__area">
             <div class="education__subject">
-
               <div class="control">
-
               </div>
               <a href="#" class="education__title">
                 Подология
               </a>
-
               <div class="calendar">
-
               </div>
             </div>
             <div class="education__content">
@@ -409,85 +344,60 @@
                   <div class="course__photo">
                     <img src="img/pedicure1.jpg" srcset="img/pedicure1@2x.jpg 900w, img/pedicure1@3x.jpg 1200w" alt="">
                   </div>
-
                   <div class="course__info">
-
                     <div class="course__name">
                       Педикюр
                     </div>
-
                     <div class="course__date">
                       12.09.2019
                     </div>
-
                     <div class="course__city">
                       Cанкт-Петербург
                     </div>
-
                   </div>
-
                   <div class="course__places">
                     Осталось <span>2</span> места
                   </div>
-
                   <div class="course__link">
-
                   </div>
                 </div>
-
                 <div class="education__course">
                   <div class="course__photo">
                     <img src="img/pedicure2.jpg" srcset="img/pedicure2@2x.jpg 900w, img/pedicure2@3x.jpg 1200w" alt="">
                   </div>
-
                   <div class="course__info">
-
                     <div class="course__name">
                       Педикюр
                     </div>
-
                     <div class="course__date">
                       12.09.2019
                     </div>
-
                     <div class="course__city">
                       Москва
                     </div>
-
                   </div>
-
                   <div class="course__places">
                     Осталось <span>2</span> места
                   </div>
-
                   <div class="course__link">
-
                   </div>
                 </div>
               </div>
-
               <div class="education__btn">
-
                 <div class="mainbtn">
                   <a href="#">Все курсы</a>
                 </div>
-
               </div>
             </div>
           </div>
-
           <div class="education__area">
             <div class="education__subject">
-
               <div class="control">
-
               </div>
               <a href="#" class="education__title">
                 Перманентный макияж
               </a>
-
               <div class="calendar">
-
               </div>
             </div>
             <div class="education__content">
@@ -496,85 +406,60 @@
                   <div class="course__photo">
                     <img src="img/pedicure1.jpg" srcset="img/pedicure1@2x.jpg 900w, img/pedicure1@3x.jpg 1200w" alt="">
                   </div>
-
                   <div class="course__info">
-
                     <div class="course__name">
                       Педикюр
                     </div>
-
                     <div class="course__date">
                       12.09.2019
                     </div>
-
                     <div class="course__city">
                       Cанкт-Петербург
                     </div>
-
                   </div>
-
                   <div class="course__places">
                     Осталось <span>2</span> места
                   </div>
-
                   <div class="course__link">
-
                   </div>
                 </div>
-
                 <div class="education__course">
                   <div class="course__photo">
                     <img src="img/pedicure2.jpg" srcset="img/pedicure2@2x.jpg 900w, img/pedicure2@3x.jpg 1200w" alt="">
                   </div>
-
                   <div class="course__info">
-
                     <div class="course__name">
                       Педикюр
                     </div>
-
                     <div class="course__date">
                       12.09.2019
                     </div>
-
                     <div class="course__city">
                       Москва
                     </div>
-
                   </div>
-
                   <div class="course__places">
                     Осталось <span>2</span> места
                   </div>
-
                   <div class="course__link">
-
                   </div>
                 </div>
               </div>
-
               <div class="education__btn">
-
                 <div class="mainbtn">
                   <a href="#">Все курсы</a>
                 </div>
-
               </div>
             </div>
           </div>
-
           <div class="education__area">
             <div class="education__subject">
-
               <div class="control">
-
               </div>
               <a href="#" class="education__title">
                 Перманентный макияж
               </a>
-
               <div class="calendar">
-
               </div>
             </div>
             <div class="education__content">
@@ -583,78 +468,55 @@
                   <div class="course__photo">
                     <img src="img/pedicure1.jpg" srcset="img/pedicure1@2x.jpg 900w, img/pedicure1@3x.jpg 1200w" alt="">
                   </div>
-
                   <div class="course__info">
-
                     <div class="course__name">
                       Педикюр
                     </div>
-
                     <div class="course__date">
                       12.09.2019
                     </div>
-
                     <div class="course__city">
                       Cанкт-Петербург
                     </div>
-
                   </div>
-
                   <div class="course__places">
                     Осталось <span>2</span> места
                   </div>
-
                   <div class="course__link">
-
                   </div>
                 </div>
-
                 <div class="education__course">
                   <div class="course__photo">
                     <img src="img/pedicure2.jpg" srcset="img/pedicure2@2x.jpg 900w, img/pedicure2@3x.jpg 1200w" alt="">
                   </div>
-
                   <div class="course__info">
-
                     <div class="course__name">
                       Педикюр
                     </div>
-
                     <div class="course__date">
                       12.09.2019
                     </div>
-
                     <div class="course__city">
                       Москва
                     </div>
-
                   </div>
-
                   <div class="course__places">
                     Осталось <span>2</span> места
                   </div>
-
                   <div class="course__link">
-
                   </div>
                 </div>
               </div>
-
               <div class="education__btn">
-
                 <div class="mainbtn">
                   <a href="#">Все курсы</a>
                 </div>
-
               </div>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
-
     <!-- courses -->
     <section class="courses">
       <div class="container">
@@ -709,48 +571,35 @@
                     sit amet eget eros. Sed laoreet posuere
                     velit sit amet varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </div>
-
                   <div class="banner__link banner__link--small">
                     <a href="#" data-entity="event-url">Подробнее</a>
                   </div>
-
                   <div class="courses__signup">
-
                     <div class="courses__text">
                       Записаться на курс
                     </div>
-
                     <a href="#" class="courses__link">+7 495 229 37 70</a>
                     <a href="#" class="courses__link courses__link--phone"></a>
                     <a href="#" class="courses__link courses__link--whatsapp"></a>
                   </div>
                 </div>
-
                 <div class="courses__calendar owl-carousel" data-entity="event-calendar">
-
                   <!-- <div class="datepicker-here" data-range="false"></div> -->
-
-
                 </div>
               </div>
-
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <!-- sales courses -->
     <section class="sales-courses">
       <div class="container">
-
         <div class="main-title">
           Акции на курсы
         </div>
       </div>
-
       <div class="slider-wrapper">
-
         <div class="container">
           <div class="sales-courses__list owl-carousel">
             <div class="sales-courses__item sales-courses__item--discont">
@@ -771,11 +620,8 @@
                   </div>
                   <div class="sales-courses__review">
                     <div class="stars">
-
                       <div id="review__stars">
-
                         <!-- для вывода рейтинга: класс review__item--active -->
-
                         <div class="review__item">
                           <input type="radio" name="stars">
                         </div>
@@ -792,7 +638,6 @@
                           <input type="radio" name="stars">
                         </div>
                       </div>
-
                     </div>
                     <div class="text">
                       <span>85</span> Отзывов
@@ -803,33 +648,24 @@
             </div>
             <div class="sales-courses__item">
               <a href="#">
-
                 <div class="sales-courses__photo" style="background-image: url('img/courses3.jpg');"></div>
-
                 <div class="sales-courses__desc">
                   <div class="sales-courses__price">
                     30 000 ₽
                   </div>
-
                   <div class="course__name">
                     Косметология
                   </div>
-
                   <div class="course__city">
                     Санкт-Петербург
                   </div>
-
                   <div class="sales-courses__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
                   </div>
-
                   <div class="sales-courses__review">
                     <div class="stars">
-
                       <div id="review__stars">
-
                         <!-- для вывода рейтинга: класс review__item--active -->
-
                         <div class="review__item">
                           <input type="radio" name="stars">
                         </div>
@@ -846,7 +682,6 @@
                           <input type="radio" name="stars">
                         </div>
                       </div>
-
                     </div>
                     <div class="text">
                       <span>85</span> Отзывов
@@ -857,33 +692,24 @@
             </div>
             <div class="sales-courses__item">
               <a href="#">
-
                 <div class="sales-courses__photo" style="background-image: url('img/courses3.jpg');"></div>
-
                 <div class="sales-courses__desc">
                   <div class="sales-courses__price">
                     30 000 ₽
                   </div>
-
                   <div class="course__name">
                     Косметология
                   </div>
-
                   <div class="course__city">
                     Санкт-Петербург
                   </div>
-
                   <div class="sales-courses__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
                   </div>
-
                   <div class="sales-courses__review">
                     <div class="stars">
-
                       <div id="review__stars">
-
                         <!-- для вывода рейтинга: класс review__item--active -->
-
                         <div class="review__item">
                           <input type="radio" name="stars">
                         </div>
@@ -900,7 +726,6 @@
                           <input type="radio" name="stars">
                         </div>
                       </div>
-
                     </div>
                     <div class="text">
                       <span>85</span> Отзывов
@@ -911,22 +736,14 @@
             </div>
           </div>
         </div>
-
-
-
-
-
       </div>
     </section>
-
     <!-- contacts form -->
     <section class="contacts">
-
       <div class="container">
         <div class="main-title">
           Свяжитесь с нами
         </div>
-
         <form method="post" action="" enctype="multipart/form-data" class="contacts__form">
           <label>
             <span class="contacts__text">Оставьте ваш телефон чтобы мы перезвонили</span>
@@ -934,10 +751,8 @@
               class="contacts__field contacts__field--half contacts__field--phone contacts__field--phonemask phone-1"
               placeholder="8 900 123-45-56">
           </label>
-
           <div class="contacts__text contacts__text--icon">Или пишите нам, наши менеджеры свяжутся с вами в ближайшее
             время:</div>
-
           <input type="text" class="contacts__field contacts__field--half" placeholder="Имя">
           <input type="text" class="contacts__field contacts__field--half" placeholder="Ваш город">
           <input type="tel" class="contacts__field contacts__field--half contacts__field--phonemask phone-2"
@@ -947,7 +762,6 @@
           <input type="text" class="contacts__field contacts__field--half" placeholder="Бренд">
           <textarea name="" id="" cols="30" rows="3" class="contacts__field contacts__field--big"
             placeholder="Сообщение"></textarea>
-
           <div class="contacts__checking">
             <div class="contacts__personal">
               <label for="personal-checked" class="personal__checked">Согласие на обработку персональных данных</label>
@@ -958,42 +772,18 @@
             </div>
             <input type="submit" class="mainbtn mainbtn--blue contacts__btn" value="Отправить заявку">
           </div>
-
-
         </form>
       </div>
-
     </section>
   </div>
-
   <footer class="footer">
-
     ICG Group 2019
-
   </footer>
-
   <script src="js/jquery-3.4.1.js"></script>
   <script src="js/owl.carousel.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/datepicker.js"></script>
-  <script src="js/datepicker.en.js"></script>
   <script src="js/jquery.maskedinput.js"></script>
   <script src="js/wiedemann.calendar.widget.js"></script>
-  <script src="js/courses.js"></script>
-
-  <script>
-    $(document).ready(function () {
-      wiedemann_data_parser.jqFetch('js/events.json', function (data) {
-        window.wiedemann_calendar_widget = new WIEDEMANN_CALENDAR_WIDGET({
-          widget: 'calendar-widget',
-          defaultState: {
-            eventID: '3'
-          }
-        }).init(data)
-      })
-    })
-  </script>
-
+  <script src="js/main.js"></script>
 </body>
 
 </html>
