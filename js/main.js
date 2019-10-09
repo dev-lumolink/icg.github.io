@@ -87,6 +87,9 @@ $(document).ready(function ($) {
         items: 3
       },
       960: {
+        items: 4
+      },
+      1025: {
         items: 6
       }
     }
@@ -129,8 +132,8 @@ $(document).ready(function ($) {
     margin: 0
   });
   var newsSlider = $('.news__scroll').owlCarousel({
-    URLhashListener:true,
-    autoplayHoverPause:true,
+    URLhashListener: true,
+    autoplayHoverPause: true,
     startPosition: '1',
     mouseDrag: false,
     touchDrag: false,
@@ -143,37 +146,20 @@ $(document).ready(function ($) {
       }
     }
   })
-  // responsive sliders
-  // function calcNav() {
-  //   var height = $('.courses__calendar .datepicker').height();
-  //   $('.courses__list .owl-nav').css('bottom', height + 10 + 'px');
-  // }
-
-  // function calcSlider() {
-  //   var i = $(".news__scroll .news__item").length;
-  //   if ($(window).width() >= 650) {
-
-  //     $(".news__scroll").css('width', i * 50 + '%');
-
-  //     setTimeout(function () {
-  //       $('.news__outer').css('height', $('.news__item').height() + 40 + 'px');
-  //     }, 300)
-
-  //     scrollToMonth($(".news__month--active").index());
-  //   } else {
-  //     $(".news__scroll").css('width', '');
-  //     $(".news__scroll").css('left', '');
-  //     $('.news__outer').css('height', '');
-  //   }
-
-  // }
-  // calcPage();
-  // if ($(window).width() <= 650) {
-  //   calcNav();
-  //   calcSlider();
-  // } else {
-  //   //calcSlider();
-  // }
+  var salesSlider = $(".sales__slider").owlCarousel({
+    items: 2,
+    nav: true,
+    loop: false,
+    margin: 30,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      750: {
+        items: 2,
+      }
+    }
+  });
 
   function scrollToMonth(i) {
     var screen = $("news__outer");
@@ -200,53 +186,6 @@ $(document).ready(function ($) {
 
     }
   })
-
-  // function calcPage() {
-  //   $(function () {
-  //     var owl = $('.news__outer .owl-carousel'),
-  //       owlOptions = {
-  //         loop: false,
-  //         nav: false,
-  //         margin: 10,
-  //         responsive: {
-  //           0: {
-  //             items: 1
-  //           }
-  //         }
-  //       };
-
-  //     if ($(window).width() <= 650) {
-  //       var owlActive = owl.owlCarousel(owlOptions);
-  //     } else {
-  //       owl.addClass('off');
-  //     }
-
-  //     $(window).resize(function () {
-  //       if ($(window).width() <= 650) {
-  //         if (owl.hasClass('off')) {
-  //           var owlActive = owl.owlCarousel(owlOptions);
-  //           owl.removeClass('off');
-  //         }
-  //       } else {
-  //         if (!owl.hasClass('off')) {
-  //           owl.addClass('off').trigger('destroy.owl.carousel');
-  //           owl.find('.owl-stage-outer').children(':eq(0)').unwrap();
-  //         }
-  //       }
-  //     });
-  //     calcSlider();
-  //   });
-  // }
-
-  // $(window).resize(function () {
-  //   if ($(window).width() <= 650) {
-  //     calcNav();
-  //     calcSlider();
-  //   } else {
-  //     calcSlider();
-  //   }
-  //   calcPage();
-  // })
   // burger
   $('.header__burger').on('click', function (e) {
     e.preventDefault();
@@ -271,20 +210,13 @@ $(document).ready(function ($) {
   //переключатель checkbox в блоке Свяжитесь с нами
   $(".contacts__personal").on('click', function (e) {
     e.preventDefault();
-    var decorCheckbox = $(this).find(".form__checkmark"),
-      mainCheckbox = $(this).find(".form__checked");
+    $(this)
+      .find('.form__checkmark')
+      .toggleClass('form__checkmark--checked')
+      .siblings('span')
+      .toggleClass('form__form__checkmark--checked');
 
-
-    if (decorCheckbox.hasClass("form__checkmark--checked")) {
-      decorCheckbox.removeClass("form__checkmark--checked");
-      mainCheckbox.prop('checked', false);
-      $(this).siblings('.mainbtn').addClass('disabled');
-
-    } else {
-      decorCheckbox.addClass("form__checkmark--checked");
-      mainCheckbox.prop('checked', true);
-      $(this).siblings('.mainbtn').removeClass('disabled');
-    }
+    $('.contacts__btn').toggleClass('disabled');
   })
   //phone mask в блоке Свяжитесь с нами
   function checkPhone() {
@@ -410,5 +342,14 @@ $(document).ready(function ($) {
     for (var i = 0; i < buttons.length; i++) {
       buttons.eq(i).prop('checked', true);
     }
+  });
+
+  $('.onemebel__photos .onemebel__pic').on('click', function (e) {
+    e.preventDefault();
+    var screen = $('.onemebel__big .onemebel__pic img');
+
+    screen.attr('src', $(this).find('img').attr('src'));
+    screen.attr('srcset', $(this).find('img').attr('srcset'));
+
   })
 })

@@ -1,38 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>ICG Group</title>
-
   <link rel="stylesheet" href="css/normalize.css">
-  <link href="css/datepicker.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/datepicker.minimal.css">
   <link rel="stylesheet" href="css/main.css">
-
 </head>
+
 <body>
-
   <div class="wrapper course-page">
-
     <header class="header">
-
       <div class="container">
-
         <div class="header__menu">
           <div class="header__burger">
-
           </div>
-
           <div class="header__popup">
-
             <div class="header__wrapper">
               <a href="#" class="header__close">
-
               </a>
-
               <nav class="header__nav">
                 <ul class="header__list">
                   <li class="header__item">
@@ -61,12 +52,10 @@
                   </li>
                 </ul>
               </nav>
-
               <div class="header__contacts">
                 <div class="header__text">
                   ICG В СОЦИАЛЬНЫХ СЕТЯХ
                 </div>
-
                 <ul class="header__social-list">
                   <li class="header__social header__social--vk">
                     <a href="#"></a>
@@ -79,9 +68,7 @@
                   </li>
                 </ul>
               </div>
-
             </div>
-
           </div>
         </div>
         <div class="header__logo">
@@ -90,13 +77,13 @@
         <div class="header__cities">
           <ul class="cities__list">
             <li class="cities__name">
-                Москва
+              Москва
             </li>
             <li class="cities__name">
-                Санкт-Петербург
+              Санкт-Петербург
             </li>
             <li class="cities__name">
-                Екатеринбург
+              Екатеринбург
             </li>
           </ul>
           <ul class="phone__list">
@@ -111,23 +98,25 @@
             </li>
           </ul>
         </div>
-
         <div class="header__search">
           <div class="search__icon">
-
+          </div>
+          <div class="search__popup">
+            <form action="" method="POST" class="search__form">
+              <input type="text" placeholder="Поиск" class="search__field" id="search__field">
+              <input type="submit" class="search__submit" value="">
+            </form>
           </div>
         </div>
       </div>
-
     </header>
-
     <section class="brends">
       <div class="container">
         <ul class="brends__list owl-carousel">
           <li class="brends__item">
             <a href="#" class="brends__link--desktop">IONTO Comed</a>
             <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
-          </li>            
+          </li>
           <li class="brends__item">
             <a href="#" class="brends__link--desktop">Suda</a>
             <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
@@ -137,265 +126,358 @@
             <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
           <li class="brends__item">
-              <a href="#" class="brends__link--desktop">MyStyle</a>
-              <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
+            <a href="#" class="brends__link--desktop">MyStyle</a>
+            <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
           <li class="brends__item">
-              <a href="#" class="brends__link--desktop">Bernand Cassiere</a>
-              <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
+            <a href="#" class="brends__link--desktop">Bernand Cassiere</a>
+            <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
           <li class="brends__item">
-              <a href="#" class="brends__link--desktop">Profillers</a>
-              <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
+            <a href="#" class="brends__link--desktop">Profillers</a>
+            <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
         </ul>
       </div>
     </section>
-
-    <nav class="breadcrumbs">
-        <div class="container">
-            <a href="index.html" class="breadcrumbs__link">Главная</a>
-            <a href="courses.html" class="breadcrumbs__link">Учебный центр ICG</a>           
-            <a href="one-course.html" class="breadcrumbs__link">Первый уровень. Базовый курс для начинающих. Аппаратный педикюр (SUDA)</a>
-        </div>
-    </nav>
-
+    <!-- breadcrumbs -->
+    <div class="breadcrumbs">
+      <div class="container">
+        <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="#">
+              <span itemprop="name">главная</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="#">
+              <span itemprop="name">учебный центр ICG</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="#">
+              <span itemprop="name">Первый уровень. Базовый курс для начинающих. Аппаратный педикюр (SUDA)</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+        </ol>
+      </div>
+    </div>
     <section class="course__main">
-
-        <div class="container">
-            <div class="main-title">
-                Первый уровень. Базовый курс для начинающих
-            </div>
-
-            <div class="course__block">
-                <div class="course__photos">
-
-                    <div class="course__short">
-                        <div class="course__pic">
-
-                            <img src="img/course-photo.png" srcset="img/course-photo@2x.png 900w, img/course-photo@3x.png 1200w" alt="">
-
-                            <div class="course__price">
-                                17 000 ₽
-                            </div>
-                        </div>
-
-                        <div class="course__info">
-                          <div class="course__title">
-                            Аппаратный педикюр SUDA 
-                        </div>
-
-                        <div class="course__format">
-                            <ul class="course__format-left">
-                                <li>
-                                    Формат
-                                </li>
-                                <li>
-                                    Нагрузка
-                                </li>
-                                <li>
-                                    Время прохождения
-                                </li>
-                                <li>
-                                    Сертификат
-                                </li>
-    
-                            </ul>
-    
-                            <div class="course__format-right">
-                                <li>
-                                    Групповой
-                                </li>
-                                <li>
-                                    8 часов в неделю
-                                </li>
-                                <li>
-                                    4 недели
-                                </li>
-                                <li>
-                                    Нет
-                                </li>
-                            </div>
-                        </div>
-                        </div>
-
-                        
-                        
-                    </div>      
-
-                    <div class="course__btns">
-                        <div class="course__btn course__btn--full cities__title">
-                          <div class="course__payment">
-                              <select name="cities-list" id="">
-                                  <option value="full">Оплатить полностью</option>
-                                  <option value="half">Оплатить 50%</option>
-                                </select>
-  
-                                <div class="select-side"></div>
-                          </div>
-                            
-                        </div>
-                        <div class="course__btn">
-                            <span>Записаться</span>
-                            
-                        </div>
-                    </div>
-
+      <div class="container">
+        <h1 class="main-title">
+          Первый уровень. Базовый курс для начинающих
+        </h1>
+        <div class="course__block">
+          <div class="course__photos">
+            <div class="course__short">
+              <div class="course__pic">
+                <img src="img/course-photo.png" srcset="img/course-photo@2x.png 900w, img/course-photo@3x.png 1200w"
+                  alt="">
+                <div class="course__price">
+                  17 000 ₽
                 </div>
-
-                <div class="course__info">
-                    <div class="course__tabs">
-
-                        <a href="#" class="course__tab course__tab--active">
-                            Описание курса
-                            
-                        </a>
-                        <a href="#" class="course__tab">
-                            Программа курса
-                        </a>
-                        <a href="#" class="course__tab">
-                            Отзывы               
-                        </a>
-
-                    </div>
-
-                    <div class="course__desc course__desc--active">
-                        <div class="course__text">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi. Ut placerat quam 
-                                lectus. Curabitur dictum velit non lacus ornare tempor. Nullam quis augue in leo aliquet 
-                                malesuada sit amet eget eros. Sed laoreet posuere velit sit amet varius. 
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi. Ut placerat quam 
-                                lectus. Curabitur dictum velit non lacus ornare tempor. Nullam quis augue in leo aliquet 
-                                malesuada sit amet eget eros.
-                            </p>
-                        </div>
-
-                        <div class="course__features">
-                            <div class="course__feature">
-                                После прохождения курса вы сможете
-                            </div>
-                            <div class="course__feature">
-                                После прохождения курса вы сможете
-                            </div>
-                            <div class="course__feature">
-                                После прохождения курса вы сможете
-                            </div>
-                        </div>
-
-                        <div class="course__text">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi. Ut placerat quam 
-                                lectus. Curabitur dictum velit non lacus ornare tempor. Nullam quis augue in leo aliquet 
-                                malesuada sit amet eget eros. Sed laoreet posuere velit sit amet varius. 
-                            </p>
-                        </div>
-
-                        <div class="course__support">
-                            <div class="course__support-title">
-                                Мы поддерживаем
-                            </div>
-
-                            <div class="course__support-list">
-                                <div class="course__support-item course__support-item--mc">
-
-                                </div>
-                                <div class="course__support-item course__support-item--visa">
-                                    
-                                </div>
-                                <div class="course__support-item course__support-item--paypal">
-                            
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="course__desc">
-                        
-                    </div>
-
-                    <div class="course__desc">
-                        
-                    </div>
-
-                    
-
+              </div>
+              <div class="course__info">
+                <div class="course__title">
+                  Аппаратный педикюр SUDA
                 </div>
+                <div class="course__format">
+                  <ul class="course__format-left">
+                    <li>
+                      Город:
+                    </li>
+                    <li>
+                      Дата:
+                    </li>
+                    <li>
+                      Формат
+                    </li>
+                    <li>
+                      Нагрузка
+                    </li>
+                    <li>
+                      Время прохождения
+                    </li>
+                    <li>
+                      Сертификат
+                    </li>
+                  </ul>
+                  <div class="course__format-right">
+                    <li>
+                      Москва
+                    </li>
+                    <li>
+                      <input type="text" id="datepicker" data-course-id="1" autocomplete="none" aria-autocomplete="none" placeholder="Выберите дату">
+                    </li>
+                    <li>
+                      Групповой
+                    </li>
+                    <li>
+                      8 часов в неделю
+                    </li>
+                    <li>
+                      4 недели
+                    </li>
+                    <li>
+                      Нет
+                    </li>
+                  </div>
+                </div>
+              </div>
             </div>
+            <div class="course__btns">
+              <div class="course__btn course__btn--full cities__title">
+                <div class="course__payment">
+                  <select name="cities-list" id="">
+                    <option value="full">Оплатить полностью</option>
+                    <option value="half">Оплатить 50%</option>
+                  </select>
+                  <div class="select-side"></div>
+                </div>
+              </div>
+              <div class="course__btn">
+                <span>Записаться</span>
+              </div>
+            </div>
+          </div>
+          <div class="course__info">
+            <div class="course__tabs">
+              <a href="#" class="course__tab course__tab--active">
+                Описание курса
+              </a>
+              <a href="#" class="course__tab">
+                Программа курса
+              </a>
+              <a href="#" class="course__tab">
+                Отзывы
+              </a>
+            </div>
+            <div class="course__desc course__desc--active">
+              <div class="course__text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi. Ut placerat quam
+                  lectus. Curabitur dictum velit non lacus ornare tempor. Nullam quis augue in leo aliquet
+                  malesuada sit amet eget eros. Sed laoreet posuere velit sit amet varius.
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi. Ut placerat quam
+                  lectus. Curabitur dictum velit non lacus ornare tempor. Nullam quis augue in leo aliquet
+                  malesuada sit amet eget eros.
+                </p>
+              </div>
+              <div class="course__features">
+                <div class="course__feature">
+                  После прохождения курса вы сможете
+                </div>
+                <div class="course__feature">
+                  После прохождения курса вы сможете
+                </div>
+                <div class="course__feature">
+                  После прохождения курса вы сможете
+                </div>
+              </div>
+              <div class="course__text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi. Ut placerat quam
+                  lectus. Curabitur dictum velit non lacus ornare tempor. Nullam quis augue in leo aliquet
+                  malesuada sit amet eget eros. Sed laoreet posuere velit sit amet varius.
+                </p>
+              </div>
+              <div class="course__support">
+                <div class="course__support-title">
+                  Мы поддерживаем
+                </div>
+                <div class="course__support-list">
+                  <div class="course__support-item course__support-item--mc">
+                  </div>
+                  <div class="course__support-item course__support-item--visa">
+                  </div>
+                  <div class="course__support-item course__support-item--paypal">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="course__desc">
+              <div class="course__text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi. Ut placerat quam
+                  lectus. Curabitur dictum velit non lacus ornare tempor. Nullam quis augue in leo aliquet
+                  malesuada sit amet eget eros.
+                </p>
+              </div>
+              <div class="course__features">
+                <div class="course__feature">
+                  После прохождения курса вы сможете
+                </div>
+                <div class="course__feature">
+                  После прохождения курса вы сможете
+                </div>
+                <div class="course__feature">
+                  После прохождения курса вы сможете
+                </div>
+              </div>
+              <div class="course__text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi. Ut placerat quam
+                  lectus. Curabitur dictum velit non lacus ornare tempor. Nullam quis augue in leo aliquet
+                  malesuada sit amet eget eros. Sed laoreet posuere velit sit amet varius.
+                </p>
+              </div>
+              <div class="course__support">
+                <div class="course__support-title">
+                  Мы поддерживаем
+                </div>
+                <div class="course__support-list">
+                  <div class="course__support-item course__support-item--mc">
+                  </div>
+                  <div class="course__support-item course__support-item--visa">
+                  </div>
+                  <div class="course__support-item course__support-item--paypal">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="course__desc">
+              <div class="course__text">
+              </div>
+              <div class="course__features">
+                <div class="course__feature">
+                  После прохождения курса вы сможете
+                </div>
+                <div class="course__feature">
+                  После прохождения курса вы сможете
+                </div>
+                <div class="course__feature">
+                  После прохождения курса вы сможете
+                </div>
+              </div>
+              <div class="course__text">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi. Ut placerat quam
+                  lectus. Curabitur dictum velit non lacus ornare tempor. Nullam quis augue in leo aliquet
+                  malesuada sit amet eget eros. Sed laoreet posuere velit sit amet varius.
+                </p>
+              </div>
+              <div class="course__support">
+                <div class="course__support-title">
+                  Мы поддерживаем
+                </div>
+                <div class="course__support-list">
+                  <div class="course__support-item course__support-item--mc">
+                  </div>
+                  <div class="course__support-item course__support-item--visa">
+                  </div>
+                  <div class="course__support-item course__support-item--paypal">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
+      </div>
     </section>
-
-
     <section class="individual">
-        <div class="container">
-            <form action="" class="individual__form">
-                <input type="text" class="individual__input" placeholder="Имя">
-                <input type="text" class="individual__input" placeholder="Фамилия">
-                <input type="text" class="individual__input" placeholder="E-mail">
-                <input type="submit" class="individual__input individual__btn" value="Оплатить курс"> 
-
-            </form>
-        </div>
+      <div class="container">
+        <form action="" class="individual__form">
+          <input type="text" class="individual__input" placeholder="Имя">
+          <input type="text" class="individual__input" placeholder="Фамилия">
+          <input type="text" class="individual__input" placeholder="E-mail">
+          <input type="hidden" name="" id="number-of-courses">
+          <input type="hidden" name="" id="dates-of-courses">
+          <input type="submit" class="individual__input individual__btn" value="Оплатить курс">
+        </form>
+      </div>
     </section>
-
-
     <section class="contacts">
-
       <div class="container">
         <div class="main-title">
           Свяжитесь с нами
         </div>
-
         <div class="contacts__form">
           <label>
             <span class="contacts__text">Оставьте ваш телефон чтобы мы перезвонили</span>
-            <input type="text" class="contacts__field contacts__field--half contacts__field--phone contacts__field--phonemask" placeholder="8 900 123-45-56">
+            <input type="text"
+              class="contacts__field contacts__field--half contacts__field--phone contacts__field--phonemask"
+              placeholder="8 900 123-45-56">
           </label>
-
-          <div class="contacts__text contacts__text--icon">Или пишите нам, наши менеджеры свяжутся с вами в ближайшее время:</div>
-
+          <div class="contacts__text contacts__text--icon">Или пишите нам, наши менеджеры свяжутся с вами в ближайшее
+            время:</div>
           <input type="text" class="contacts__field contacts__field--half" placeholder="Имя">
           <input type="text" class="contacts__field contacts__field--half" placeholder="Ваш город">
-          <input type="text" class="contacts__field contacts__field--half contacts__field--phonemask" placeholder="Телефон">
+          <input type="text" class="contacts__field contacts__field--half contacts__field--phonemask"
+            placeholder="Телефон">
           <input type="text" class="contacts__field contacts__field--half" placeholder="Направление">
           <input type="text" class="contacts__field contacts__field--half" placeholder="Email">
           <input type="text" class="contacts__field contacts__field--half" placeholder="Бренд">
-          <textarea name="" id="" cols="30" rows="1" class="contacts__field contacts__field--big" placeholder="Сообщение"></textarea>
-
+          <textarea name="" id="" cols="30" rows="1" class="contacts__field contacts__field--big"
+            placeholder="Сообщение"></textarea>
           <div class="contacts__checking">
             <div class="contacts__personal">
               <label for="personal-checked" class="personal__checked">Согласие на обработку персональных данных</label>
-              <input type="checkbox" id="personal-checked" name="personal-personal-checked" class="form__checked" checked>
+              <input type="checkbox" id="personal-checked" name="personal-personal-checked" class="form__checked"
+                checked>
               <span class="form__checkmark form__checkmark--checked">
               </span>
             </div>
             <input type="submit" class="mainbtn contacts__btn" value="Отправить заявку">
           </div>
-
-
         </div>
       </div>
-
     </section>
-
-
   </div>
-
   <footer class="footer">
-
     ICG Group 2019
-
   </footer>
-
   <script src="js/jquery-3.4.1.js"></script>
   <script src="js/owl.carousel.min.js"></script>
   <script src="js/jquery.maskedinput.js"></script>
+  <script src="js/datepicker_2.js"></script>
   <script src="js/main.js"></script>
   <script src="js/one-course.js"></script>
-
+  <script>
+    $(document).ready(function($){
+      $.ajax('js/events.json').done(function(data){
+          var dates = data.filter(function(item){
+            return item.id == $('#datepicker').data('course-id')
+          }).map(function(item){
+            return item.dates
+          });
+          var arrayOfDates = [];
+          $.each(dates[0], function(index, dates){
+            var _dates = {
+              from: new Date(dates.from).getDate(),
+              to: new Date(dates.to).getDate()
+            };
+            var _month = {
+              from: new Date(dates.from).getMonth('numeric') + 1,
+              to: new Date(dates.to).getMonth('numeric') + 1
+            };
+            var _year = {
+              from: new Date(dates.from).getFullYear('numeric'),
+              to: new Date(dates.from).getFullYear('numeric')
+            }
+            var range = _dates.to - _dates.from;
+            for(var i = _dates.from; i <= _dates.to; i++) {
+              arrayOfDates.push(new Date(_month.from+'.'+i+'.'+_year.from))
+            }
+          })
+          var picker = new Datepicker('#datepicker', {
+            within: (function(){
+              return arrayOfDates
+            })(),
+            multiple: true,
+            separator: ', ',
+            min: arrayOfDates[0],
+            max: arrayOfDates[arrayOfDates.length - 1],
+            yearRange: 0,
+            weekStart: 1,
+            onChange: function(date){
+              $('#number-of-courses').val(date.length)
+            }
+          });
+      });
+    })
+    </script>
 </body>
+
 </html>

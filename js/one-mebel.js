@@ -26,24 +26,6 @@ $(document).ready(function() {
 
 })
 
-function makePhotos() {
-    var photos = $('.onemebel__gallery .onemebel__pic'),
-    width;
-
-    for  (var i=0; i<photos.length; i++) {
-        width = photos.eq(i).width();        
-        photos.eq(i).css('height', width + 'px');
-    }
-}
-
-$(document).ready(function() {
-    makePhotos();
-})
-
-$(window).resize(function() {
-    makePhotos();
-})
-
 $('.onemebel__photos .onemebel__pic').on('click', function(e) {
     e.preventDefault();
     var screen = $('.onemebel__big .onemebel__pic img');
