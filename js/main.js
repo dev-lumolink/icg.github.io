@@ -10186,7 +10186,8 @@ jQuery(document).ready(function (jQuery) {
   // course calendar
   if(document.getElementById('datepicker')) {
     jQuery.ajax('js/events.json').done(function (data) {
-      var dates = data.filter(function (item) {
+      var _data = jQuery.parseJSON(data);
+      var dates = _data.filter(function (item) {
         return item.id == jQuery('#datepicker').data('course-id')
       }).map(function (item) {
         return item.dates
