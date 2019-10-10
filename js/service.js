@@ -12,14 +12,14 @@ $(document).ready(function() {
     });
 
     var tabs = $('.course__tab'),
-        features = $('.service__features');
+        features = $('.service__tab');
 
     tabs.eq(0).addClass('course__tab--active');
-    features.eq(0).css('display', 'flex');
+    features.eq(0).css('display', 'block');
  
   })
 
-  $('.service__features').owlCarousel({
+  $('.service__tab .service__features').owlCarousel({
         items : 1,
         nav:false,
         loop:false,
@@ -61,21 +61,21 @@ $(document).ready(function() {
 
 
 
-  $('.service__features').css('display', 'none');
+  $('.service__tab').css('display', 'none');
 
 $(".service__choice .course__tab").on('click', function(e) {
     e.preventDefault();
     $(this).addClass("course__tab--active");
     $(this).siblings().removeClass("course__tab--active");
     var i=$(this).index(),
-        list=$(".service__choice .service__features");
+        list=$(".service__choice .service__tab");
 
    for (var j=0; j<list.length; j++) {
         list.eq(j).css('display', 'none');
    }
 
    
-   $(".service__choice .service__features").eq(i).css('display', 'flex');
+   $(".service__choice .service__tab").eq(i).css('display', 'block');
 
     
  })

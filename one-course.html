@@ -270,12 +270,9 @@
                     </dl>
                   </div>
                   <div class="course-images">
-                    <a href="https://dummyimage.com/300x300.jpg" class="image-popup-vertical-fit"><img
-                        src='https://dummyimage.com/100x100.jpg' alt='' /></a>
-                    <a href="https://dummyimage.com/300x300.jpg" class="image-popup-vertical-fit"><img
-                        src='https://dummyimage.com/100x100.jpg' alt='' /></a>
-                    <a href="https://dummyimage.com/300x300.jpg" class="image-popup-vertical-fit"><img
-                        src='https://dummyimage.com/100x100.jpg' alt='' /></a>
+                    <a href="img/course-photo.png" class="image-popup-vertical-fit"><img src='img/course-photo.png' alt='' width="100px" height="100px" /></a>
+                    <a href="img/course-photo.png" class="image-popup-vertical-fit"><img src='img/course-photo.png' alt='' width="100px" height="100px" /></a>
+                    <a href="img/course-photo.png" class="image-popup-vertical-fit"><img src='img/course-photo.png' alt='' width="100px" height="100px" /></a>
                   </div>
                 </div>
               </div>
@@ -341,14 +338,16 @@
                 <ul class="feedback-list">
                   <li class="feedback">
                     <article>
-                      <div class="feedback__avatar" style="background-image: url(https://dummyimage.com/300x300.jpg);"></div>
-                      <p class="feedback__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quae cupiditate alias et itaque commodi totam quisquam ea. Ducimus quibusdam pariatur quis ipsum corrupti aut perspiciatis voluptates eum, est error, aliquam qui ullam harum impedit. Debitis fugiat similique vitae, est provident optio, magni ut magnam reiciendis expedita, aspernatur quod ab?</p>
+                      <div class="feedback__avatar" style="background-image: url(img/course-photo.png);"></div>
+                      <p class="feedback__text">
+                        <strong>Name of a client</strong><br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quae cupiditate alias et itaque commodi totam quisquam ea. Ducimus quibusdam pariatur quis ipsum corrupti aut perspiciatis voluptates eum, est error, aliquam qui ullam harum impedit. Debitis fugiat similique vitae, est provident optio, magni ut magnam reiciendis expedita, aspernatur quod ab?</p>
                     </article>
                   </li>
                   <li class="feedback">
                     <article>
-                      <div class="feedback__avatar" style="background-image: url(https://dummyimage.com/300x300.jpg);"></div>
-                      <p class="feedback__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quae cupiditate alias et itaque commodi totam quisquam ea. Ducimus quibusdam pariatur quis ipsum corrupti aut perspiciatis voluptates eum, est error, aliquam qui ullam harum impedit. Debitis fugiat similique vitae, est provident optio, magni ut magnam reiciendis expedita, aspernatur quod ab?</p>
+                      <div class="feedback__avatar" style="background-image: url(img/course-photo.png);"></div>
+                      <p class="feedback__text">
+                        <strong>Name of a client</strong><br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quae cupiditate alias et itaque commodi totam quisquam ea. Ducimus quibusdam pariatur quis ipsum corrupti aut perspiciatis voluptates eum, est error, aliquam qui ullam harum impedit. Debitis fugiat similique vitae, est provident optio, magni ut magnam reiciendis expedita, aspernatur quod ab?</p>
                     </article>
                   </li>
                 </ul>
@@ -360,9 +359,9 @@
       <section class="individual">
         <div class="container">
           <form action="" class="individual__form">
-            <input type="text" class="individual__input" placeholder="Имя">
-            <input type="text" class="individual__input" placeholder="Фамилия">
-            <input type="text" class="individual__input" placeholder="E-mail">
+            <input type="text" class="individual__input" placeholder="Имя" required>
+            <input type="text" class="individual__input" placeholder="Фамилия" required>
+            <input type="email" class="individual__input" placeholder="E-mail" required>
             <input type="hidden" name="" id="number-of-courses">
             <input type="hidden" name="" id="dates-of-courses">
             <input type="submit" class="individual__input individual__btn" value="Оплатить курс">

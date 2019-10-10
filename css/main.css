@@ -82,7 +82,7 @@ body {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
-  margin-top: 95px;
+  padding-top: 95px;
 }
 
 ul {
@@ -184,6 +184,7 @@ body.fixed header.header {
 }
 
 .container {
+  position: relative;
   max-width: 1440px;
   margin: 0 auto;
   display: -webkit-box;
@@ -261,6 +262,10 @@ section.courses {
   margin-top: 60px;
   width: 100%;
   margin-bottom: 50px;
+}
+
+.service-page .main-title {
+  margin-top: 40px;
 }
 
 .mainbtn {
@@ -1328,6 +1333,14 @@ section.courses {
       -ms-flex-pack: justify;
           justify-content: space-between;
   max-width: 100%;
+}
+
+.service__tab {
+  position: relative;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  /* flex: 1; */
 }
 
 .service__item {
@@ -5620,12 +5633,13 @@ section.courses {
 .course__tab {
   margin-bottom: 10px;
   font-size: 20px;
-  line-height: 2.06;
+  line-height: 1;
   letter-spacing: 0.2px;
   color: #595f6f;
-  padding: 1px 10px;
-  display: inline-block;
-  margin-right: 40px;
+  padding: 10px;
+  display: block;
+  flex: auto;
+  text-align: center;
 }
 
 .course__tab:hover,
@@ -5951,7 +5965,8 @@ section.courses {
 }
 
 .service-page .brends__list {
-  padding-bottom: 4px;
+  margin: 0;
+  padding: 30px 0 0;
 }
 
 .service-page .owl-carousel {
@@ -6077,22 +6092,28 @@ section.courses {
   margin-bottom: 20px;
 }
 
-.service__features {
+/* .service__features {
   display: none;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
+} */
+
+.service__features .owl-stage-outer {
+  overflow: visible;
 }
 
-.service__feature {
+/* .service__feature {
   -ms-flex-preferred-size: calc(33% - 20px);
   flex-basis: calc(33% - 20px);
   border-radius: 5px;
-  -webkit-box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
-  box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   margin-bottom: 60px;
+} */
+.service__feature:hover {
+  -webkit-box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
 }
 
 .service__feature-desc {
@@ -6227,6 +6248,7 @@ section.courses {
   margin-bottom: 0;
   width: 100%;
   max-width: 100%;
+  line-height: 1;
 }
 
 .service__request .request__btn {
@@ -6263,6 +6285,11 @@ section.courses {
   -ms-flex-preferred-size: calc(33% - 20px);
   flex-basis: calc(33% - 20px);
   margin-bottom: 60px;
+}
+
+.service__addresses-item img {
+  -webkit-box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
 }
 
 .service__addresses-map {
