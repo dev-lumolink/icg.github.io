@@ -1341,7 +1341,7 @@ section.courses {
   display: block;
   width: 100%;
   max-width: 100%;
-  flex: 1;
+  /* flex: 1; */
 }
 
 .service__item {
@@ -6291,6 +6291,7 @@ section.courses {
 .service__addresses-item img {
   -webkit-box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .service__addresses-map {
