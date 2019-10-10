@@ -388,52 +388,48 @@
         </form>
       </div>
     </section>
+    <!-- contacts form -->
     <section class="contacts">
       <div class="container">
         <div class="main-title">
           Свяжитесь с нами
         </div>
-        <div class="contacts__form">
+        <form method="post" action="" enctype="multipart/form-data" class="contacts__form">
           <label>
             <span class="contacts__text">Оставьте ваш телефон чтобы мы перезвонили</span>
-            <input type="text"
-              class="contacts__field contacts__field--half contacts__field--phone contacts__field--phonemask"
+            <input type="tel"
+              class="contacts__field contacts__field--half contacts__field--phone contacts__field--phonemask phone-1"
               placeholder="8 900 123-45-56">
           </label>
           <div class="contacts__text contacts__text--icon">Или пишите нам, наши менеджеры свяжутся с вами в ближайшее
             время:</div>
           <input type="text" class="contacts__field contacts__field--half" placeholder="Имя">
           <input type="text" class="contacts__field contacts__field--half" placeholder="Ваш город">
-          <input type="text" class="contacts__field contacts__field--half contacts__field--phonemask"
-            placeholder="Телефон">
+          <input type="tel" class="contacts__field contacts__field--half contacts__field--phonemask phone-2"
+            placeholder="Телефон" required>
           <input type="text" class="contacts__field contacts__field--half" placeholder="Направление">
-          <input type="text" class="contacts__field contacts__field--half" placeholder="Email">
+          <input type="email" class="contacts__field contacts__field--half" placeholder="Email" required>
           <input type="text" class="contacts__field contacts__field--half" placeholder="Бренд">
-          <textarea name="" id="" cols="30" rows="1" class="contacts__field contacts__field--big"
+          <textarea name="" id="" cols="30" rows="3" class="contacts__field contacts__field--big"
             placeholder="Сообщение"></textarea>
           <div class="contacts__checking">
             <div class="contacts__personal">
               <label for="personal-checked" class="personal__checked">Согласие на обработку персональных данных</label>
               <input type="checkbox" id="personal-checked" name="personal-personal-checked" class="form__checked"
-                checked>
+                checked required>
               <span class="form__checkmark form__checkmark--checked">
               </span>
             </div>
-            <input type="submit" class="mainbtn contacts__btn" value="Отправить заявку">
+            <input type="submit" class="mainbtn mainbtn--blue contacts__btn" value="Отправить заявку">
           </div>
-        </div>
+        </form>
       </div>
     </section>
   </div>
   <footer class="footer">
     ICG Group 2019
   </footer>
-  <script src="js/jquery-3.4.1.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.maskedinput.js"></script>
-  <script src="js/datepicker_2.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/one-course.js"></script>
 </body>
 
 </html>

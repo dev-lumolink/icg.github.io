@@ -94,7 +94,7 @@ var WIEDEMANN_DATA_PARSER = function () {
   }
 
   this.jqFetch = function (url, done) {
-    $.ajax(url, {
+    jQuery.ajax(url, {
         dataType: 'json',
         beforeSend: function () {
           console.log('loading data...')
@@ -104,7 +104,7 @@ var WIEDEMANN_DATA_PARSER = function () {
         }
       })
       .done(function (data) {
-        // var parsedData = $.parseJSON(data);
+        // var parsedData = jQuery.parseJSON(data);
         // that.data = parsedData;
         // done(parsedData);
         that.data = data;
@@ -318,7 +318,7 @@ var CALENDAR = function (options) {
     that.cnode().setinside(container, that.compose().body());
     that.cnode().setinside(that.DOM_ELEMENT, container);
 
-    $(that.DOM_ELEMENT).owlCarousel({
+    jQuery(that.DOM_ELEMENT).owlCarousel({
       items: 1,
       loop: false,
       nav: true
@@ -376,7 +376,7 @@ if (jQuery && wiedemann_data_parser) {
 
     // helpers
     this.getSelectedValue = function (select) {
-      return $(select).find('option:selected').val()
+      return jQuery(select).find('option:selected').val()
     }
 
     this.getDirections = function (city) {
@@ -455,14 +455,14 @@ if (jQuery && wiedemann_data_parser) {
     // widget methods
     this.createState = function (state) {
       var cities = this.dataParser.show('city', {});
-      $(cities).each(function (index, element) {
+      jQuery(cities).each(function (index, element) {
         that.farm().setinside(document.querySelector('[data-entity="city-selector"]'), 'option', {
           attributes: {
             value: element
           },
           html: element
         })
-        if (element == state.city) $(that.DOM.selectors.city).find('option[value="' + element + '"]').attr('selected', true);
+        if (element == state.city) jQuery(that.DOM.selectors.city).find('option[value="' + element + '"]').attr('selected', true);
       });
 
       // levels
@@ -479,13 +479,13 @@ if (jQuery && wiedemann_data_parser) {
     }
 
     this.citySelect = function (node, defaultID) {
-      $(that.DOM.directions.list).empty();
+      jQuery(that.DOM.directions.list).empty();
       //that.DOM.directions.list
       that.city = !node ? defaultID : that.getSelectedValue(node);
       // 
       that.getDirections(!node ? defaultID : that.getSelectedValue(node));
       // 
-      $(that.directions).each(function (index, element) {
+      jQuery(that.directions).each(function (index, element) {
         that.farm().setinside(that.DOM.directions.list, 'li', {
           attributes: {
             'data-direction': element,
@@ -498,17 +498,17 @@ if (jQuery && wiedemann_data_parser) {
     };
 
     this.directionSelect = function (node, defaultID) {
-      if ($(node).hasClass('cities__item')) {
-        $(node).siblings().removeClass('active');
-        $(node).addClass('active');
+      if (jQuery(node).hasClass('cities__item')) {
+        jQuery(node).siblings().removeClass('active');
+        jQuery(node).addClass('active');
         // clear
-        $(that.DOM.selectors.level).html('<option value="all">Выберите уровень</option>')
+        jQuery(that.DOM.selectors.level).html('<option value="all">Выберите уровень</option>')
         // get levels
-        that.direction = $(node).data('direction');
+        that.direction = jQuery(node).data('direction');
         // 
         that.getLevels();
         //
-        $(that.levels).each(function (index, element) {
+        jQuery(that.levels).each(function (index, element) {
           that.farm().setinside(that.DOM.selectors.level, 'option', {
             attributes: {
               value: element.value,
@@ -522,12 +522,12 @@ if (jQuery && wiedemann_data_parser) {
     };
 
     this.levelSelect = function (node, defaultID) {
-      $(that.DOM.selectors.event).html('<option value="all">Выберите семинар</option>')
+      jQuery(that.DOM.selectors.event).html('<option value="all">Выберите семинар</option>')
       // that.DOM.directions.list
-      that.level = !node ? defaultID : that.getSelectedValue($(node));
+      that.level = !node ? defaultID : that.getSelectedValue(jQuery(node));
       that.getEvents();
       // 
-      $(that.events).each(function (index, element) {
+      jQuery(that.events).each(function (index, element) {
         that.farm().setinside(that.DOM.selectors.event, 'option', {
           attributes: {
             'data-entity': 'event',
@@ -537,11 +537,11 @@ if (jQuery && wiedemann_data_parser) {
         })
       })
 
-      if (defaultID) $(that.DOM.selectors.level).find('option[value="' + defaultID + '"]').prop('selected', true);
+      if (defaultID) jQuery(that.DOM.selectors.level).find('option[value="' + defaultID + '"]').prop('selected', true);
     };
 
     this.eventSelect = function (node, defaultID) {
-      that.getEvent(!node ? defaultID : that.getSelectedValue($(node)));
+      that.getEvent(!node ? defaultID : that.getSelectedValue(jQuery(node)));
       // text
       that.DOM.eventContent.text.innerText = that.event[0].text;
       // image
@@ -551,16 +551,16 @@ if (jQuery && wiedemann_data_parser) {
 
       // calendar
       // remove items from owl.carousel
-      $(calendar.DOM_ELEMENT).find('.owl-stage .owl-item').each(function (index, element) {
-        $(calendar.DOM_ELEMENT).trigger('remove.owl.carousel', index);
+      jQuery(calendar.DOM_ELEMENT).find('.owl-stage .owl-item').each(function (index, element) {
+        jQuery(calendar.DOM_ELEMENT).trigger('remove.owl.carousel', index);
       });
       if (that.event[0].dates && that.event[0].dates.length != 0) {
         // appending new calendar
-        $.each(that.event[0].dates, function (index, dates) {
+        jQuery.each(that.event[0].dates, function (index, dates) {
           that.createCalendar(dates);
         });
         // refresh owl.carousel
-        // $(calendar.DOM_ELEMENT).trigger('refresh.owl.carousel');
+        // jQuery(calendar.DOM_ELEMENT).trigger('refresh.owl.carousel');
       } else {
         var text = that.farm().set('div', {
           attributes: {
@@ -571,11 +571,11 @@ if (jQuery && wiedemann_data_parser) {
             '<a href="tel:+74954453771">Мск&nbsp;(495)&nbsp;445-37-71</a>' +
             '<a href="tel:+73433638438">Екб&nbsp;(343)&nbsp;363-84-38</a>'
         });
-        $(calendar.DOM_ELEMENT).trigger('add.owl.carousel', text, [0]);
+        jQuery(calendar.DOM_ELEMENT).trigger('add.owl.carousel', text, [0]);
       }
-      $(calendar.DOM_ELEMENT).trigger('refresh.owl.carousel');
+      jQuery(calendar.DOM_ELEMENT).trigger('refresh.owl.carousel');
 
-      if (defaultID) $(that.DOM.selectors.event).find('option[value="' + defaultID + '"]').prop('selected', true);
+      if (defaultID) jQuery(that.DOM.selectors.event).find('option[value="' + defaultID + '"]').prop('selected', true);
     };
 
     // create calendar
@@ -593,7 +593,7 @@ if (jQuery && wiedemann_data_parser) {
       }));
 
       // appending calendar to carousel
-      $(calendar.DOM_ELEMENT).trigger('add.owl.carousel', container, [0]);
+      jQuery(calendar.DOM_ELEMENT).trigger('add.owl.carousel', container, [0]);
     }
 
     // begin
@@ -609,25 +609,25 @@ if (jQuery && wiedemann_data_parser) {
       this.createState(this.defaulState[0]);
       // event listeners
       // city selector
-      $(this.DOM.selectors.city).on('change', function () {
-        that.citySelect($(this))
+      jQuery(this.DOM.selectors.city).on('change', function () {
+        that.citySelect(jQuery(this))
       })
       // direction list
-      $(this.DOM.directions.list).on('click', function (e) {
-        that.directionSelect($(e.target));
+      jQuery(this.DOM.directions.list).on('click', function (e) {
+        that.directionSelect(jQuery(e.target));
       });
       // level selector
-      $(this.DOM.selectors.level).on('change', function () {
-        if (that.getSelectedValue($(this)) == "all") return;
-        that.levelSelect($(this));
+      jQuery(this.DOM.selectors.level).on('change', function () {
+        if (that.getSelectedValue(jQuery(this)) == "all") return;
+        that.levelSelect(jQuery(this));
       });
       // event selector
-      $(this.DOM.selectors.event).on('change', function () {
-        if (that.getSelectedValue($(this)) == "all") return;
-        that.eventSelect($(this));
+      jQuery(this.DOM.selectors.event).on('change', function () {
+        if (that.getSelectedValue(jQuery(this)) == "all") return;
+        that.eventSelect(jQuery(this));
       });
 
-      // $('[data-entity="event-calendar"]').trigger('refresh.owl.carousel')
+      // jQuery('[data-entity="event-calendar"]').trigger('refresh.owl.carousel')
     };
   }
 };

@@ -328,6 +328,10 @@ section.courses {
   /* overflow: visible; */
 }
 
+.mebel__items .owl-stage-outer {
+  overflow: visible;
+}
+
 @media screen and (max-width: 800px) {
   .container {
     padding: 10px 36px;
