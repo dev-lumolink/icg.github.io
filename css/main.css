@@ -1321,6 +1321,7 @@ section.courses {
   height: 100px;
 }
 
+.course__tabs,
 .service__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1340,7 +1341,7 @@ section.courses {
   display: block;
   width: 100%;
   max-width: 100%;
-  /* flex: 1; */
+  flex: 1;
 }
 
 .service__item {
