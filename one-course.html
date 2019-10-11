@@ -111,6 +111,7 @@
         </div>
       </div>
     </header>
+    <!-- brands -->
     <section class="brends">
       <div class="container">
         <ul class="brends__list owl-carousel">
@@ -270,9 +271,12 @@
                     </dl>
                   </div>
                   <div class="course-images">
-                    <a href="img/course-photo.png" class="image-popup-vertical-fit"><img src='img/course-photo.png' alt='' width="100px" height="100px" /></a>
-                    <a href="img/course-photo.png" class="image-popup-vertical-fit"><img src='img/course-photo.png' alt='' width="100px" height="100px" /></a>
-                    <a href="img/course-photo.png" class="image-popup-vertical-fit"><img src='img/course-photo.png' alt='' width="100px" height="100px" /></a>
+                    <a href="img/course-photo.png" class="image-popup-vertical-fit"><img src='img/course-photo.png'
+                        alt='' width="100px" height="100px" /></a>
+                    <a href="img/course-photo.png" class="image-popup-vertical-fit"><img src='img/course-photo.png'
+                        alt='' width="100px" height="100px" /></a>
+                    <a href="img/course-photo.png" class="image-popup-vertical-fit"><img src='img/course-photo.png'
+                        alt='' width="100px" height="100px" /></a>
                   </div>
                 </div>
               </div>
@@ -340,14 +344,22 @@
                     <article>
                       <div class="feedback__avatar" style="background-image: url(img/course-photo.png);"></div>
                       <p class="feedback__text">
-                        <strong>Name of a client</strong><br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quae cupiditate alias et itaque commodi totam quisquam ea. Ducimus quibusdam pariatur quis ipsum corrupti aut perspiciatis voluptates eum, est error, aliquam qui ullam harum impedit. Debitis fugiat similique vitae, est provident optio, magni ut magnam reiciendis expedita, aspernatur quod ab?</p>
+                        <strong>Name of a client</strong><br />Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Eligendi quae cupiditate alias et itaque commodi totam quisquam ea. Ducimus quibusdam pariatur
+                        quis ipsum corrupti aut perspiciatis voluptates eum, est error, aliquam qui ullam harum impedit.
+                        Debitis fugiat similique vitae, est provident optio, magni ut magnam reiciendis expedita,
+                        aspernatur quod ab?</p>
                     </article>
                   </li>
                   <li class="feedback">
                     <article>
                       <div class="feedback__avatar" style="background-image: url(img/course-photo.png);"></div>
                       <p class="feedback__text">
-                        <strong>Name of a client</strong><br/>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quae cupiditate alias et itaque commodi totam quisquam ea. Ducimus quibusdam pariatur quis ipsum corrupti aut perspiciatis voluptates eum, est error, aliquam qui ullam harum impedit. Debitis fugiat similique vitae, est provident optio, magni ut magnam reiciendis expedita, aspernatur quod ab?</p>
+                        <strong>Name of a client</strong><br />Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Eligendi quae cupiditate alias et itaque commodi totam quisquam ea. Ducimus quibusdam pariatur
+                        quis ipsum corrupti aut perspiciatis voluptates eum, est error, aliquam qui ullam harum impedit.
+                        Debitis fugiat similique vitae, est provident optio, magni ut magnam reiciendis expedita,
+                        aspernatur quod ab?</p>
                     </article>
                   </li>
                 </ul>
@@ -358,28 +370,28 @@
       </section>
       <section class="individual">
         <div class="container">
-          <form action="" class="individual__form">
+          <form action="" class="individual__form" id="individual">
             <input type="text" class="individual__input" placeholder="Имя" required>
             <input type="text" class="individual__input" placeholder="Фамилия" required>
             <input type="email" class="individual__input" placeholder="E-mail" required>
             <input type="hidden" name="" id="number-of-courses">
             <input type="hidden" name="" id="dates-of-courses">
-            <input type="submit" class="individual__input individual__btn" value="Оплатить курс">
+            <input type="submit" for="individual" class="individual__input individual__btn" value="Оплатить курс">
           </form>
         </div>
-                <div class="course__support">
-                  <div class="course__support-title">
-                    Мы поддерживаем
-                  </div>
-                  <div class="course__support-list">
-                    <div class="course__support-item course__support-item--mc">
-                    </div>
-                    <div class="course__support-item course__support-item--visa">
-                    </div>
-                    <div class="course__support-item course__support-item--paypal">
-                    </div>
-                  </div>
-                </div>
+        <div class="course__support">
+          <div class="course__support-title">
+            Мы поддерживаем
+          </div>
+          <div class="course__support-list">
+            <div class="course__support-item course__support-item--mc">
+            </div>
+            <div class="course__support-item course__support-item--visa">
+            </div>
+            <div class="course__support-item course__support-item--paypal">
+            </div>
+          </div>
+        </div>
       </section>
     </form>
     <!-- contacts form -->
@@ -388,7 +400,7 @@
         <div class="main-title">
           Свяжитесь с нами
         </div>
-        <form method="post" action="" enctype="multipart/form-data" class="contacts__form">
+        <form method="post" action="" enctype="multipart/form-data" class="contacts__form" id="contacts">
           <label>
             <span class="contacts__text">Оставьте ваш телефон чтобы мы перезвонили</span>
             <input type="tel"
@@ -414,14 +426,65 @@
               <span class="form__checkmark form__checkmark--checked">
               </span>
             </div>
-            <input type="submit" class="mainbtn mainbtn--blue contacts__btn" value="Отправить заявку">
+            <input type="submit" for="contacts" class="mainbtn mainbtn--blue contacts__btn" value="Отправить заявку">
           </div>
         </form>
       </div>
     </section>
   </div>
+  <!-- footer -->
   <footer class="footer">
-    ICG Group 2019
+    <div class="flex-container">
+      <div class="icg-copy">
+        ICG GROUP
+      </div>
+      <div class="flex-row">
+        <div class="flex-col">
+          <div class="footer__menu menu--main">
+            <strong>Меню</strong>
+            <ul>
+              <li><a href="">о компании</a></li>
+              <li><a href="">учебный центр icg</a></li>
+              <li><a href="">icg мебель</a></li>
+              <li><a href="">новости</a></li>
+              <li><a href="">акции</a></li>
+              <li><a href="">сервис</a></li>
+              <li><a href="">написать нам</a></li>
+              <li><a href="">в магазин icg</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex-col flex--double">
+          <div class="footer__menu menu--brands">
+            <strong>Бренды</strong>
+            <ul>
+              <li><a href="">IONTO Comed</a></li>
+              <li><a href="">Suda</a></li>
+              <li><a href="">Creativellooda</a></li>
+              <li><a href="">MyStyle</a></li>
+              <li><a href="">Bernand Cassiere</a></li>
+              <li><a href="">Profillers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex-col">
+          <div class="footer__menu menu--social">
+            <strong>icg в&nbsp;социальных&nbsp;сетях</strong>
+            <ul class="header__social-list">
+              <li class="header__social header__social--vk">
+                <a href="#"></a>
+              </li>
+              <li class="header__social header__social--fb">
+                <a href="#"></a>
+              </li>
+              <li class="header__social header__social--inst">
+                <a href="#"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
   <script src="js/main.js"></script>
 </body>
