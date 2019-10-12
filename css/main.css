@@ -5156,10 +5156,15 @@ section.courses {
 
 .sales-page .brends__list {
   padding-bottom: 15px;
+  margin: 0;
 }
 
 .sales-page__slider {
   position: relative;
+}
+
+.sales-page__slider .owl-stage-outer {
+  overflow: visible;
 }
 
 .sales-page__slider-item {
@@ -5253,20 +5258,6 @@ section.courses {
   margin-bottom: 20px;
 }
 
-.sales__filter {
-  display: inline-block;
-  margin-right: 10px;
-  padding: 3px 25px 2px 6px;
-  border-radius: 10px;
-  background: #00489c;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 1.17;
-  text-align: center;
-  color: #ffffff;
-  position: relative;
-}
-
 .sales__filter:after {
   content: '';
   position: absolute;
@@ -5318,6 +5309,10 @@ section.courses {
   flex-wrap: wrap;
 }
 
+.sales__news-list .owl-stage-outer {
+  overflow: visible;
+}
+
 .sales__news-list .owl-item {
   opacity: 0;
 }
@@ -5345,7 +5340,8 @@ section.courses {
   -webkit-box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  margin-top: -30px;
+  top: -30px;
+  margin-bottom: -10px;
 }
 
 .sales__news-photo img {
@@ -7406,6 +7402,9 @@ footer.footer {
   transition: all cubic-bezier(1, 1, 0, 1) .3s;
 }
 /* components */
+.component {
+  position: relative;
+}
 .mb-3 {
   margin-bottom: 30px;
 }
@@ -7525,6 +7524,51 @@ footer.footer {
   padding: 16px 30px;
   z-index: 1;
 }
+.component--rounded.component--small {
+  border-radius: 10px;
+}
+.component--select {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.component--select label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('../img/icons/Arrow-down-white.svg');
+}
+.component--select select {
+  width: calc(100% - 13px);
+  -webkit-appearance: none;
+  border: none;
+  margin: 0;
+  padding: 5px 5px;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background: transparent;
+}
+.component--select select option {
+  font-size: inherit;
+  line-height: inherit;
+}
+.component--small {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 900;
+}
+.select--blue,
+.select--blue option {
+  background-color: #0f358e;
+  color: #fff;
+}
 .input--bordered {
   border: 1px solid #dddfe7;
   border-radius: 5px;
@@ -7533,6 +7577,9 @@ footer.footer {
 .input--bordered input {
   background: transparent;
   color: #fff;
+}
+.individual .component {
+  max-width: calc(100% / 4 - 10px);
 }
 /* sliders */
 [data-slider="events"] article {

@@ -7,34 +7,23 @@
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>ICG Group</title>
-
   <link rel="stylesheet" href="css/normalize.css">
   <link href="css/datepicker.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/main.css">
-
 </head>
 
 <body>
-
   <div class="wrapper sales-page">
-
     <header class="header">
-
       <div class="container">
-
         <div class="header__menu">
           <div class="header__burger">
-
           </div>
-
           <div class="header__popup">
-
             <div class="header__wrapper">
               <a href="#" class="header__close">
-
               </a>
-
               <nav class="header__nav">
                 <ul class="header__list">
                   <li class="header__item">
@@ -63,12 +52,10 @@
                   </li>
                 </ul>
               </nav>
-
               <div class="header__contacts">
                 <div class="header__text">
                   ICG В СОЦИАЛЬНЫХ СЕТЯХ
                 </div>
-
                 <ul class="header__social-list">
                   <li class="header__social header__social--vk">
                     <a href="#"></a>
@@ -81,9 +68,7 @@
                   </li>
                 </ul>
               </div>
-
             </div>
-
           </div>
         </div>
         <div class="header__logo">
@@ -113,16 +98,19 @@
             </li>
           </ul>
         </div>
-
         <div class="header__search">
           <div class="search__icon">
-
+          </div>
+          <div class="search__popup">
+            <form action="" method="POST" class="search__form">
+              <input type="text" placeholder="Поиск" class="search__field" id="search__field">
+              <input type="submit" class="search__submit" value="">
+            </form>
           </div>
         </div>
       </div>
-
     </header>
-
+    <!-- brands -->
     <section class="brends">
       <div class="container">
         <ul class="brends__list owl-carousel">
@@ -153,41 +141,51 @@
         </ul>
       </div>
     </section>
-
     <section class="sales__main">
       <div class="container">
-        <div class="main-title">
+        <h1 class="main-title">
           Акции
-        </div>
-
+        </h1>
         <div class="sales__filters">
-          <a href="#" class="sales__filter">Направление</a>
-          <a href="#" class="sales__filter">Раздел</a>
-          <a href="#" class="sales__filter">Бренд</a>
+          <div class="component component--select component--small component--rounded select--blue">
+            <select id="sales-filter-direction">
+              <option value="">Направление</option>
+              <option value="">Направление 1</option>
+              <option value="">Направление 2</option>
+            </select>
+            <label for="sales-filter-direction"></label>
+          </div>
+          <div class="component component--select component--small component--rounded select--blue">
+            <select id="sales-filter-section">
+              <option value="">Раздел</option>
+              <option value="">Раздел 1</option>
+              <option value="">Раздел 2</option>
+            </select>
+            <label for="sales-filter-section"></label>
+          </div>
+          <div class="component component--select component--small component--rounded select--blue">
+            <select id="sales-filter-brand">
+              <option value="">Бренд</option>
+              <option value="">Бренд 1</option>
+              <option value="">Бренд 2</option>
+            </select>
+            <label for="sales-filter-brand"></label>
+          </div>
         </div>
-
         <div class="slider-wrapper">
-
-
           <div class="sales-page__slider owl-carousel">
             <div class="sales-page__slider-item">
-
               <div class="sales-page__left">
                 <a href=""><img src="img/sales-slider.jpg"
                     srcset="img/sales-slider@2x.jpg 900w, img/sales-slider@3x.jpg 1200w" alt=""></a>
-
               </div>
-
               <div class="sales-page__right">
-
                 <div class="sales__name">
                   Название акции
                 </div>
-
                 <div class="sales__brend">
                   Бренд
                 </div>
-
                 <div class="sales__text">
                   Основана в 2004 году, как одно из подразделений холдинга ICG.
                   Специализация компании— производство мебели для салонов красоты,
@@ -200,35 +198,23 @@
                   оборудованного нами места парикмахерской, маникюрного зала,
                   спа-салона — лучшие на российском рынке.
                 </div>
-
                 <div class="banner__link">
                   <a href="#">Подробнее</a>
                 </div>
-
               </div>
-
             </div>
-
             <div class="sales-page__slider-item">
-
               <div class="sales-page__left">
-
                 <img src="img/sales-slider.jpg" srcset="img/sales-slider@2x.jpg 900w, img/sales-slider@3x.jpg 1200w"
                   alt="">
-
-
               </div>
-
               <div class="sales-page__right">
-
                 <div class="sales__name">
                   Название акции
                 </div>
-
                 <div class="sales__brend">
                   Бренд
                 </div>
-
                 <div class="sales__text">
                   Основана в 2004 году, как одно из подразделений холдинга ICG.
                   Специализация компании— производство мебели для салонов красоты,
@@ -241,90 +227,55 @@
                   оборудованного нами места парикмахерской, маникюрного зала,
                   спа-салона — лучшие на российском рынке.
                 </div>
-
                 <div class="banner__link">
                   <a href="#">Подробнее</a>
                 </div>
-
               </div>
-
             </div>
           </div>
         </div>
-
-
       </div>
     </section>
-
     <section class="individual">
       <div class="container">
         <div class="main-title">
           Хочу специальные условия
         </div>
         <form action="" enctype="multipart/form-data" method="post" class="individual__form">
-          <!-- component -->
-          <div class="component component--input input--text input--bordered mb-3">
-            <input type="text" name="name" id="name" required>
-            <label for="name">Имя</label>
-          </div>
-          <!-- component -->
-          <div class="component component--input input--text input--bordered mb-3">
-            <input type="text" name="surname" id="surname" required>
-            <label for="surname">Фамилия</label>
-          </div>
-          <!-- component -->
-          <div class="component component--input input--email input--bordered mb-3">
-            <input type="email" name="email" id="email" required>
-            <label for="email">E-mail</label>
-          </div>
-          <!-- component -->
-          <div class="component component--input input--submit mb-3">
-            <input type="submit" value="Получить предложение" class="component component--button button--big button--stretch button--white bordered">
-          </div>
-          <!-- <input type="text" class="individual__input" placeholder="Имя" required>
+          <input type="text" class="individual__input" placeholder="Имя" required>
           <input type="text" class="individual__input" placeholder="Фамилия" required>
-          <input type="email" class="individual__input" placeholder="E-mail" required> -->
-          <!-- <input type="submit" class="individual__input individual__btn" value="Получить предложение"> -->
+          <input type="email" class="individual__input" placeholder="E-mail" required>
+          <input type="submit" class="individual__input individual__btn" value="Получить предложение">
         </form>
       </div>
     </section>
-
     <section class="sales-page__news">
       <div class="container">
         <div class="main-title">
           Новости и события
         </div>
-
         <div class="sales__news-list owl-carousel">
-
           <div class="sales__news-item">
             <a href="">
               <div class="sales__news-photo">
-
                 <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
-
                 <div class="sales__news-city">
                   <div class="sales__news-wrapper">
                     Санкт-Петербург
                   </div>
-
                 </div>
               </div>
-
               <div class="sales__news-signature">
                 <div class="sales__news-block">
                   Оборудование
                 </div>
-
                 <div class="sales__news-date">
                   14.02.2019
                 </div>
               </div>
-
               <div class="sales__news-title">
                 Заголовок новостей
               </div>
-
               <div class="sales__news-text">
                 Краткий анонс новости.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
@@ -334,31 +285,24 @@
           <div class="sales__news-item">
             <a href="">
               <div class="sales__news-photo">
-
                 <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
-
                 <div class="sales__news-city">
                   <div class="sales__news-wrapper">
                     Санкт-Петербург
                   </div>
-
                 </div>
               </div>
-
               <div class="sales__news-signature">
                 <div class="sales__news-block">
                   Оборудование
                 </div>
-
                 <div class="sales__news-date">
                   14.02.2019
                 </div>
               </div>
-
               <div class="sales__news-title">
                 Заголовок новостей
               </div>
-
               <div class="sales__news-text">
                 Краткий анонс новости.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
@@ -368,43 +312,32 @@
           <div class="sales__news-item">
             <a href="">
               <div class="sales__news-photo">
-
                 <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
-
                 <div class="sales__news-city">
                   <div class="sales__news-wrapper">
                     Санкт-Петербург
                   </div>
-
                 </div>
               </div>
-
               <div class="sales__news-signature">
                 <div class="sales__news-block">
                   Оборудование
                 </div>
-
                 <div class="sales__news-date">
                   14.02.2019
                 </div>
               </div>
-
               <div class="sales__news-title">
                 Заголовок новостей
               </div>
-
               <div class="sales__news-text">
                 Краткий анонс новости.
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
               </div>
             </a>
           </div>
-
-
         </div>
-
         <div class="sales__news-checkbox">
-
           <!-- component -->
           <div class="component component--label_with_checkbox mb-3">
             <label>
@@ -413,90 +346,108 @@
               <i></i>
             </label>
           </div>
-
-
         </div>
-
         <div class="news__btn">
-
           <div class="mainbtn">
             <a href="news.html">Все анонсы</a>
           </div>
-
         </div>
       </div>
     </section>
-
-
-
+    <!-- contacts form -->
     <section class="contacts">
-
       <div class="container">
         <div class="main-title">
           Свяжитесь с нами
         </div>
-
-        <div class="contacts__form">
+        <form method="post" action="" enctype="multipart/form-data" class="contacts__form">
           <label>
             <span class="contacts__text">Оставьте ваш телефон чтобы мы перезвонили</span>
-            <input type="text"
-              class="contacts__field contacts__field--half contacts__field--phone contacts__field--phonemask"
+            <input type="tel"
+              class="contacts__field contacts__field--half contacts__field--phone contacts__field--phonemask phone-1"
               placeholder="8 900 123-45-56">
           </label>
-
           <div class="contacts__text contacts__text--icon">Или пишите нам, наши менеджеры свяжутся с вами в ближайшее
             время:</div>
-
           <input type="text" class="contacts__field contacts__field--half" placeholder="Имя">
           <input type="text" class="contacts__field contacts__field--half" placeholder="Ваш город">
-          <input type="text" class="contacts__field contacts__field--half contacts__field--phonemask"
-            placeholder="Телефон">
+          <input type="tel" class="contacts__field contacts__field--half contacts__field--phonemask phone-2"
+            placeholder="Телефон" required>
           <input type="text" class="contacts__field contacts__field--half" placeholder="Направление">
-          <input type="text" class="contacts__field contacts__field--half" placeholder="Email">
+          <input type="email" class="contacts__field contacts__field--half" placeholder="Email" required>
           <input type="text" class="contacts__field contacts__field--half" placeholder="Бренд">
-          <textarea name="" id="" cols="30" rows="1" class="contacts__field contacts__field--big"
+          <textarea name="" id="" cols="30" rows="3" class="contacts__field contacts__field--big"
             placeholder="Сообщение"></textarea>
-
           <div class="contacts__checking">
-            <!-- component -->
-            <div class="component component--label_with_checkbox mb-3">
-              <label>
-                <span>Согласие на обработку персональных данных</span>
-                <input type="checkbox" hidden required>
-                <i></i>
-              </label>
-            </div>
-
-            <!-- <div class="contacts__personal">
+            <div class="contacts__personal">
               <label for="personal-checked" class="personal__checked">Согласие на обработку персональных данных</label>
               <input type="checkbox" id="personal-checked" name="personal-personal-checked" class="form__checked"
-                checked>
+                checked required>
               <span class="form__checkmark form__checkmark--checked">
               </span>
-            </div> -->
-            <input type="submit" class="mainbtn contacts__btn" value="Отправить заявку">
+            </div>
+            <input type="submit" class="mainbtn mainbtn--blue contacts__btn" value="Отправить заявку">
           </div>
-
-
+        </form>
+      </div>
+    </section>
+  </div>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="flex-container">
+      <div class="icg-copy">
+        ICG GROUP
+      </div>
+      <div class="flex-row">
+        <div class="flex-col">
+          <div class="footer__menu menu--main">
+            <strong>Меню</strong>
+            <ul>
+              <li><a href="">о компании</a></li>
+              <li><a href="">учебный центр icg</a></li>
+              <li><a href="">icg мебель</a></li>
+              <li><a href="">новости</a></li>
+              <li><a href="">акции</a></li>
+              <li><a href="">сервис</a></li>
+              <li><a href="">написать нам</a></li>
+              <li><a href="">в магазин icg</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex-col flex--double">
+          <div class="footer__menu menu--brands">
+            <strong>Бренды</strong>
+            <ul>
+              <li><a href="">IONTO Comed</a></li>
+              <li><a href="">Suda</a></li>
+              <li><a href="">Creativellooda</a></li>
+              <li><a href="">MyStyle</a></li>
+              <li><a href="">Bernand Cassiere</a></li>
+              <li><a href="">Profillers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex-col">
+          <div class="footer__menu menu--social">
+            <strong>icg в&nbsp;социальных&nbsp;сетях</strong>
+            <ul class="header__social-list">
+              <li class="header__social header__social--vk">
+                <a href="#"></a>
+              </li>
+              <li class="header__social header__social--fb">
+                <a href="#"></a>
+              </li>
+              <li class="header__social header__social--inst">
+                <a href="#"></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-
-    </section>
-
-
-  </div>
-
-  <footer class="footer">
-
-    ICG Group 2019
-
+    </div>
   </footer>
-
-  <script src="js/jquery-3.4.1.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/sales.js"></script>
-
 </body>
 
 </html>

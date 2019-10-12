@@ -12423,7 +12423,7 @@ jQuery(document).ready(function (jQuery) {
     body.stop().animate({
       scrollTop: $('section.contacts').offset().top
     }, 500, 'swing', function () {
-      $('section.contacts form textarea').val($(button).data('product'))
+      $('section.contacts textarea').val($(button).data('product'))
     });
   });
   jQuery(document).ready(function () {
