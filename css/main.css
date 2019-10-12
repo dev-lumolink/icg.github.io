@@ -360,6 +360,15 @@ section.courses {
     padding-bottom: 80px;
   }
 }
+.section--social {
+  display: flex;
+  justify-content: center;
+  background-color: #f4f8fc;
+  padding: 30px 0;
+}
+.section--social ul {
+  width: 170px;
+}
 
 .main-title {
   font-size: 48px;
@@ -7116,6 +7125,7 @@ section.courses {
 
 .contacts-page .brends__list {
   padding-bottom: 0;
+  margin: 0;
 }
 
 @media screen and (max-width: 1050px) {
