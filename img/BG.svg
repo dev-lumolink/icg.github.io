@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="371" viewBox="0 0 1440 371">
+    <defs>
+        <style>
+            .cls-1{fill:#00489c}.cls-2{clip-path:url(#clip-path)}.cls-3{opacity:.07;fill:url(#linear-gradient)}.cls-4{fill:#fff;font-size:300px;font-family:Circe-ExtraBold,Circe;font-weight:800;letter-spacing:-.021em;opacity:.03}
+        </style>
+        <clipPath id="clip-path">
+            <path id="Rectangle_38" d="M0 0h1440v371H0z" class="cls-1" data-name="Rectangle 38" transform="translate(0 2142)"/>
+        </clipPath>
+        <linearGradient id="linear-gradient" x1=".5" x2=".5" y2="1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#b8d2ff"/>
+            <stop offset="1" stop-color="#b8d2ff"/>
+        </linearGradient>
+    </defs>
+    <g id="BG" transform="translate(0 -2142)">
+        <path id="Rectangle_37" d="M0 0h1440v371H0z" class="cls-1" data-name="Rectangle 37" transform="translate(0 2142)"/>
+        <g id="Mask_Group_9" class="cls-2" data-name="Mask Group 9">
+            <rect id="Rectangle" width="999.973" height="1019.39" class="cls-3" rx="100" transform="rotate(45 -2348.893 812.907)"/>
+            <text id="Образование" class="cls-4" transform="translate(630 2330)">
+                <tspan x="0" y="0">Акция</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

@@ -12617,5 +12617,11 @@ jQuery(document).ready(function (jQuery) {
   $('.service__addresses-item img').on('click', function () {
     $(this).replaceWith('<div class="service__addresses-map" id="map' + $(this).data('id') + '"></div>');
     mapsInit($(this).data('coords'), 'map' + $(this).data('id'));
+  });
+
+  $('.slider--brand').find('.owl-carousel').owlCarousel({
+    items: 1,
+    nav: true,
+    autoHeight: true
   })
 })

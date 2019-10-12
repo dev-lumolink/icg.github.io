@@ -1,38 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>ICG Group</title>
-
   <link rel="stylesheet" href="css/normalize.css">
   <link href="css/datepicker.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/main.css">
-
 </head>
+
 <body>
-
   <div class="wrapper brends-page">
-
     <header class="header">
-
       <div class="container">
-
         <div class="header__menu">
           <div class="header__burger">
-
           </div>
-
           <div class="header__popup">
-
             <div class="header__wrapper">
               <a href="#" class="header__close">
-
               </a>
-
               <nav class="header__nav">
                 <ul class="header__list">
                   <li class="header__item">
@@ -61,12 +52,10 @@
                   </li>
                 </ul>
               </nav>
-
               <div class="header__contacts">
                 <div class="header__text">
                   ICG В СОЦИАЛЬНЫХ СЕТЯХ
                 </div>
-
                 <ul class="header__social-list">
                   <li class="header__social header__social--vk">
                     <a href="#"></a>
@@ -79,9 +68,7 @@
                   </li>
                 </ul>
               </div>
-
             </div>
-
           </div>
         </div>
         <div class="header__logo">
@@ -90,13 +77,13 @@
         <div class="header__cities">
           <ul class="cities__list">
             <li class="cities__name">
-                Москва
+              Москва
             </li>
             <li class="cities__name">
-                Санкт-Петербург
+              Санкт-Петербург
             </li>
             <li class="cities__name">
-                Екатеринбург
+              Екатеринбург
             </li>
           </ul>
           <ul class="phone__list">
@@ -111,23 +98,26 @@
             </li>
           </ul>
         </div>
-
         <div class="header__search">
           <div class="search__icon">
-
+          </div>
+          <div class="search__popup">
+            <form action="" method="POST" class="search__form">
+              <input type="text" placeholder="Поиск" class="search__field" id="search__field">
+              <input type="submit" class="search__submit" value="">
+            </form>
           </div>
         </div>
       </div>
-
     </header>
-
+    <!-- brands -->
     <section class="brends">
       <div class="container">
         <ul class="brends__list owl-carousel">
           <li class="brends__item">
             <a href="#" class="brends__link--desktop">IONTO Comed</a>
             <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
-          </li>            
+          </li>
           <li class="brends__item">
             <a href="#" class="brends__link--desktop">Suda</a>
             <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
@@ -137,54 +127,87 @@
             <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
           <li class="brends__item">
-              <a href="#" class="brends__link--desktop">MyStyle</a>
-              <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
+            <a href="#" class="brends__link--desktop">MyStyle</a>
+            <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
           <li class="brends__item">
-              <a href="#" class="brends__link--desktop">Bernand Cassiere</a>
-              <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
+            <a href="#" class="brends__link--desktop">Bernand Cassiere</a>
+            <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
           <li class="brends__item">
-              <a href="#" class="brends__link--desktop">Profillers</a>
-              <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
+            <a href="#" class="brends__link--desktop">Profillers</a>
+            <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
         </ul>
       </div>
     </section>
-
-    <nav class="breadcrumbs">
+    <!-- breadcrumbs -->
+    <div class="breadcrumbs">
       <div class="container">
-        <a href="index.html" class="breadcrumbs__link">Главная</a>
-        <a href="brends.html" class="breadcrumbs__link">Ionto Comed - это профессиональное оборудование</a>
+        <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="#">
+              <span itemprop="name">главная</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="#">
+              <span itemprop="name">Бренды</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+        </ol>
       </div>
-    </nav>
-
+    </div>
     <section class="banners">
-
       <div class="container">
-        <div class="main-title">
+        <h1 class="main-title">
           Ionto Comed - это профессиональное оборудование для косметологии и педикюра из Германии
+        </h1>
+      </div>
+    </section>
+<section>
+  <div class="top-slider slider--brand">
+    <div class="owl-carousel">
+      <div class="top-slider__slide" style="background-image: url('img/BG.svg')">
+        <div class="container--default">
+          <div class="row justify-between align-center wrap">
+            <div class="col col--4of12">
+              <img src="img/sale@3x.png" alt="" class="img img--responsive">
+            </div>
+            <div class="col col--6of12">
+              <h1 class="top-slider__title">ionto comed</h1>
+              <div class="top-slider__subtitle">Европейский лидер по производству профессионального оборудования</div>
+              <a href="" class="top-slider__url">Перейти на сайт <span>ionto comed</span></a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="slider-wrapper">
-          <div class="banners__slider owl-carousel">
-              <a href=""><img src="img/slider.jpg" srcset="img/slider@2x.jpg 900w, img/slider@3x.jpg 1200w" alt=""></a>
-              <a href=""><img src="img/slider.jpg" srcset="img/slider@2x.jpg 900w, img/slider@3x.jpg 1200w" alt=""></a>       
+      <div class="top-slider__slide" style="background-image: url('')">
+        <div class="container--default">
+          <div class="row justify-between align-center wrap">
+            <div class="col col--4of12">
+              <img src="img/sale@3x.png" alt="" class="img img--responsive">
+            </div>
+            <div class="col col--6of12">
+              <h1 class="top-slider__title">Bernard Cassiere</h1>
+              <div class="top-slider__subtitle">Европейский лидер по производству профессионального оборудования. Лидирует в производстве кресел</div>
+              <a href="" class="top-slider__url">Перейти на сайт <span>Bernard Cassiere</span></a>
+            </div>
           </div>
+        </div>
       </div>
-
-
+    </div>
+  </div>
+</section>
+    <section class="brand__main-info">
       <div class="container banners__info">
         <div class="banners__img">
           <img src="img/banner.png" srcset="img/banner@2x.png 900w, img/banner@3x.png 1200w" alt="">
         </div>
-
         <div class="banners__desc">
           <div class="banner__link">
             <a href="#">Перейти на сайт IONTO Comed</a>
           </div>
-
           <div class="banners__text">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -192,226 +215,137 @@
               dictum velit non lacus ornare tempor. Nullam quis augue
               in leo aliquet malesuada sit amet eget eros. Sed laoreet
               posuere velit sit amet varius. Nunc quis risus mi. Ut
-              placerat quam lectus.  Curabitur dictum velit non lacus
+              placerat quam lectus. Curabitur dictum velit non lacus
               ornare tempor. Nullam quis augue in leo aliquet malesuada
               sit amet eget eros.
             </p>
-
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis
               risus mi. Ut placerat quam lectus. Curabitur dictum velit non lacus
               ornare tempor. Nullam quis augue in leo aliquet malesuada sit amet
               eget eros.
             </p>
-
             <p>
-              Nunc quis risus mi. Ut placerat quam lectus.  Curabitur
+              Nunc quis risus mi. Ut placerat quam lectus. Curabitur
               dictum velit non lacus ornare tempor.
             </p>
           </div>
-
-
         </div>
       </div>
-
     </section>
-
     <section class="offers">
       <div class="container">
         <div class="main-title">
           Лучшие предложения
         </div>
-
         <div class="offers__list">
           <a href="#" class="offers__item">
-            <div class="offers__photo">
-              <img src="img/sale.png" srcset="img/sale@2x.png 900w, img/sale@3x.png 1200w" alt="">
-            </div>
-
+            <div class="offers__photo" style="background-image: url('img/sale.png');"></div>
             <div class="offers__desc">
               <div class="offers__title">
                 Аппаратная косметология
               </div>
-
               <div class="offers__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
               </div>
             </div>
-
-
           </a>
-
           <a href="#" class="offers__item">
-            <div class="offers__photo">
-              <img src="img/sale.png" srcset="img/sale@2x.png 900w, img/sale@3x.png 1200w" alt="">
-            </div>
-
+            <div class="offers__photo" style="background-image: url('img/sale.png');"></div>
             <div class="offers__desc">
               <div class="offers__title">
-                Аппаратный педикюр
+                Аппаратная косметология
               </div>
-
               <div class="offers__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
               </div>
             </div>
-
-
           </a>
-
           <a href="#" class="offers__item">
-            <div class="offers__photo">
-              <img src="img/sale.png" srcset="img/sale@2x.png 900w, img/sale@3x.png 1200w" alt="">
-            </div>
-
+            <div class="offers__photo" style="background-image: url('img/sale.png');"></div>
             <div class="offers__desc">
               <div class="offers__title">
-                WELLNESS
+                Аппаратная косметология
               </div>
-
               <div class="offers__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
               </div>
             </div>
-
-
           </a>
-
           <a href="#" class="offers__item">
-            <div class="offers__photo">
-              <img src="img/sale.png" srcset="img/sale@2x.png 900w, img/sale@3x.png 1200w" alt="">
-            </div>
-
+            <div class="offers__photo" style="background-image: url('img/sale.png');"></div>
             <div class="offers__desc">
               <div class="offers__title">
-                Кабинеты "под ключ"
+                Аппаратная косметология
               </div>
-
               <div class="offers__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
               </div>
             </div>
-
           </a>
-
           <a href="#" class="offers__item">
-            <div class="offers__photo">
-              <img src="img/sale.png" srcset="img/sale@2x.png 900w, img/sale@3x.png 1200w" alt="">
-            </div>
-
+            <div class="offers__photo" style="background-image: url('img/sale.png');"></div>
             <div class="offers__desc">
               <div class="offers__title">
-                Аппаратные решения
+                Аппаратная косметология
               </div>
-
               <div class="offers__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
               </div>
             </div>
-
-
           </a>
-
           <a href="#" class="offers__item">
-            <div class="offers__photo">
-              <img src="img/sale.png" srcset="img/sale@2x.png 900w, img/sale@3x.png 1200w" alt="">
-            </div>
-
+            <div class="offers__photo" style="background-image: url('img/sale.png');"></div>
             <div class="offers__desc">
               <div class="offers__title">
-                Мебель и аксессуары
+                Аппаратная косметология
               </div>
-
               <div class="offers__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
               </div>
             </div>
-
-
           </a>
         </div>
       </div>
     </section>
-
     <section class="sales">
       <div class="container">
-
         <div class="main-title">
           Акции
         </div>
-
         <div class="sales__slider slider-wrapper owl-carousel">
-
-          <div class="offers__item">
-            <div class="offers__photo">
-              <img src="img/sale2.jpg" srcset="img/sale2@2x.jpg 900w, img/sale2@3x.jpg 1200w" alt="">
-            </div>
-
+          <a href="#" class="offers__item">
+            <div class="offers__photo" style="background-image: url('img/sale1.jpg')" ;></div>
             <div class="offers__desc">
               <div class="offers__title">
                 Название товара
               </div>
-
               <div class="offers__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
               </div>
             </div>
-
-          </div>
-
-          <div class="offers__item">
-            <div class="offers__photo">
-              <img src="img/sale1.jpg" srcset="img/sale1@2x.jpg 900w, img/sale1@3x.jpg 1200w" alt="">
-            </div>
-
+          </a>
+          <a href="#" class="offers__item">
+            <div class="offers__photo" style="background-image: url('img/sale1.jpg')" ;></div>
             <div class="offers__desc">
               <div class="offers__title">
                 Название товара
               </div>
-
               <div class="offers__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
               </div>
             </div>
-
-
-          </div> -->
-
-
-          <div class="offers__item">
-              <div class="offers__photo">
-                <img src="img/sale1.jpg" srcset="img/sale1@2x.jpg 900w, img/sale1@3x.jpg 1200w" alt="">
-              </div>
-  
-              <div class="offers__desc">
-                <div class="offers__title">
-                  Название товара
-                </div>
-  
-                <div class="offers__text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
-                </div>
-              </div>
-  
-  
-            </div>
-
+          </a>
         </div>
-
       </div>
     </section>
-
     <section class="reviews">
       <div class="container">
-
         <div class="main-title">
           Отзывы
         </div>
-
         <div class="reviews__slider owl-carousel slider-wrapper">
-
           <div class="reviews__item">
-
             <div class="reviews__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Nunc quis risus mi. Ut placerat quam lectus. Curabitur
@@ -420,24 +354,17 @@
               posuere velit sit amet varius. Lorem ipsum dolor sit amet,
               consectetur adipiscing elit.
             </div>
-
             <div class="reviews__name">
               Мария Алагова
             </div>
-
             <div class="reviews__position">
               Генеральный директор салона красоты "Максимум"
             </div>
-
             <div class="reviews__photo">
               <img src="img/Avatar.jpg" srcset="img/Avatar@2x.jpg 900w, img/Avatar@3x.jpg 1200w" alt="">
-
             </div>
-
           </div>
-
           <div class="reviews__item">
-
             <div class="reviews__text">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Nunc quis risus mi. Ut placerat quam lectus. Curabitur
@@ -446,50 +373,36 @@
               posuere velit sit amet varius. Lorem ipsum dolor sit amet,
               consectetur adipiscing elit.
             </div>
-
             <div class="reviews__name">
               Мария Алагова
             </div>
-
             <div class="reviews__position">
               Генеральный директор салона красоты "Максимум"
             </div>
-
             <div class="reviews__photo">
               <img src="img/Avatar.jpg" srcset="img/Avatar@2x.jpg 900w, img/Avatar@3x.jpg 1200w" alt="">
-
             </div>
-
           </div>
-
           <div class="reviews__item">
-
-              <div class="reviews__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Nunc quis risus mi. Ut placerat quam lectus. Curabitur
-                dictum velit non lacus ornare tempor. Nullam quis augue
-                in leo aliquet malesuada sit amet eget eros. Sed laoreet
-                posuere velit sit amet varius. Lorem ipsum dolor sit amet,
-                consectetur adipiscing elit.
-              </div>
-  
-              <div class="reviews__name">
-                Мария Алагова
-              </div>
-  
-              <div class="reviews__position">
-                Генеральный директор салона красоты "Максимум"
-              </div>
-  
-              <div class="reviews__photo">
-                <img src="img/Avatar.jpg" srcset="img/Avatar@2x.jpg 900w, img/Avatar@3x.jpg 1200w" alt="">
-  
-              </div>
-  
+            <div class="reviews__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Nunc quis risus mi. Ut placerat quam lectus. Curabitur
+              dictum velit non lacus ornare tempor. Nullam quis augue
+              in leo aliquet malesuada sit amet eget eros. Sed laoreet
+              posuere velit sit amet varius. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit.
             </div>
-
+            <div class="reviews__name">
+              Мария Алагова
+            </div>
+            <div class="reviews__position">
+              Генеральный директор салона красоты "Максимум"
+            </div>
+            <div class="reviews__photo">
+              <img src="img/Avatar.jpg" srcset="img/Avatar@2x.jpg 900w, img/Avatar@3x.jpg 1200w" alt="">
+            </div>
+          </div>
         </div>
-
         <ul class="header__social-list">
           <li class="header__social header__social--vk">
             <a href="#"></a>
@@ -501,62 +414,102 @@
             <a href="#"></a>
           </li>
         </ul>
-
       </div>
     </section>
-
+    <!-- contacts form -->
     <section class="contacts">
-
       <div class="container">
         <div class="main-title">
           Свяжитесь с нами
         </div>
-
-        <div class="contacts__form">
+        <form method="post" action="" enctype="multipart/form-data" class="contacts__form" id="contacts">
           <label>
             <span class="contacts__text">Оставьте ваш телефон чтобы мы перезвонили</span>
-            <input type="text" class="contacts__field contacts__field--half contacts__field--phone" placeholder="8 900 123-45-56">
+            <input type="tel"
+              class="contacts__field contacts__field--half contacts__field--phone contacts__field--phonemask phone-1"
+              placeholder="8 900 123-45-56">
           </label>
-
-          <div class="contacts__text contacts__text--icon">Или пишите нам, наши менеджеры свяжутся с вами в ближайшее время:</div>
-
+          <div class="contacts__text contacts__text--icon">Или пишите нам, наши менеджеры свяжутся с вами в ближайшее
+            время:</div>
           <input type="text" class="contacts__field contacts__field--half" placeholder="Имя">
           <input type="text" class="contacts__field contacts__field--half" placeholder="Ваш город">
-          <input type="text" class="contacts__field contacts__field--half" placeholder="Телефон">
+          <input type="tel" class="contacts__field contacts__field--half contacts__field--phonemask phone-2"
+            placeholder="Телефон" required>
           <input type="text" class="contacts__field contacts__field--half" placeholder="Направление">
-          <input type="text" class="contacts__field contacts__field--half" placeholder="Email">
+          <input type="email" class="contacts__field contacts__field--half" placeholder="Email" required>
           <input type="text" class="contacts__field contacts__field--half" placeholder="Бренд">
-          <textarea name="" id="" cols="30" rows="1" class="contacts__field contacts__field--big" placeholder="Сообщение"></textarea>
-
+          <textarea name="" id="" cols="30" rows="3" class="contacts__field contacts__field--big"
+            placeholder="Сообщение"></textarea>
           <div class="contacts__checking">
             <div class="contacts__personal">
               <label for="personal-checked" class="personal__checked">Согласие на обработку персональных данных</label>
-              <input type="checkbox" id="personal-checked" name="personal-personal-checked" class="form__checked" checked>
+              <input type="checkbox" id="personal-checked" name="personal-personal-checked" class="form__checked"
+                checked required>
               <span class="form__checkmark form__checkmark--checked">
               </span>
             </div>
-            <input type="submit" class="mainbtn contacts__btn" value="Отправить заявку">
+            <input type="submit" for="contacts" class="mainbtn mainbtn--blue contacts__btn" value="Отправить заявку">
           </div>
-
-
+        </form>
+      </div>
+    </section>
+  </div>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="flex-container">
+      <div class="icg-copy">
+        ICG GROUP
+      </div>
+      <div class="flex-row">
+        <div class="flex-col">
+          <div class="footer__menu menu--main">
+            <strong>Меню</strong>
+            <ul>
+              <li><a href="">о компании</a></li>
+              <li><a href="">учебный центр icg</a></li>
+              <li><a href="">icg мебель</a></li>
+              <li><a href="">новости</a></li>
+              <li><a href="">акции</a></li>
+              <li><a href="">сервис</a></li>
+              <li><a href="">написать нам</a></li>
+              <li><a href="">в магазин icg</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex-col flex--double">
+          <div class="footer__menu menu--brands">
+            <strong>Бренды</strong>
+            <ul>
+              <li><a href="">IONTO Comed</a></li>
+              <li><a href="">Suda</a></li>
+              <li><a href="">Creativellooda</a></li>
+              <li><a href="">MyStyle</a></li>
+              <li><a href="">Bernand Cassiere</a></li>
+              <li><a href="">Profillers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex-col">
+          <div class="footer__menu menu--social">
+            <strong>icg в&nbsp;социальных&nbsp;сетях</strong>
+            <ul class="header__social-list">
+              <li class="header__social header__social--vk">
+                <a href="#"></a>
+              </li>
+              <li class="header__social header__social--fb">
+                <a href="#"></a>
+              </li>
+              <li class="header__social header__social--inst">
+                <a href="#"></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-
-    </section>
-
-
-  </div>
-
-  <footer class="footer">
-
-    ICG Group 2019
-
+    </div>
   </footer>
-
-  <script src="js/jquery-3.4.1.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
   <script src="js/main.js"></script>
   <script src="js/brends.js"></script>
-
 </body>
+
 </html>
