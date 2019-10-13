@@ -69,7 +69,6 @@
         nonce: true,
         noModule: true
     };
-
     function DOMEval(code, node, doc) {
         doc = doc || document;
         var i, val,
@@ -95,7 +94,6 @@
         }
         doc.head.appendChild(script).parentNode.removeChild(script);
     }
-
     function toType(obj) {
         if (obj == null) {
             return obj + "";
@@ -385,7 +383,6 @@
         function (i, name) {
             class2type["[object " + name + "]"] = name.toLowerCase();
         });
-
     function isArrayLike(obj) {
         // Support: real iOS 8.2 only (not reproducible in simulator)
         // `in` check used to prevent JIT error (gh-2145)
@@ -590,7 +587,6 @@
                         }
                 };
             }
-
             function Sizzle(selector, context, results, seed) {
                 var m, i, elem, nid, match, groups, newSelector,
                     newContext = context && context.ownerDocument,
@@ -708,7 +704,6 @@
              */
             function createCache() {
                 var keys = [];
-
                 function cache(key, value) {
                     // Use (key + " ") to avoid collision with native prototype properties (see Issue #157)
                     if (keys.push(key + " ") > Expr.cacheLength) {
@@ -1864,7 +1859,6 @@
                     // Cache the tokens
                     tokenCache(selector, groups).slice(0);
             };
-
             function toSelector(tokens) {
                 var i = 0,
                     len = tokens.length,
@@ -1874,7 +1868,6 @@
                 }
                 return selector;
             }
-
             function addCombinator(matcher, combinator, base) {
                 var dir = combinator.dir,
                     skip = combinator.next,
@@ -1931,7 +1924,6 @@
                         return false;
                     };
             }
-
             function elementMatcher(matchers) {
                 return matchers.length > 1 ?
                     function (elem, context, xml) {
@@ -1945,7 +1937,6 @@
                     } :
                     matchers[0];
             }
-
             function multipleContexts(selector, contexts, results) {
                 var i = 0,
                     len = contexts.length;
@@ -1954,7 +1945,6 @@
                 }
                 return results;
             }
-
             function condense(unmatched, map, filter, context, xml) {
                 var elem,
                     newUnmatched = [],
@@ -1973,7 +1963,6 @@
                 }
                 return newUnmatched;
             }
-
             function setMatcher(preFilter, selector, matcher, postFilter, postFinder, postSelector) {
                 if (postFilter && !postFilter[expando]) {
                     postFilter = setMatcher(postFilter);
@@ -2054,7 +2043,6 @@
                     }
                 });
             }
-
             function matcherFromTokens(tokens) {
                 var checkContext, matcher, j,
                     len = tokens.length,
@@ -2110,7 +2098,6 @@
                 }
                 return elementMatcher(matchers);
             }
-
             function matcherFromGroupMatchers(elementMatchers, setMatchers) {
                 var bySet = setMatchers.length > 0,
                     byElement = elementMatchers.length > 0,
@@ -2389,7 +2376,6 @@
         return matched;
     };
     var rneedsContext = jQuery.expr.match.needsContext;
-
     function nodeName(elem, name) {
         return elem.nodeName && elem.nodeName.toLowerCase() === name.toLowerCase();
     };
@@ -2629,7 +2615,6 @@
             );
         }
     });
-
     function sibling(cur, dir) {
         while ((cur = cur[dir]) && cur.nodeType !== 1) {}
         return cur;
@@ -2893,15 +2878,12 @@
             };
         return self;
     };
-
     function Identity(v) {
         return v;
     }
-
     function Thrower(ex) {
         throw ex;
     }
-
     function adoptValue(value, resolve, reject, noValue) {
         var method;
         try {
@@ -2984,7 +2966,6 @@
                     },
                     then: function (onFulfilled, onRejected, onProgress) {
                         var maxDepth = 0;
-
                         function resolve(depth, deferred, handler, special) {
                             return function () {
                                 var that = this,
@@ -3365,7 +3346,6 @@
         //    - Any
         return owner.nodeType === 1 || owner.nodeType === 9 || !(+owner.nodeType);
     };
-
     function Data() {
         this.expando = jQuery.expando + Data.uid++;
     }
@@ -3502,7 +3482,6 @@
     //	6. Provide a clear path for implementation upgrade to WeakMap in 2014
     var rbrace = /^(?:\{[\w\W]*\}|\[[\w\W]*\])$/,
         rmultiDash = /[A-Z]/g;
-
     function getData(data) {
         if (data === "true") {
             return true;
@@ -3522,7 +3501,6 @@
         }
         return data;
     }
-
     function dataAttr(elem, key, data) {
         var name;
         // If nothing was found internally, try to fetch any
@@ -3794,7 +3772,6 @@
         }
         return ret;
     };
-
     function adjustCSS(elem, prop, valueParts, tween) {
         var adjusted, scale,
             maxIterations = 20,
@@ -3848,7 +3825,6 @@
         return adjusted;
     }
     var defaultDisplayMap = {};
-
     function getDefaultDisplay(elem) {
         var temp,
             doc = elem.ownerDocument,
@@ -3866,7 +3842,6 @@
         defaultDisplayMap[nodeName] = display;
         return display;
     }
-
     function showHide(elements, show) {
         var display, elem,
             values = [],
@@ -3948,7 +3923,6 @@
     wrapMap.optgroup = wrapMap.option;
     wrapMap.tbody = wrapMap.tfoot = wrapMap.colgroup = wrapMap.caption = wrapMap.thead;
     wrapMap.th = wrapMap.td;
-
     function getAll(context, tag) {
         // Support: IE <=9 - 11 only
         // Use typeof to avoid zero-argument method invocation on host objects (#15151)
@@ -3978,7 +3952,6 @@
         }
     }
     var rhtml = /<|&#?\w+;/;
-
     function buildFragment(elems, context, scripts, selection, ignored) {
         var elem, tmp, tag, wrap, attached, j,
             fragment = context.createDocumentFragment(),
@@ -4072,11 +4045,9 @@
         rkeyEvent = /^key/,
         rmouseEvent = /^(?:mouse|pointer|contextmenu|drag|drop)|click/,
         rtypenamespace = /^([^.]*)(?:\.(.+)|)/;
-
     function returnTrue() {
         return true;
     }
-
     function returnFalse() {
         return false;
     }
@@ -4097,7 +4068,6 @@
             return document.activeElement;
         } catch (err) {}
     }
-
     function on(elem, types, selector, data, fn, one) {
         var origFn, type;
         // Types can be a map of types/handlers
@@ -4817,7 +4787,6 @@
         elem.type = (elem.getAttribute("type") !== null) + "/" + elem.type;
         return elem;
     }
-
     function restoreScript(elem) {
         if ((elem.type || "").slice(0, 5) === "true/") {
             elem.type = elem.type.slice(5);
@@ -4826,7 +4795,6 @@
         }
         return elem;
     }
-
     function cloneCopyEvent(src, dest) {
         var i, l, type, pdataOld, pdataCur, udataOld, udataCur, events;
         if (dest.nodeType !== 1) {
@@ -4865,7 +4833,6 @@
             dest.defaultValue = src.defaultValue;
         }
     }
-
     function domManip(collection, args, callback, ignored) {
         // Flatten any nested arrays
         args = concat.apply([], args);
@@ -4940,7 +4907,6 @@
         }
         return collection;
     }
-
     function remove(elem, selector, keepData) {
         var node,
             nodes = selector ? jQuery.filter(selector, elem) : elem,
@@ -5214,7 +5180,6 @@
             // it will also be a sign that checks already performed
             div = null;
         }
-
         function roundPixelMeasures(measure) {
             return Math.round(parseFloat(measure));
         }
@@ -5254,7 +5219,6 @@
             }
         });
     })();
-
     function curCSS(elem, name, computed) {
         var width, minWidth, maxWidth, ret,
             // Support: Firefox 51+
@@ -5296,7 +5260,6 @@
             ret + "" :
             ret;
     }
-
     function addGetHookIf(conditionFn, hookFn) {
         // Define the hook, we'll check on the first run if it's really needed.
         return {
@@ -5353,7 +5316,6 @@
             letterSpacing: "0",
             fontWeight: "400"
         };
-
     function setPositiveNumber(elem, value, subtract) {
         // Any relative (+/-) values have already been
         // normalized at this point
@@ -5363,7 +5325,6 @@
             Math.max(0, matches[2] - (subtract || 0)) + (matches[3] || "px") :
             value;
     }
-
     function boxModelAdjustment(elem, dimension, box, isBorderBox, styles, computedVal) {
         var i = dimension === "width" ? 1 : 0,
             extra = 0,
@@ -5417,7 +5378,6 @@
         }
         return delta;
     }
-
     function getWidthOrHeight(elem, dimension, extra) {
         // Start with computed style
         var styles = getStyles(elem),
@@ -5723,7 +5683,6 @@
             }, name, value, arguments.length > 1);
         }
     });
-
     function Tween(elem, options, prop, end, easing) {
         return new Tween.prototype.init(elem, options, prop, end, easing);
     }
@@ -5827,7 +5786,6 @@
         fxNow, inProgress,
         rfxtypes = /^(?:toggle|show|hide)$/,
         rrun = /queueHooks$/;
-
     function schedule() {
         if (inProgress) {
             if (document.hidden === false && window.requestAnimationFrame) {
@@ -5864,7 +5822,6 @@
         }
         return attrs;
     }
-
     function createTween(value, prop, animation) {
         var tween,
             collection = (Animation.tweeners[prop] || []).concat(Animation.tweeners["*"]),
@@ -5877,7 +5834,6 @@
             }
         }
     }
-
     function defaultPrefilter(elem, props, opts) {
         var prop, value, toggle, hooks, oldfire, propTween, restoreDisplay, display,
             isBox = "width" in props || "height" in props,
@@ -6028,7 +5984,6 @@
             }
         }
     }
-
     function propFilter(props, specialEasing) {
         var index, name, easing, value, hooks;
         // camelCase, specialEasing and expand cssHook pass
@@ -6061,7 +6016,6 @@
             }
         }
     }
-
     function Animation(elem, properties, options) {
         var result,
             stopped,
@@ -6662,11 +6616,9 @@
         var tokens = value.match(rnothtmlwhite) || [];
         return tokens.join(" ");
     }
-
     function getClass(elem) {
         return elem.getAttribute && elem.getAttribute("class") || "";
     }
-
     function classesToArray(value) {
         if (Array.isArray(value)) {
             return value;
@@ -7159,7 +7111,6 @@
         rCRLF = /\r?\n/g,
         rsubmitterTypes = /^(?:submit|button|image|reset|file)$/i,
         rsubmittable = /^(?:input|select|textarea|keygen)/i;
-
     function buildParams(prefix, obj, traditional, add) {
         var name;
         if (Array.isArray(obj)) {
@@ -7317,7 +7268,6 @@
     function inspectPrefiltersOrTransports(structure, options, originalOptions, jqXHR) {
         var inspected = {},
             seekingTransport = (structure === transports);
-
         function inspect(dataType) {
             var selected;
             inspected[dataType] = true;
@@ -9744,7 +9694,6 @@ function (a, b, c, d) {
             if (g[b] !== d) return e = !c || b, !1
         }), e
     }
-
     function f(a) {
         return e(a, !0)
     }
@@ -9846,21 +9795,17 @@ function (a, b, c, d) {
                             settings.completed.call(input);
                         }
                     }
-
                     function getPlaceholder(i) {
                         return settings.placeholder.charAt(i < settings.placeholder.length ? i : 0);
                     }
-
                     function seekNext(pos) {
                         for (; ++pos < len && !tests[pos];);
                         return pos;
                     }
-
                     function seekPrev(pos) {
                         for (; --pos >= 0 && !tests[pos];);
                         return pos;
                     }
-
                     function shiftL(begin, end) {
                         var i, j;
                         if (!(0 > begin)) {
@@ -9872,7 +9817,6 @@ function (a, b, c, d) {
                             writeBuffer(), input.caret(Math.max(firstNonMaskPos, begin));
                         }
                     }
-
                     function shiftR(pos) {
                         var i, c, j, t;
                         for (i = pos, c = getPlaceholder(pos); len > i; i++)
@@ -9881,7 +9825,6 @@ function (a, b, c, d) {
                                 c = t;
                             }
                     }
-
                     function androidInputEvent() {
                         var curVal = input.val(),
                             pos = input.caret();
@@ -9896,11 +9839,9 @@ function (a, b, c, d) {
                         }
                         tryFireCompleted();
                     }
-
                     function blurEvent() {
                         checkVal(), input.val() != focusText && input.change();
                     }
-
                     function keydownEvent(e) {
                         if (!input.prop("readonly")) {
                             var pos, begin, end, k = e.which || e.keyCode;
@@ -9911,7 +9852,6 @@ function (a, b, c, d) {
                                 input.caret(0, checkVal()), e.preventDefault());
                         }
                     }
-
                     function keypressEvent(e) {
                         if (!input.prop("readonly")) {
                             var p, c, next, k = e.which || e.keyCode,
@@ -9931,16 +9871,13 @@ function (a, b, c, d) {
                             }
                         }
                     }
-
                     function clearBuffer(start, end) {
                         var i;
                         for (i = start; end > i && len > i; i++) tests[i] && (buffer[i] = getPlaceholder(i));
                     }
-
                     function writeBuffer() {
                         input.val(buffer.join(""));
                     }
-
                     function checkVal(allow) {
                         var i, c, pos, test = input.val(),
                             lastMatch = -1;
@@ -10022,17 +9959,14 @@ function (a, b, c, d) {
             }
             return e
         };
-
     function a(e, t) {
         var n = (t || document).querySelectorAll(e);
         return Array.prototype.slice.call(n)
     }
-
     function r(e, t) {
         var n = e.matches || e.matchesSelector || e.webkitMatchesSelector || e.msMatchesSelector;
         return n && n.call(e, t)
     }
-
     function s(e, t, n) {
         for (var i = n && !n.contains(e); e && !i;) {
             if (r(e, t)) return e;
@@ -10040,27 +9974,22 @@ function (a, b, c, d) {
         }
         return !1
     }
-
     function o(e, t) {
         e.classList.add.apply(e.classList, t.split(" ").filter(Boolean))
     }
-
     function l(e, t) {
         e.classList.remove.apply(e.classList, t.split(" ").filter(Boolean))
     }
-
     function h(e, t, n) {
         void 0 === n && (n = ! function (e, t) {
             return t && e.classList.contains(t)
         }(e, t)), t && (n ? o(e, t) : l(e, t))
     }
-
     function d(e, t) {
         return e instanceof Date && (t = e.getMonth(), e = e.getFullYear()), [31, function (e) {
             return e % 4 == 0 && e % 100 != 0 || e % 400 == 0
         }(e) ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][t]
     }
-
     function u(e, t, n) {
         for (var i = 0; i < t.length; i++) {
             var a = e,
@@ -10069,28 +9998,23 @@ function (a, b, c, d) {
         }
         return !1
     }
-
     function c(e, t) {
         return e.getTime() - t.getTime()
     }
-
     function p(e) {
         return !!e && e instanceof Date && !isNaN(e.getTime())
     }
-
     function f(e) {
         return _(e, function (e) {
             return e && e.setHours(0, 0, 0, 0), e
         })
     }
-
     function g(e, t) {
         var n = e = new Date(e);
         e > (t = new Date(t)) && (e = t, t = n, n = e);
         for (var i = [new Date(n)]; n < t;) n.setDate(n.getDate() + 1), i.push(new Date(n));
         return i
     }
-
     function m(t) {
         if ("object" == (void 0 === t ? "undefined" : e(t)) && null !== t) {
             var n = Object.getPrototypeOf(t);
@@ -10098,18 +10022,15 @@ function (a, b, c, d) {
         }
         return !1
     }
-
     function v(t) {
         for (var n = Array.prototype.slice.call(arguments, 1), i = 0; i < n.length; i++)
             for (var a in n[i]) void 0 !== t[a] && "object" === e(n[i][a]) && null !== n[i][a] && void 0 === n[i][a].nodeName ? (n[i][a] instanceof Date && (t[a] = new Date(n[i][a].getTime())), Array.isArray(n[i][a]) ? t[a] = n[i][a].slice(0) : t[a] = v(t[a], n[i][a])) : t[a] = n[i][a];
         return t
     }
-
     function _(e, t, n) {
         var i = [].concat(e).map(t, n);
         return 1 === i.length ? i[0] : i
     }
-
     function y(e, t) {
         var n = new Function("obj", "var p=[],print=function(){p.push.apply(p,arguments);};with(obj){p.push('" + e.replace(/[\r\t\n]/g, " ").split("<%").join("\t").replace(/((^|%>)[^\t]*)'/g, "$1\r").replace(/\t=(.*?)%>/g, "',$1,'").split("\t").join("');").split("%>").join("p.push('").split("\r").join("\\'") + "');}return p.join('');");
         return t ? n(t) : n
@@ -12302,7 +12223,23 @@ jQuery(document).ready(function (jQuery) {
             }
         }
     });
-
+    var newsSlider = jQuery(".news__slider-wrapper").owlCarousel({
+        items : 3,
+        nav:true,
+        loop:true,
+        margin: 30,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          650: {
+            items: 2,
+          },
+          850: {
+            items: 3,
+          }
+        }
+    });
     function scrollToMonth(i) {
         var screen = jQuery("news__outer");
         var list = jQuery(".news__scroll");
@@ -12584,7 +12521,6 @@ jQuery(document).ready(function (jQuery) {
             ymaps.ready(init);
             var myMap;
             var coords = coordinates.split(',').reverse();
-
             function init() {
                 myMap = new ymaps.Map(node, {
                     center: coords,
