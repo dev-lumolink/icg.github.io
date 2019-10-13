@@ -11984,6 +11984,67 @@ if (jQuery && wiedemann_data_parser) {
         }
     }), A()
 })
+// map
+function contactsMap (dealers)
+{
+    var myMap;
+    var placemarkCollections = {};
+    var placemarkList = {};
+    ymaps.ready(init);
+    function init() {
+        // Создаем карту
+        myMap = new ymaps.Map("map", {
+            center: [56, 37],
+            zoom: 8,
+            controls: [
+                'zoomControl'
+            ],
+            zoomMargin: [20]
+        });
+        for (var i = 0; i < dealers.length; i++) {
+            // Добавляем название города в выпадающий список
+            $('select#brand-city').append('<option value="' + i + '">' + dealers[i].cityName + '</option>');
+            // Создаём коллекцию меток для города
+            var cityCollection = new ymaps.GeoObjectCollection();
+            for (var c = 0; c < dealers[i].dealers.length; c++) {
+                var dealerInfo = dealers[i].dealers[c];
+                var dealerPlacemark = new ymaps.Placemark(
+                    dealerInfo.coordinates,
+                    {
+                        hintContent: dealerInfo.name,
+                        balloonContent: dealerInfo.name
+                    }
+                );
+                if (!placemarkList[i]) placemarkList[i] = {};
+                placemarkList[i][c] = dealerPlacemark;
+                // Добавляем метку в коллекцию
+                cityCollection.add(dealerPlacemark);
+            }
+            placemarkCollections[i] = cityCollection;
+            // Добавляем коллекцию на карту
+            myMap.geoObjects.add(cityCollection);
+        }
+        $('select#brand-city').trigger('change');
+    }
+    // Переключение города
+    $(document).on('change', $('select#brand-city'), function () {
+        var cityId = $('select#brand-city').val();
+        // Масштабируем и выравниваем карту так, чтобы были видны метки для выбранного города
+        myMap.setBounds(placemarkCollections[cityId].getBounds(), {checkZoomRange:true}).then(function(){
+            if(myMap.getZoom() > 15) myMap.setZoom(15); // Если значение zoom превышает 15, то устанавливаем 15.
+        });
+        $('#dealers').html('');
+        for (var c = 0; c < dealers[cityId].dealers.length; c++) {
+            $('#dealers').append('<li value="' + c + '">' + dealers[cityId].dealers[c].name + '</li>');
+        }
+    });
+    // Клик на адрес
+    $(document).on('click', '#dealers li', function () {
+        var cityId = $('select#brand-city').val();
+        var dealerId = $(this).val();
+        placemarkList[cityId][dealerId].events.fire('click');
+    });
+}
 // !libs
 jQuery(document).ready(function (jQuery) {
     if (document.querySelector('[data-entity="event-calendar"]')) {
@@ -12578,5 +12639,15 @@ jQuery(document).ready(function (jQuery) {
         jQuery(this).addClass('title--active');
         jQuery('.tabs .tab').hide(0).parents('.tabs').find('.tab[data-tab="' + jQuery(this).data('tab') + '"]').show(0)
     });
-    jQuery('.tabs .tab:first').show(0)
+    jQuery('.tabs .tab:first').show(0);
+
+    jQuery('#dealer-btn').on('click', function () {
+        var button = $(this);
+        var body = jQuery("html, body");
+        body.stop().animate({
+            scrollTop: $('section.contacts').offset().top
+        }, 500, 'swing', function () {
+            $('section.contacts #form-direction').val('Дилер')
+        });
+    })
 })
