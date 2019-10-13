@@ -160,195 +160,317 @@
     </div>
     <!-- banners -->
     <section class="banners courses-page">
-        <div class="container">
-          <a href="#" class="offers__item">
-            <div class="offers__photo" style="background-image: url('img/courses1@2x.jpg');"></div>
-            <div class="offers__desc">
-              <div class="offers__title">
-                Требуются модели
-              </div>
-              <div class="offers__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
-              </div>
-            </div>
-          </a>
-          <a href="#" class="offers__item">
-            <div class="offers__photo" style="background-image: url('img/courses2@2x.jpg');"></div>
-            <div class="offers__desc">
-              <div class="offers__title">
-                Ближайшие семинары
-              </div>
-              <div class="offers__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
-              </div>
-            </div>
-          </a>
-        </div>
-      </section>
-    <section class="news__section">
       <div class="container">
-        <div class="main-title">
-          Новости
-        </div>
+        <a href="#" class="offers__item">
+          <div class="offers__photo" style="background-image: url('img/courses1@2x.jpg');"></div>
+          <div class="offers__desc">
+            <div class="offers__title">
+              Требуются модели
+            </div>
+            <div class="offers__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
+            </div>
+          </div>
+        </a>
+        <a href="#" class="offers__item">
+          <div class="offers__photo" style="background-image: url('img/courses2@2x.jpg');"></div>
+          <div class="offers__desc">
+            <div class="offers__title">
+              Ближайшие семинары
+            </div>
+            <div class="offers__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
+            </div>
+          </div>
+        </a>
       </div>
-      <div class="news__time">
-        <div class="container">
-          <div class="news__month news__month--active"><a href="#">Обучение</a></div>
-          <div class="news__month"><a href="#">Оборудование</a></div>
-          <div class="news__month"><a href="#">Косметика</a></div>
-        </div>
-      </div>
-      <div class="news__tags">
-        <div class="container">
-          <a href="#" class="news__tag">2018</a>
-          <a href="#" class="news__tag">Семинар</a>
-          <a href="#" class="news__tag">Санкт-Петербург</a>
-          <a href="#" class="news__tag">SUDA</a>
-          <a href="#" class="news__tag">Профессиональная косметика</a>
-          <a href="#" class="news__tag">Косметика для лица</a>
-        </div>
-      </div>
-      <div class="news__container">
-        <div class="container">
-          <div class="news__outer">
-            <div class="news__scroll owl-carousel" data-slider="events">
-              <article>
+    </section>
+
+    <!-- news tabs -->
+    <section class="news-categories">
+      <header>
+        <h1 class="main-title">Новости</h1>
+      </header>
+      <div class="container--default">
+        <div class="tabs">
+          <ul class="row wrap justify-center">
+            <li class="col col--auto align-center"><a class="title title--active" data-tab="1" href="">Все новости</a>
+            </li>
+            <li class="col col--auto align-center"><a class="title" data-tab="2" href="">Выставки</a></li>
+            <li class="col col--auto align-center"><a class="title" data-tab="3" href="">Семинары</a></li>
+            <li class="col col--auto align-center"><a class="title" data-tab="4" href="">Обзоры товаров</a></li>
+            <li class="col col--auto align-center"><a class="title" data-tab="5" href="">Оснащение салонов</a></li>
+            <li class="col col--auto align-center"><a class="title" data-tab="6" href="">Новости партнеров</a></li>
+          </ul>
+          <form method="POST" class="row wrap justify-between" data-entity="filter">
+            <div class="col">
+              <div data-entity="select">
+                <select name="">
+                  <option value="">Все категории</option>
+                  <option value="">Бренды</option>
+                  <option value="">Обучение</option>
+                  <option value="">Город</option>
+                </select>
+              </div>
+            </div>
+            <div class="col col--grow">
+              <input type="text" name="" data-entity="filter-input" placeholder="Поиск..." />
+            </div>
+          </form>
+          <div class="tab tab--active" data-tab="1">
+            <div class="sales__news-list owl-carousel">
+              <div class="sales__news-item">
                 <a href="">
-                  <img src="img/new1.jpg" srcset="img/new1@2x.jpg 900w, img/new1@3x.jpg 1200w" alt="">
+                  <div class="sales__news-photo">
+                    <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
+                    <div class="sales__news-city">
+                      <div class="sales__news-wrapper">
+                        Санкт-Петербург
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sales__news-signature">
+                    <div class="sales__news-block">
+                      Оборудование
+                    </div>
+                    <div class="sales__news-date">
+                      14.02.2019
+                    </div>
+                  </div>
+                  <div class="sales__news-title">
+                    Заголовок новостей
+                  </div>
+                  <div class="sales__news-text">
+                    Краткий анонс новости.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
+                  </div>
                 </a>
-                <date class="news__date">7 MAY 2015</date>
-                <a class="news__title" href="">Weekend plans</a>
-                <p class="news__text">It’s nearly friday and we’re already planning for the weekend… start with waffles
-                </p>
-              </article>
-              <article>
+              </div>
+              <div class="sales__news-item">
                 <a href="">
-                  <img src="img/new1.jpg" srcset="img/new1@2x.jpg 900w, img/new1@3x.jpg 1200w" alt="">
+                  <div class="sales__news-photo">
+                    <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
+                    <div class="sales__news-city">
+                      <div class="sales__news-wrapper">
+                        Санкт-Петербург
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sales__news-signature">
+                    <div class="sales__news-block">
+                      Оборудование
+                    </div>
+                    <div class="sales__news-date">
+                      14.02.2019
+                    </div>
+                  </div>
+                  <div class="sales__news-title">
+                    Заголовок новостей
+                  </div>
+                  <div class="sales__news-text">
+                    Краткий анонс новости.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
+                  </div>
                 </a>
-                <date class="news__date">7 MAY 2015</date>
-                <a class="news__title" href="">Weekend plans</a>
-                <p class="news__text">It’s nearly friday and we’re already planning for the weekend… start with waffles
-                </p>
-              </article>
+              </div>
+              <div class="sales__news-item">
+                <a href="">
+                  <div class="sales__news-photo">
+                    <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
+                    <div class="sales__news-city">
+                      <div class="sales__news-wrapper">
+                        Санкт-Петербург
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sales__news-signature">
+                    <div class="sales__news-block">
+                      Оборудование
+                    </div>
+                    <div class="sales__news-date">
+                      14.02.2019
+                    </div>
+                  </div>
+                  <div class="sales__news-title">
+                    Заголовок новостей
+                  </div>
+                  <div class="sales__news-text">
+                    Краткий анонс новости.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
+                  </div>
+                </a>
+              </div>
+              <div class="sales__news-item">
+                <a href="">
+                  <div class="sales__news-photo">
+                    <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
+                    <div class="sales__news-city">
+                      <div class="sales__news-wrapper">
+                        Санкт-Петербург
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sales__news-signature">
+                    <div class="sales__news-block">
+                      Оборудование
+                    </div>
+                    <div class="sales__news-date">
+                      14.02.2019
+                    </div>
+                  </div>
+                  <div class="sales__news-title">
+                    Заголовок новостей
+                  </div>
+                  <div class="sales__news-text">
+                    Краткий анонс новости.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
+                  </div>
+                </a>
+              </div>
+              <div class="sales__news-item">
+                <a href="">
+                  <div class="sales__news-photo">
+                    <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
+                    <div class="sales__news-city">
+                      <div class="sales__news-wrapper">
+                        Санкт-Петербург
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sales__news-signature">
+                    <div class="sales__news-block">
+                      Оборудование
+                    </div>
+                    <div class="sales__news-date">
+                      14.02.2019
+                    </div>
+                  </div>
+                  <div class="sales__news-title">
+                    Заголовок новостей
+                  </div>
+                  <div class="sales__news-text">
+                    Краткий анонс новости.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
+                  </div>
+                </a>
+              </div>
+              <div class="sales__news-item">
+                <a href="">
+                  <div class="sales__news-photo">
+                    <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
+                    <div class="sales__news-city">
+                      <div class="sales__news-wrapper">
+                        Санкт-Петербург
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sales__news-signature">
+                    <div class="sales__news-block">
+                      Оборудование
+                    </div>
+                    <div class="sales__news-date">
+                      14.02.2019
+                    </div>
+                  </div>
+                  <div class="sales__news-title">
+                    Заголовок новостей
+                  </div>
+                  <div class="sales__news-text">
+                    Краткий анонс новости.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
+                  </div>
+                </a>
+              </div>
+              <div class="sales__news-item">
+                <a href="">
+                  <div class="sales__news-photo">
+                    <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
+                    <div class="sales__news-city">
+                      <div class="sales__news-wrapper">
+                        Санкт-Петербург
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sales__news-signature">
+                    <div class="sales__news-block">
+                      Оборудование
+                    </div>
+                    <div class="sales__news-date">
+                      14.02.2019
+                    </div>
+                  </div>
+                  <div class="sales__news-title">
+                    Заголовок новостей
+                  </div>
+                  <div class="sales__news-text">
+                    Краткий анонс новости.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
+                  </div>
+                </a>
+              </div>
+              <div class="sales__news-item">
+                <a href="">
+                  <div class="sales__news-photo">
+                    <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
+                    <div class="sales__news-city">
+                      <div class="sales__news-wrapper">
+                        Санкт-Петербург
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sales__news-signature">
+                    <div class="sales__news-block">
+                      Оборудование
+                    </div>
+                    <div class="sales__news-date">
+                      14.02.2019
+                    </div>
+                  </div>
+                  <div class="sales__news-title">
+                    Заголовок новостей
+                  </div>
+                  <div class="sales__news-text">
+                    Краткий анонс новости.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
+                  </div>
+                </a>
+              </div>
+              <div class="sales__news-item">
+                <a href="">
+                  <div class="sales__news-photo">
+                    <img src="img/courses3.jpg" srcset="img/courses3@2x.jpg 900w, img/courses3@3x.jpg 1200w" alt="">
+                    <div class="sales__news-city">
+                      <div class="sales__news-wrapper">
+                        Санкт-Петербург
+                      </div>
+                    </div>
+                  </div>
+                  <div class="sales__news-signature">
+                    <div class="sales__news-block">
+                      Оборудование
+                    </div>
+                    <div class="sales__news-date">
+                      14.02.2019
+                    </div>
+                  </div>
+                  <div class="sales__news-title">
+                    Заголовок новостей
+                  </div>
+                  <div class="sales__news-text">
+                    Краткий анонс новости.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis risus mi.
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="loader">
+                <div class="lds-css ng-scope"><div style="width:100%;height:100%" class="lds-double-ring"><div></div><div></div><div><div></div></div><div><div></div></div></div></div>
             </div>
           </div>
         </div>
       </div>
-      <div class="news__btn">
-        <div class="mainbtn">
-          <a href="news.html">Все события</a>
-        </div>
-      </div>
     </section>
-    <section class="news__popular">
-      <div class="container">
-        <div class="main-title">
-          Популярные новости
-        </div>
-      </div>
-      <div class="news__time">
-        <div class="news__month news__month--active"><a href="#">Обучение</a></div>
-        <div class="news__month"><a href="#">Оборудование</a></div>
-        <div class="news__month"><a href="#">Партнеры</a></div>
-      </div>
-      <div class="container">
-        <div class="news__tags">
-          <a href="#" class="news__tag">2018</a>
-          <a href="#" class="news__tag">Семинар</a>
-          <a href="#" class="news__tag">Санкт-Петербург</a>
-          <a href="#" class="news__tag">SUDA</a>
-          <a href="#" class="news__tag">Профессиональная косметика</a>
-          <a href="#" class="news__tag">Косметика для лица</a>
-        </div>
-        <div class="news__outer">
-          <div class="news__scroll owl-carousel" data-slider="popular-news">
-            <div class="news__one">
-              <a href="">
-                <div class="news__one-photo">
-                  <img src="img/news-pop1.jpg" srcset="img/news-pop1@2x.jpg 900w, img/news-pop1@3x.jpg 1200w" alt="">
-                </div>
-                <div class="course__date">
-                  12.09.2019
-                </div>
-                <div class="news__one-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                  scelerisque non orci vel mattis.
-                </div>
-              </a>
-            </div>
-            <div class="news__one">
-              <a href="">
-                <div class="news__one-photo">
-                  <img src="img/news-pop1.jpg" srcset="img/news-pop1@2x.jpg 900w, img/news-pop1@3x.jpg 1200w" alt="">
-                </div>
-                <div class="course__date">
-                  12.09.2019
-                </div>
-                <div class="news__one-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                  scelerisque non orci vel mattis.
-                </div>
-              </a>
-            </div>
-            <div class="news__one">
-              <a href="">
-                <div class="news__one-photo">
-                  <img src="img/news-pop1.jpg" srcset="img/news-pop1@2x.jpg 900w, img/news-pop1@3x.jpg 1200w" alt="">
-                </div>
-                <div class="course__date">
-                  12.09.2019
-                </div>
-                <div class="news__one-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                  scelerisque non orci vel mattis.
-                </div>
-              </a>
-            </div>
-            <div class="news__one">
-              <a href="">
-                <div class="news__one-photo">
-                  <img src="img/news-pop1.jpg" srcset="img/news-pop1@2x.jpg 900w, img/news-pop1@3x.jpg 1200w" alt="">
-                </div>
-                <div class="course__date">
-                  12.09.2019
-                </div>
-                <div class="news__one-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                  scelerisque non orci vel mattis.
-                </div>
-              </a>
-            </div>
-            <div class="news__one">
-              <a href="">
-                <div class="news__one-photo">
-                  <img src="img/news-pop1.jpg" srcset="img/news-pop1@2x.jpg 900w, img/news-pop1@3x.jpg 1200w" alt="">
-                </div>
-                <div class="course__date">
-                  12.09.2019
-                </div>
-                <div class="news__one-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                  scelerisque non orci vel mattis.
-                </div>
-              </a>
-            </div>
-            <div class="news__one">
-              <a href="">
-                <div class="news__one-photo">
-                  <img src="img/news-pop1.jpg" srcset="img/news-pop1@2x.jpg 900w, img/news-pop1@3x.jpg 1200w" alt="">
-                </div>
-                <div class="course__date">
-                  12.09.2019
-                </div>
-                <div class="news__one-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                  scelerisque non orci vel mattis.
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-    </section>
+
     <!-- contacts form -->
     <section class="contacts">
       <div class="container">
@@ -442,7 +564,7 @@
     </div>
   </footer>
   <script src="js/main.js"></script>
-  <!-- <script src="js/newslist.js"></script> -->
+  <script src="js/newslist.js"></script>
 </body>
 
 </html>

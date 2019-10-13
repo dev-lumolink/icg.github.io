@@ -12528,17 +12528,17 @@ jQuery(document).ready(function (jQuery) {
       }
     });
   }
-  $('.service__addresses-item img').on('click', function () {
-    $(this).replaceWith('<div class="service__addresses-map" id="map' + $(this).data('id') + '"></div>');
-    mapsInit($(this).data('coords'), 'map' + $(this).data('id'));
+  jQuery('.service__addresses-item img').on('click', function () {
+    jQuery(this).replaceWith('<div class="service__addresses-map" id="map' + jQuery(this).data('id') + '"></div>');
+    mapsInit($(this).data('coords'), 'map' + jQuery(this).data('id'));
   });
-  $('.slider--brand').find('.owl-carousel').owlCarousel({
+  jQuery('.slider--brand').find('.owl-carousel').owlCarousel({
     items: 1,
     nav: true,
     autoHeight: true
   });
-  if ( $('.reviews__slider .reviews__item').length > 1 ) {
-    $(".reviews__slider").owlCarousel({
+  if ( jQuery('.reviews__slider .reviews__item').length > 1 ) {
+    jQuery(".reviews__slider").owlCarousel({
       items : 2,
        nav:true,
        loop:false,
@@ -12553,6 +12553,14 @@ jQuery(document).ready(function (jQuery) {
       }
    });
   } else {
-    $('.reviews__slider').css('display', 'block');
-  }
+    jQuery('.reviews__slider').css('display', 'block');
+  };
+  jQuery('.tabs > ul li a').on('click', function(e)
+  {
+    e.preventDefault();
+    jQuery(this).parents('ul').find('a').removeClass('title--active');
+    jQuery(this).addClass('title--active');
+    jQuery('.tabs .tab').hide(0).parents('.tabs').find('.tab[data-tab="' + jQuery(this).data('tab') + '"]').show(0)
+  });
+  jQuery('.tabs .tab:first').show(0)
 })
