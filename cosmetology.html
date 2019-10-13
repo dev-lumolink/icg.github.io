@@ -1,38 +1,29 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>ICG Group</title>
-
   <link rel="stylesheet" href="css/normalize.css">
   <link href="css/datepicker.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/main.css">
-
 </head>
+
 <body>
-
   <div class="wrapper cosmetology-page">
-
     <header class="header">
-
       <div class="container">
-
         <div class="header__menu">
           <div class="header__burger">
-
           </div>
-
           <div class="header__popup">
-
             <div class="header__wrapper">
               <a href="#" class="header__close">
-
               </a>
-
               <nav class="header__nav">
                 <ul class="header__list">
                   <li class="header__item">
@@ -61,12 +52,10 @@
                   </li>
                 </ul>
               </nav>
-
               <div class="header__contacts">
                 <div class="header__text">
                   ICG В СОЦИАЛЬНЫХ СЕТЯХ
                 </div>
-
                 <ul class="header__social-list">
                   <li class="header__social header__social--vk">
                     <a href="#"></a>
@@ -79,9 +68,7 @@
                   </li>
                 </ul>
               </div>
-
             </div>
-
           </div>
         </div>
         <div class="header__logo">
@@ -90,13 +77,13 @@
         <div class="header__cities">
           <ul class="cities__list">
             <li class="cities__name">
-                Москва
+              Москва
             </li>
             <li class="cities__name">
-                Санкт-Петербург
+              Санкт-Петербург
             </li>
             <li class="cities__name">
-                Екатеринбург
+              Екатеринбург
             </li>
           </ul>
           <ul class="phone__list">
@@ -111,23 +98,26 @@
             </li>
           </ul>
         </div>
-
         <div class="header__search">
           <div class="search__icon">
-
+          </div>
+          <div class="search__popup">
+            <form action="" method="POST" class="search__form">
+              <input type="text" placeholder="Поиск" class="search__field" id="search__field">
+              <input type="submit" class="search__submit" value="">
+            </form>
           </div>
         </div>
       </div>
-
     </header>
-
+    <!-- brands -->
     <section class="brends">
       <div class="container">
         <ul class="brends__list owl-carousel">
           <li class="brends__item">
             <a href="#" class="brends__link--desktop">IONTO Comed</a>
             <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
-          </li>            
+          </li>
           <li class="brends__item">
             <a href="#" class="brends__link--desktop">Suda</a>
             <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
@@ -137,151 +127,212 @@
             <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
           <li class="brends__item">
-              <a href="#" class="brends__link--desktop">MyStyle</a>
-              <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
+            <a href="#" class="brends__link--desktop">MyStyle</a>
+            <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
           <li class="brends__item">
-              <a href="#" class="brends__link--desktop">Bernand Cassiere</a>
-              <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
+            <a href="#" class="brends__link--desktop">Bernand Cassiere</a>
+            <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
           <li class="brends__item">
-              <a href="#" class="brends__link--desktop">Profillers</a>
-              <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
+            <a href="#" class="brends__link--desktop">Profillers</a>
+            <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
         </ul>
       </div>
     </section>
-
-    <nav class="breadcrumbs">
+    <!-- breadcrumbs -->
+    <div class="breadcrumbs">
       <div class="container">
-        <a href="index.html" class="breadcrumbs__link">Главная</a>
-        <a href="index.html" class="breadcrumbs__link">Эстетическая медицина</a>
-        <a href="brends.html" class="breadcrumbs__link">Оборудование</a>
+        <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="#">
+              <span itemprop="name">главная</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="#">
+              <span itemprop="name">косметология</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+        </ol>
       </div>
-    </nav>
-
-    <section class="banners">
-
+    </div>
+    <!-- top slider -->
+    <section>
       <div class="container">
-        <div class="main-title">
-            Оборудование
+        <h1 class="main-title">
+          Косметология
+        </h1>
+      </div>
+      <div class="top-slider slider--brand">
+        <div class="owl-carousel">
+          <div class="top-slider__slide" style="background-image: url('img/BG.svg')">
+            <div class="container--default">
+              <div class="row justify-between align-center wrap">
+                <div class="col col--4of12">
+                  <div class="image-container">
+                    <img src="img/sale@3x.png" alt="" class="img img--responsive">
+                    <div class="image-hint" style="background-image: url('img/mebel1.png');">
+                      <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, voluptatibus? Quidem pariatur incidunt quam dolorem culpa blanditiis similique! Quod commodi, exercitationem hic voluptatibus dolorum reiciendis aliquid a error magni corrupti.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col--6of12">
+                  <h1 class="top-slider__title">оборудование</h1>
+                  <div class="top-slider__subtitle">Европейский лидер по производству профессионального оборудования
+                  </div>
+                  <a href="" class="top-slider__url">Узнать больше</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="slider-wrapper">
-          <div class="banners__slider owl-carousel">
-              <a href=""><img src="img/slider.jpg" srcset="img/slider@2x.jpg 900w, img/slider@3x.jpg 1200w" alt=""></a>
-              <a href=""><img src="img/slider.jpg" srcset="img/slider@2x.jpg 900w, img/slider@3x.jpg 1200w" alt=""></a>       
-          </div>
-      </div>
-
-      
-
     </section>
-
     <section class="complex">
-        <div class="container">
-            <div class="main-title">
-                    Комплексные решения
-            </div>
-
-            <div class="complex__list">
-
-                <div class="complex__left">
-
-                    <div class="complex__photo">
-                        <img src="img/cosmetology-s.png" srcset="img/cosmetology-s@2x.png 900w, img/cosmetology-s@3x.png 1200w" alt="">
-
-                    </div>
-
-                    <div class="complex__photo">
-                        <img src="img/cosmetology-s.png" srcset="img/cosmetology-s@2x.png 900w, img/cosmetology-s@3x.png 1200w" alt="">
-
-                    </div>
-
-
-                </div>
-
-                <div class="complex__right">
-                    <div class="complex__photo">
-                        <img src="img/cosmetology-b.png" srcset="img/cosmetology-b@2x.png 900w, img/cosmetology-b@3x.png 1200w" alt="">
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="individual">
-        <div class="container">
-            <div class="main-title">
-                Нужны индивидуальные условия?
-            </div>
-            <form action="" class="individual__form">
-                <input type="text" class="individual__input" placeholder="Имя">
-                <input type="text" class="individual__input" placeholder="Фамилия">
-                <input type="text" class="individual__input" placeholder="E-mail">
-                <input type="submit" class="individual__input individual__btn" value="Обсудить условия"> 
-
-            </form>
-        </div>
-    </section>
-
-
-    <section class="contacts">
-
       <div class="container">
         <div class="main-title">
-          Свяжитесь с нами
+          Комплексные решения
         </div>
-
-        <div class="contacts__form">
-          <label>
-            <span class="contacts__text">Оставьте ваш телефон чтобы мы перезвонили</span>
-            <input type="text" class="contacts__field contacts__field--half contacts__field--phone contacts__field--phonemask" placeholder="8 900 123-45-56">
-          </label>
-
-          <div class="contacts__text contacts__text--icon">Или пишите нам, наши менеджеры свяжутся с вами в ближайшее время:</div>
-
-          <input type="text" class="contacts__field contacts__field--half" placeholder="Имя">
-          <input type="text" class="contacts__field contacts__field--half" placeholder="Ваш город">
-          <input type="text" class="contacts__field contacts__field--half contacts__field--phonemask" placeholder="Телефон">
-          <input type="text" class="contacts__field contacts__field--half" placeholder="Направление">
-          <input type="text" class="contacts__field contacts__field--half" placeholder="Email">
-          <input type="text" class="contacts__field contacts__field--half" placeholder="Бренд">
-          <textarea name="" id="" cols="30" rows="1" class="contacts__field contacts__field--big" placeholder="Сообщение"></textarea>
-
-          <div class="contacts__checking">
-            <div class="contacts__personal">
-              <label for="personal-checked" class="personal__checked">Согласие на обработку персональных данных</label>
-              <input type="checkbox" id="personal-checked" name="personal-personal-checked" class="form__checked" checked>
-              <span class="form__checkmark form__checkmark--checked">
-              </span>
+        <div class="complex__list">
+          <div class="complex__left">
+            <div class="complex__photo">
+              <div class="image-container">
+                <img src="img/cosmetology-s.png" srcset="img/cosmetology-s@2x.png 900w, img/cosmetology-s@3x.png 1200w"
+                alt="">
+                <span class="image-hint" style="background-image:url('img/courses1.jpg')">Далеко-далеко за, словесными горами в стране гласных и согласных живут рыбные тексты. Несколько встретил безопасную они его вопроса своих имеет о, рыбными от всех океана власти правилами курсивных продолжил жизни деревни! Власти, она.</span>
+              </div>
             </div>
-            <input type="submit" class="mainbtn contacts__btn" value="Отправить заявку">
+            <div class="complex__photo">
+              <div class="image-container">
+                <img src="img/cosmetology-s.png" srcset="img/cosmetology-s@2x.png 900w, img/cosmetology-s@3x.png 1200w"
+                alt="">
+                <span class="image-hint" style="background-image:url('img/courses1.jpg')">Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Большой рукопись заманивший заголовок бросил города злых, силуэт вдали переписали!</span>
+              </div>
+              
+            </div>
           </div>
-
-
+          <div class="complex__right">
+            <div class="complex__photo">
+              <div class="image-container">
+                <img src="img/cosmetology-b.png" srcset="img/cosmetology-b@2x.png 900w, img/cosmetology-b@3x.png 1200w"
+                alt="">
+                <span class="image-hint" style="background-image:url('img/courses1.jpg')">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Она моей осталось использовало предупредила предупреждал силуэт необходимыми, первую, рыбного все вдали на берегу имеет коварный деревни путь над. Точках прямо текст предложения свое ее имени буквоград образ жаренные семантика однажды!</span>
+              </div>
+              
+            </div>
+          </div>
         </div>
       </div>
-
     </section>
-
-
+    <section class="individual">
+      <div class="container">
+        <div class="main-title">
+          Нужны индивидуальные условия?
+        </div>
+        <form action="POST" class="individual__form">
+          <input type="text" class="individual__input" placeholder="Имя" required>
+          <input type="text" class="individual__input" placeholder="Фамилия" required>
+          <input type="email" class="individual__input" placeholder="E-mail" required>
+          <input type="submit" class="individual__input individual__btn" value="Обсудить условия">
+        </form>
+      </div>
+    </section>
+    <!-- contacts form -->
+    <section class="contacts">
+        <div class="container">
+          <div class="main-title">
+            Свяжитесь с нами
+          </div>
+          <form method="post" action="" enctype="multipart/form-data" class="contacts__form">
+            <label>
+              <span class="contacts__text">Оставьте ваш телефон чтобы мы перезвонили</span>
+              <input type="tel"
+                class="contacts__field contacts__field--half contacts__field--phone contacts__field--phonemask phone-1"
+                placeholder="8 900 123-45-56">
+            </label>
+            <div class="contacts__text contacts__text--icon">Или пишите нам, наши менеджеры свяжутся с вами в ближайшее
+              время:</div>
+            <input type="text" class="contacts__field contacts__field--half" placeholder="Имя">
+            <input type="text" class="contacts__field contacts__field--half" placeholder="Ваш город">
+            <input type="tel" class="contacts__field contacts__field--half contacts__field--phonemask phone-2"
+              placeholder="Телефон" required>
+            <input type="text" class="contacts__field contacts__field--half" placeholder="Направление">
+            <input type="email" class="contacts__field contacts__field--half" placeholder="Email" required>
+            <input type="text" class="contacts__field contacts__field--half" placeholder="Бренд">
+            <textarea name="" id="" cols="30" rows="3" class="contacts__field contacts__field--big"
+              placeholder="Сообщение"></textarea>
+            <div class="contacts__checking">
+              <div class="contacts__personal">
+                <label for="personal-checked" class="personal__checked">Согласие на обработку персональных данных</label>
+                <input type="checkbox" id="personal-checked" name="personal-personal-checked" class="form__checked"
+                  checked required>
+                <span class="form__checkmark form__checkmark--checked">
+                </span>
+              </div>
+              <input type="submit" class="mainbtn mainbtn--blue contacts__btn" value="Отправить заявку">
+            </div>
+          </form>
+        </div>
+    </section>
   </div>
-
+  <!-- footer -->
   <footer class="footer">
-
-    ICG Group 2019
-
+    <div class="flex-container">
+      <div class="icg-copy">
+        ICG GROUP
+      </div>
+      <div class="flex-row">
+        <div class="flex-col">
+          <div class="footer__menu menu--main">
+            <strong>Меню</strong>
+            <ul>
+              <li><a href="">о компании</a></li>
+              <li><a href="">учебный центр icg</a></li>
+              <li><a href="">icg мебель</a></li>
+              <li><a href="">новости</a></li>
+              <li><a href="">акции</a></li>
+              <li><a href="">сервис</a></li>
+              <li><a href="">написать нам</a></li>
+              <li><a href="">в магазин icg</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex-col flex--double">
+          <div class="footer__menu menu--brands">
+            <strong>Бренды</strong>
+            <ul>
+              <li><a href="">IONTO Comed</a></li>
+              <li><a href="">Suda</a></li>
+              <li><a href="">Creativellooda</a></li>
+              <li><a href="">MyStyle</a></li>
+              <li><a href="">Bernand Cassiere</a></li>
+              <li><a href="">Profillers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex-col">
+          <div class="footer__menu menu--social">
+            <strong>icg в&nbsp;социальных&nbsp;сетях</strong>
+            <ul class="header__social-list">
+              <li class="header__social header__social--vk">
+                <a href="#"></a>
+              </li>
+              <li class="header__social header__social--fb">
+                <a href="#"></a>
+              </li>
+              <li class="header__social header__social--inst">
+                <a href="#"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </footer>
-
-  <script src="js/jquery-3.4.1.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.maskedinput.js"></script>
   <script src="js/main.js"></script>
   <script src="js/cosmetology.js"></script>
-
 </body>
+
 </html>

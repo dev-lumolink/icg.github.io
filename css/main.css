@@ -137,62 +137,103 @@ h6 {
   padding: 0 120px;
 }
 .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .wrap {
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .justify-start {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 .justify-center {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .justify-between {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .justify-right {
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .justify-stretch {
-  justify-content: stretch;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
 }
 .align-center {
-  align-content: center;
-  align-items: center
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center
 }
 .col--auto {
-  flex: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
 }
 .col--grow {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 .col--6of12 {
-  flex: 0 1 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
 }
 .col--5of12 {
-  flex: 0 1 calc(100% / 12 * 5);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(100% / 12 * 5);
+          flex: 0 1 calc(100% / 12 * 5);
 }
 .col--4of12 {
-  flex: 0 1 calc(100% / 12 * 4);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(100% / 12 * 4);
+          flex: 0 1 calc(100% / 12 * 4);
 }
 .col--3of12 {
-  flex: 0 1 calc(100% / 12 * 3);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(100% / 12 * 3);
+          flex: 0 1 calc(100% / 12 * 3);
 }
 @media (max-width: 768px) {
   .container--default {
     padding: 0 30px;
   }
   .row {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .col {
-    flex: 1 0 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
     margin-bottom: 15px;
   }
 }
@@ -243,6 +284,50 @@ h6 {
 }
 .top-slider__url span {
   text-transform: uppercase
+}
+.image-container {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.image-hint {
+  position: absolute;
+  display: block;
+  padding: 60px;
+  border-radius: 10px;
+  font-size: 20px;
+  line-height: 1.2;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 9;
+}
+.image-hint:before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background-color: rgba(0, 73, 156, 0.824);
+}
+@media (min-width:1024px) {
+  .image-container:hover .image-hint {
+    opacity: 1;
+  }
+}
+.image-container:hover {
+  box-shadow: 0 0 100px -50px
+  rgba(0,0,0,.5);
 }
 
 header.header {
@@ -376,8 +461,12 @@ section.courses {
   }
 }
 .section--social {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #f4f8fc;
   padding: 30px 0;
 }
@@ -2934,7 +3023,8 @@ section.courses {
 .loader .lds-css {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 @keyframes lds-double-ring {
   0% {
@@ -2980,7 +3070,8 @@ section.courses {
   position: relative;
 }
 .lds-double-ring div {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .lds-double-ring > div {
   position: absolute;
@@ -3027,12 +3118,14 @@ section.courses {
   left: 72px;
   background: #337ab7;
   border-radius: 50%;
-  box-shadow: 0 160px 0 0 #337ab7;
+  -webkit-box-shadow: 0 160px 0 0 #337ab7;
+          box-shadow: 0 160px 0 0 #337ab7;
 }
 .lds-double-ring > div:nth-child(3) div:after {
   left: -8px;
   top: 72px;
-  box-shadow: 160px 0 0 0 #337ab7;
+  -webkit-box-shadow: 160px 0 0 0 #337ab7;
+          box-shadow: 160px 0 0 0 #337ab7;
 }
 .lds-double-ring > div:nth-child(4) {
   border-color: transparent;
@@ -3055,12 +3148,14 @@ section.courses {
   left: 62px;
   background: #5bc0de;
   border-radius: 50%;
-  box-shadow: 0 140px 0 0 #5bc0de;
+  -webkit-box-shadow: 0 140px 0 0 #5bc0de;
+          box-shadow: 0 140px 0 0 #5bc0de;
 }
 .lds-double-ring > div:nth-child(4) div:after {
   left: -8px;
   top: 62px;
-  box-shadow: 140px 0 0 0 #5bc0de;
+  -webkit-box-shadow: 140px 0 0 0 #5bc0de;
+          box-shadow: 140px 0 0 0 #5bc0de;
 }
 .lds-double-ring {
   width: 70px !important;
@@ -3702,6 +3797,8 @@ section.courses {
 }
 .brand__top-slider__slide {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -5200,6 +5297,7 @@ section.courses {
 
 .cosmetology-page .brends__list {
   padding-bottom: 9px;
+  margin-top: 0;
 }
 
 .cosmetology-page .individual {
@@ -5600,12 +5698,14 @@ section.courses {
 }
 @media (min-width: 501px) and (max-width: 1000px) {
   .sales__news-item {
-    flex-basis: calc(100% / 2 - 20px);
+    -ms-flex-preferred-size: calc(100% / 2 - 20px);
+        flex-basis: calc(100% / 2 - 20px);
   }
 }
 @media screen and (max-width: 500px) {
   .sales__news-item {
-    flex-basis: 1 0 100%;
+    -ms-flex-preferred-size: 1 0 100%;
+        flex-basis: 1 0 100%;
   }
 }
 
