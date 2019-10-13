@@ -4808,6 +4808,7 @@ section.courses {
 
 .news-page .brends__list {
   padding-bottom: 20px;
+  margin-top: 0;
 }
 
 .news-page .news__date {
@@ -4835,6 +4836,15 @@ section.courses {
   overflow: hidden;
   -webkit-box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+}
+
+.article-top-banner {
+  position: relative;
+  display: block;
+  min-height: 500px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }
 
 .news__banner img {
@@ -5601,6 +5611,7 @@ section.courses {
 
 .sales__news-photo {
   position: relative;
+  display: block;
   margin-bottom: 29px;
   border-radius: 10px;
   -webkit-box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
