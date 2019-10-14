@@ -11984,67 +11984,6 @@ if (jQuery && wiedemann_data_parser) {
         }
     }), A()
 })
-// map
-function contactsMap (dealers)
-{
-    var myMap;
-    var placemarkCollections = {};
-    var placemarkList = {};
-    ymaps.ready(init);
-    function init() {
-        // Создаем карту
-        myMap = new ymaps.Map("map", {
-            center: [56, 37],
-            zoom: 8,
-            controls: [
-                'zoomControl'
-            ],
-            zoomMargin: [20]
-        });
-        for (var i = 0; i < dealers.length; i++) {
-            // Добавляем название города в выпадающий список
-            $('select#brand-city').append('<option value="' + i + '">' + dealers[i].cityName + '</option>');
-            // Создаём коллекцию меток для города
-            var cityCollection = new ymaps.GeoObjectCollection();
-            for (var c = 0; c < dealers[i].dealers.length; c++) {
-                var dealerInfo = dealers[i].dealers[c];
-                var dealerPlacemark = new ymaps.Placemark(
-                    dealerInfo.coordinates,
-                    {
-                        hintContent: dealerInfo.name,
-                        balloonContent: dealerInfo.name
-                    }
-                );
-                if (!placemarkList[i]) placemarkList[i] = {};
-                placemarkList[i][c] = dealerPlacemark;
-                // Добавляем метку в коллекцию
-                cityCollection.add(dealerPlacemark);
-            }
-            placemarkCollections[i] = cityCollection;
-            // Добавляем коллекцию на карту
-            myMap.geoObjects.add(cityCollection);
-        }
-        $('select#brand-city').trigger('change');
-    }
-    // Переключение города
-    $(document).on('change', $('select#brand-city'), function () {
-        var cityId = $('select#brand-city').val();
-        // Масштабируем и выравниваем карту так, чтобы были видны метки для выбранного города
-        myMap.setBounds(placemarkCollections[cityId].getBounds(), {checkZoomRange:true}).then(function(){
-            if(myMap.getZoom() > 15) myMap.setZoom(15); // Если значение zoom превышает 15, то устанавливаем 15.
-        });
-        $('#dealers').html('');
-        for (var c = 0; c < dealers[cityId].dealers.length; c++) {
-            $('#dealers').append('<li value="' + c + '">' + dealers[cityId].dealers[c].name + '</li>');
-        }
-    });
-    // Клик на адрес
-    $(document).on('click', '#dealers li', function () {
-        var cityId = $('select#brand-city').val();
-        var dealerId = $(this).val();
-        placemarkList[cityId][dealerId].events.fire('click');
-    });
-}
 // !libs
 jQuery(document).ready(function (jQuery) {
     if (document.querySelector('[data-entity="event-calendar"]')) {
@@ -12068,6 +12007,67 @@ jQuery(document).ready(function (jQuery) {
                 return item.dates
             });
             var arrayOfDates = [];
+            // map
+            function contactsMap (dealers)
+            {
+                var myMap;
+                var placemarkCollections = {};
+                var placemarkList = {};
+                ymaps.ready(init);
+                function init() {
+                    // Создаем карту
+                    myMap = new ymaps.Map("map", {
+                        center: [56, 37],
+                        zoom: 8,
+                        controls: [
+                            'zoomControl'
+                        ],
+                        zoomMargin: [20]
+                    });
+                    for (var i = 0; i < dealers.length; i++) {
+                        // Добавляем название города в выпадающий список
+                        $('select#brand-city').append('<option value="' + i + '">' + dealers[i].cityName + '</option>');
+                        // Создаём коллекцию меток для города
+                        var cityCollection = new ymaps.GeoObjectCollection();
+                        for (var c = 0; c < dealers[i].dealers.length; c++) {
+                            var dealerInfo = dealers[i].dealers[c];
+                            var dealerPlacemark = new ymaps.Placemark(
+                                dealerInfo.coordinates,
+                                {
+                                    hintContent: dealerInfo.name,
+                                    balloonContent: dealerInfo.name
+                                }
+                            );
+                            if (!placemarkList[i]) placemarkList[i] = {};
+                            placemarkList[i][c] = dealerPlacemark;
+                            // Добавляем метку в коллекцию
+                            cityCollection.add(dealerPlacemark);
+                        }
+                        placemarkCollections[i] = cityCollection;
+                        // Добавляем коллекцию на карту
+                        myMap.geoObjects.add(cityCollection);
+                    }
+                    $('select#brand-city').trigger('change');
+                }
+                // Переключение города
+                $(document).on('change', $('select#brand-city'), function () {
+                    var cityId = $('select#brand-city').val();
+                    // Масштабируем и выравниваем карту так, чтобы были видны метки для выбранного города
+                    myMap.setBounds(placemarkCollections[cityId].getBounds(), {checkZoomRange:true}).then(function(){
+                        if(myMap.getZoom() > 15) myMap.setZoom(15); // Если значение zoom превышает 15, то устанавливаем 15.
+                    });
+                    $('#dealers').html('');
+                    for (var c = 0; c < dealers[cityId].dealers.length; c++) {
+                        $('#dealers').append('<li value="' + c + '">' + dealers[cityId].dealers[c].name + '</li>');
+                    }
+                });
+                // Клик на адрес
+                $(document).on('click', '#dealers li', function () {
+                    var cityId = $('select#brand-city').val();
+                    var dealerId = $(this).val();
+                    placemarkList[cityId][dealerId].events.fire('click');
+                });
+            }
             jQuery.each(dates[0], function (index, dates) {
                 var _dates = {
                     from: new Date(dates.from).getDate(),
@@ -12356,67 +12356,67 @@ jQuery(document).ready(function (jQuery) {
         jQuery('.contacts__btn').toggleClass('disabled');
     })
     //phone mask в блоке Свяжитесь с нами
-    function checkPhone() {
-        var pattern = /\+\s\d{1}\s\d{3}\s\d{3}\-\d{2}\-\d{2}/;
-        var phone = jQuery('.contacts__field--phonemask');
-        phone.blur(function () {
-            if (jQuery(this).val() != '') {
-                if (jQuery(this).val().search(pattern) == 0) {
-                    jQuery(this).removeClass('error');
-                } else {
-                    jQuery(this).addClass('error');
-                }
-            } else {
-                jQuery(this).addClass('error');
-            }
-        });
-        phone.focus(function () {
-            jQuery(this).removeClass('error');
-        })
-    }
-    checkPhone();
+    // function checkPhone() {
+    //     var pattern = /\+\s\d{1}\s\d{3}\s\d{3}\-\d{2}\-\d{2}/;
+    //     var phone = jQuery('.contacts__field--phonemask');
+    //     phone.blur(function () {
+    //         if (jQuery(this).val() != '') {
+    //             if (jQuery(this).val().search(pattern) == 0) {
+    //                 jQuery(this).removeClass('error');
+    //             } else {
+    //                 jQuery(this).addClass('error');
+    //             }
+    //         } else {
+    //             jQuery(this).addClass('error');
+    //         }
+    //     });
+    //     phone.focus(function () {
+    //         jQuery(this).removeClass('error');
+    //     })
+    // }
+    // checkPhone();
     // validations
-    jQuery(function () {
-        window.tel_1 = jQuery('.phone-1').mask("+ 9 999 999-99-99", {
-            autoclear: true
-        });
-        window.tel_2 = jQuery('.phone-2').mask("+ 9 999 999-99-99", {
-            autoclear: true
-        });
-    });
-    var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}jQuery/i;
-    var mail = jQuery('input[type="email"]');
-    mail.blur(function () {
-        if (mail.val() != '') {
-            if (mail.val().search(pattern) == 0) {
-                mail.removeClass('error');
-            } else {
-                mail.addClass('error');
-            }
-        } else {
-            mail.addClass('error');
-        }
-    });
-    mail.focus(function () {
-        mail.removeClass('error');
-    })
+    // jQuery(function () {
+    //     window.tel_1 = jQuery('.phone-1').mask("+ 9 999 999-99-99", {
+    //         autoclear: true
+    //     });
+    //     window.tel_2 = jQuery('.phone-2').mask("+ 9 999 999-99-99", {
+    //         autoclear: true
+    //     });
+    // });
+    // var pattern = /^[a-z0-9_-]+@[a-z0-9-]+\.[a-z]{2,6}jQuery/i;
+    // var mail = jQuery('input[type="email"]');
+    // mail.blur(function () {
+    //     if (mail.val() != '') {
+    //         if (mail.val().search(pattern) == 0) {
+    //             mail.removeClass('error');
+    //         } else {
+    //             mail.addClass('error');
+    //         }
+    //     } else {
+    //         mail.addClass('error');
+    //     }
+    // });
+    // mail.focus(function () {
+    //     mail.removeClass('error');
+    // })
     //form tel toggle
-    var requiredFields = function () {
-        jQuery('.contacts__form').find('.phone-2').attr('required', '');
-        jQuery('.contacts__form').find('input[type="email"]').attr('required', '');
-        window.tel_1.unmask();
-    };
-    jQuery('.phone-1').on('click focus', function () {
-        jQuery('.contacts__form').find('input').removeAttr('required');
-        jQuery('.contacts__form').find('input:not([type="submit"]):not(.phone-1)').each(function (i, input) {
-            jQuery(input).val('');
-        })
-    })
-    jQuery('.phone-1').on('blur focusout', function () {
-        if (jQuery(tel_1).val() === "") {
-            requiredFields()
-        } else return;
-    })
+    // var requiredFields = function () {
+    //     jQuery('.contacts__form').find('.phone-2').attr('required', '');
+    //     jQuery('.contacts__form').find('input[type="email"]').attr('required', '');
+    //     window.tel_1.unmask();
+    // };
+    // jQuery('.phone-1').on('click focus', function () {
+    //     jQuery('.contacts__form').find('input').removeAttr('required');
+    //     jQuery('.contacts__form').find('input:not([type="submit"]):not(.phone-1)').each(function (i, input) {
+    //         jQuery(input).val('');
+    //     })
+    // })
+    // jQuery('.phone-1').on('blur focusout', function () {
+    //     if (jQuery(tel_1).val() === "") {
+    //         requiredFields()
+    //     } else return;
+    // })
     jQuery(document).on('input change click focus focusout', function () {
         if (jQuery('.contacts__form').find('[required]:valid')) jQuery('.contacts__form input[type="submit"]').prop('disabled', false);
         if (!jQuery('.contacts__form').find('[required]:valid')) jQuery('.contacts__form input[type="submit"]').prop('disabled', true);
@@ -12528,55 +12528,55 @@ jQuery(document).ready(function (jQuery) {
         }
         jQuery(".service__choice .service__tab").eq(i).css('display', 'block');
     });
-    // jQuery(function () {
-    //   ymaps.ready(init);
-    //   var myMap;
-    //   var coords = [56.853808, 60.644070];
-    //   function init() {
-    //     myMap = new ymaps.Map("mapDealer", {
-    //       center: coords,
-    //       zoom: 14,
-    //       controls: []
-    //     });
-    //     placeMark = new ymaps.Placemark(coords, {
-    //       //balloonContent: 'Адрес аптеки',
-    //     }, {
-    //       // Опции.
-    //       // Необходимо указать данный тип макета.
-    //       iconLayout: 'default#imageWithContent',
-    //       // Своё изображение иконки метки.
-    //       iconImageHref: 'img/icons/checkmark.svg',
-    //       // Размеры метки.
-    //       iconImageSize: [25, 25],
-    //       // Смещение левого верхнего угла иконки относительно
-    //       // её "ножки" (точки привязки).
-    //       iconImageOffset: [-24, -24],
-    //       // Смещение слоя с содержимым относительно слоя с картинкой.
-    //       iconContentOffset: [15, 15],
-    //     });
-    //     myMap.geoObjects.add(placeMark);
-    //     placeMark.events.add('click', function (e) {
-    //       var placemark = new ymaps.Placemark(coords, {
-    //         // Зададим содержимое заголовка балуна.
-    //         balloonContentHeader: '<div class="map__city">Екатеринбург</div>',
-    //         // Зададим содержимое основной части балуна.
-    //         balloonContentBody: '<div class="map__text">ООО "Соло"</div><div class="map__text">344000, Буденновский пр., дом №61/12</div><div class="map__text">Тел: (863) 263-71-10</div><div class="map__text">Тел: (863) 555-45-34</div><div class="map__text">E-mail: soloros@rambler.ru</div>',
-    //         // Зададим содержимое нижней части балуна.
-    //         //balloonContentFooter: '<button class="adress__button">Выбрать</button>',
-    //         // Зададим содержимое всплывающей подсказки.
-    //         hintContent: ''
-    //       });
-    //       // Добавим метку на карту.
-    //       myMap.geoObjects.add(placemark);
-    //       // Откроем балун на метке.
-    //       placemark.balloon.open();
-    //       placemark.events.add('balloonclose', function (e) {
-    //         myMap.geoObjects.remove(placemark);
-    //         placemark = null;
-    //       });
-    //     })
-    //   }
-    // });
+    jQuery(function () {
+      ymaps.ready(init);
+      var myMap;
+      var coords = [56.853808, 60.644070];
+      function init() {
+        myMap = new ymaps.Map("mapDealer", {
+          center: coords,
+          zoom: 14,
+          controls: []
+        });
+        placeMark = new ymaps.Placemark(coords, {
+          //balloonContent: 'Адрес аптеки',
+        }, {
+          // Опции.
+          // Необходимо указать данный тип макета.
+          iconLayout: 'default#imageWithContent',
+          // Своё изображение иконки метки.
+          iconImageHref: 'img/icons/checkmark.svg',
+          // Размеры метки.
+          iconImageSize: [25, 25],
+          // Смещение левого верхнего угла иконки относительно
+          // её "ножки" (точки привязки).
+          iconImageOffset: [-24, -24],
+          // Смещение слоя с содержимым относительно слоя с картинкой.
+          iconContentOffset: [15, 15],
+        });
+        myMap.geoObjects.add(placeMark);
+        placeMark.events.add('click', function (e) {
+          var placemark = new ymaps.Placemark(coords, {
+            // Зададим содержимое заголовка балуна.
+            balloonContentHeader: '<div class="map__city">Екатеринбург</div>',
+            // Зададим содержимое основной части балуна.
+            balloonContentBody: '<div class="map__text">ООО "Соло"</div><div class="map__text">344000, Буденновский пр., дом №61/12</div><div class="map__text">Тел: (863) 263-71-10</div><div class="map__text">Тел: (863) 555-45-34</div><div class="map__text">E-mail: soloros@rambler.ru</div>',
+            // Зададим содержимое нижней части балуна.
+            //balloonContentFooter: '<button class="adress__button">Выбрать</button>',
+            // Зададим содержимое всплывающей подсказки.
+            hintContent: ''
+          });
+          // Добавим метку на карту.
+          myMap.geoObjects.add(placemark);
+          // Откроем балун на метке.
+          placemark.balloon.open();
+          placemark.events.add('balloonclose', function (e) {
+            myMap.geoObjects.remove(placemark);
+            placemark = null;
+          });
+        })
+      }
+    });
     function mapsInit(coordinates, node) {
         jQuery(function () {
             ymaps.ready(init);
@@ -12649,5 +12649,16 @@ jQuery(document).ready(function (jQuery) {
         }, 500, 'swing', function () {
             $('section.contacts #form-direction').val('Дилер')
         });
-    })
+    });
+    jQuery('[type=tel]').mask('+7 (999) 999-99-99');
+    jQuery('.cta-button').on('click', function () {
+        jQuery('.cta').toggleClass('cta--open').find('[type=tel]').focus();
+    });
+    jQuery('.cta').on('submit', function (e) {
+        e.preventDefault();
+        $(this).find('.cta__input').html('<strong>Ваша заявка отправлена. Мы свяжемся с Вами в ближайшее время.</strong>')
+        setTimeout(function(){
+            $(e.target).removeClass('cta--open');
+        }, 2000)
+    });
 })

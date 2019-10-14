@@ -109,6 +109,30 @@
           </div>
         </div>
       </div>
+      <!-- call to action form -->
+      <form action="POST" class="cta">
+        <div class="cta-circles"></div>
+        <div class="container">
+          <div class="cta__phones">
+            <ul>
+              <li>
+                Москва&nbsp;<a href="">+7 495 229 37 70</a>
+              </li>
+              <li>
+                Санкт-Петербург&nbsp;<a href="">+7 495 229 37 70</a>
+              </li>
+              <li>
+                Екатеринбург&nbsp;<a href="">+7 495 229 37 70</a>
+              </li>
+            </ul>
+          </div>
+          <div class="cta__input">
+            <input type="tel" name="" id="" required placeholder="Заказать обратный звонок" />
+            <input type="submit" value="Перезвоните мне" class="mainbtn mainbtn--white">
+          </div>
+        </div>
+      </form>
+      <!-- call to action form -->
     </header>
     <!-- brands -->
     <section class="brends">
@@ -231,22 +255,66 @@
         <div class="contacts__filters">
           <div class="contacts__input contacts__select">
             <div class="contacts__arrow"></div>
-            <select name="brand-city" id="brand-city" class=""></select>
+            <select name="brand-name" id="brand-name">
+              <option value="">Выберите бренд</option>
+            </select>
           </div>
-          <div class="contacts__input contacts__search">
-            <input type="text" class="" placeholder="Введите город">
+          <div class="contacts__input contacts__select">
+            <div class="contacts__arrow"></div>
+            <select name="brand-city" id="brand-city">
+              <option value="">Выберите город</option>
+            </select>
           </div>
           <div class="contacts__input">
             <button class="mainbtn mainbtn--blue" id="dealer-btn">Стать дилером</button>
           </div>
         </div>
-        <!-- map -->
-        <div id="dealers">
-          <ul id="shops"></ul>
-        </div>
-
-        <div id="map" style="width: 100%; height: 600px"></div>
-        <!-- map -->
+        <div id="mapDealer" style="width: 100%; height: 500px"></div>
+        <!-- php prerendered dealers list -->
+        <ul data-area="dealers">
+          <li data-area="dealer" data-coords="55.76827686208702,37.628500740009734" data-city="msk" data-name="ionto">
+            <article>
+              <header>ionto comed</header>
+              <address>Россия, Санкт-Петербург, улица Чайковского, 17</address>
+              <footer><a href="tel:+78125655257">+7&nbsp;(812)&nbsp;565-52-57</a>, <a href="tel:+78125655257">+7&nbsp;(812)&nbsp;565-52-57</a></footer>
+            </article>
+          </li>
+          <li data-area="dealer" data-coords="55.76827686208702,37.628500740009734" data-city="msk" data-name="ionto">
+            <article>
+              <header>ionto comed</header>
+              <address>Россия, Санкт-Петербург, улица Чайковского, 17</address>
+              <footer><a href="tel:+78125655257">+7&nbsp;(812)&nbsp;565-52-57</a></footer>
+            </article>
+          </li>
+          <li data-area="dealer" data-coords="55.76827686208702,37.628500740009734" data-city="msk" data-name="ionto">
+            <article>
+              <header>ionto comed</header>
+              <address>Россия, Санкт-Петербург, улица Чайковского, 17</address>
+              <footer><a href="tel:+78125655257">+7&nbsp;(812)&nbsp;565-52-57</a></footer>
+            </article>
+          </li>
+          <li data-area="dealer" data-coords="55.76827686208702,37.628500740009734" data-city="msk" data-name="ionto">
+            <article>
+              <header>ionto comed</header>
+              <address>Россия, Санкт-Петербург, улица Чайковского, 17</address>
+              <footer><a href="tel:+78125655257">+7&nbsp;(812)&nbsp;565-52-57</a></footer>
+            </article>
+          </li>
+          <li data-area="dealer" data-coords="55.76827686208702,37.628500740009734" data-city="msk" data-name="ionto">
+            <article>
+              <header>ionto comed</header>
+              <address>Россия, Санкт-Петербург, улица Чайковского, 17</address>
+              <footer><a href="tel:+78125655257">+7&nbsp;(812)&nbsp;565-52-57</a></footer>
+            </article>
+          </li>
+          <li data-area="dealer" data-coords="55.76827686208702,37.628500740009734" data-city="msk" data-name="ionto">
+            <article>
+              <header>ionto comed</header>
+              <address>Россия, Санкт-Петербург, улица Чайковского, 17</address>
+              <footer><a href="tel:+78125655257">+7&nbsp;(812)&nbsp;565-52-57</a></footer>
+            </article>
+          </li>
+        </ul>
       </div>
     </section>
     <!-- contacts form -->
@@ -256,19 +324,11 @@
           Свяжитесь с нами
         </div>
         <form method="post" action="" enctype="multipart/form-data" class="contacts__form" id="contacts">
-          <label>
-            <span class="contacts__text">Оставьте ваш телефон чтобы мы перезвонили</span>
-            <input type="tel"
-              class="contacts__field contacts__field--half contacts__field--phone contacts__field--phonemask phone-1"
-              placeholder="8 900 123-45-56">
-          </label>
-          <div class="contacts__text contacts__text--icon">Или пишите нам, наши менеджеры свяжутся с вами в ближайшее
-            время:</div>
           <input type="text" class="contacts__field contacts__field--half" placeholder="Имя">
           <input type="text" class="contacts__field contacts__field--half" placeholder="Ваш город">
           <input type="tel" class="contacts__field contacts__field--half contacts__field--phonemask phone-2"
             placeholder="Телефон" required>
-          <input type="text" class="contacts__field contacts__field--half" id="form-direction" laceholder="Направление">
+          <input type="text" class="contacts__field contacts__field--half" id="form-direction" placeholder="Направление">
           <input type="email" class="contacts__field contacts__field--half" placeholder="Email" required>
           <input type="text" class="contacts__field contacts__field--half" placeholder="Бренд">
           <textarea name="" id="" cols="30" rows="3" class="contacts__field contacts__field--big"
@@ -341,37 +401,12 @@
       </div>
     </div>
   </footer>
+  <!-- cta button -->
+  <button class="cta-button"></button>
+  <!-- cta button -->
   <script src="js/main.js"></script>
   <script src="https://api-maps.yandex.ru/2.1.74/?apikey=ac18c3d7-cdb5-4fce-a82f-ff6391ca77e5&lang=ru_RU"
     type="text/javascript">
-  </script>
-  <script>
-    var dealers = [{
-        'cityName': 'Москва',
-        'dealers': [{
-            'coordinates': [55.72532368326033, 37.748675112058876],
-            'name': 'Рязанский проспект, 6Ас21'
-          },
-          {
-            'coordinates': [55.701677873469, 37.57358050756649],
-            'name': 'Ленинский проспект, 47с2'
-          }
-        ]
-      },
-      {
-        'cityName': 'Санкт-Петербург',
-        'dealers': [{
-            'coordinates': [59.863210042666125, 30.37903938671841],
-            'name': 'Будапештская улица, 36к2'
-          },
-          {
-            'coordinates': [59.99486277158917, 30.406505207030918],
-            'name': 'проспект Непокорённых'
-          }
-        ]
-      }
-    ];
-    contactsMap(dealers);
   </script>
 </body>
 

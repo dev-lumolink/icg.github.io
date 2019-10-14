@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="212" height="212" viewBox="0 0 212 212">
+    <defs>
+        <style>
+            .cls-1{fill:#00489c}.cls-2{fill:#fff}.cls-3{filter:url(#Ellipse_41)}
+        </style>
+        <filter id="Ellipse_41" width="212" height="212" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dx="20" dy="20"/>
+            <feGaussianBlur result="blur" stdDeviation="30"/>
+            <feFlood flood-opacity=".4"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Group_136" data-name="Group 136" transform="translate(-231 -49.999)">
+        <g class="cls-3" transform="translate(231 50)">
+            <circle id="Ellipse_41-2" cx="16" cy="16" r="16" class="cls-1" data-name="Ellipse 41" transform="translate(70 70)"/>
+        </g>
+        <path id="Path_1900" d="M14.963 11.29l-1.6-1.6a1.831 1.831 0 0 0-2.593 0l-.326.327a35.485 35.485 0 0 1-4.438-4.452l.326-.327a1.842 1.842 0 0 0 0-2.6l-1.6-1.6a1.878 1.878 0 0 0-2.6 0l-.874.879a2.6 2.6 0 0 0-.326 3.264 35.355 35.355 0 0 0 9.9 9.913 2.615 2.615 0 0 0 3.261-.327l.877-.879a1.837 1.837 0 0 0 0-2.6z" class="cls-2" data-name="Path 1900" transform="translate(308.496 128.482)"/>
+    </g>
+</svg>

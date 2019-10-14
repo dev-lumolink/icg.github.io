@@ -6822,6 +6822,10 @@ section.courses {
   width: 100%;
 }
 
+.service__addresses-list .owl-stage-outer {
+  overflow: visible;
+}
+
 .service__addresses-item {
   -ms-flex-preferred-size: calc(33% - 20px);
   flex-basis: calc(33% - 20px);
@@ -6831,6 +6835,8 @@ section.courses {
 .service__addresses-item img {
   -webkit-box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
   box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -7986,4 +7992,189 @@ footer.footer {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
+}
+#mapDealer {
+  margin-bottom: 60px;
+}
+[data-area=dealers] {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+[data-area=dealer] {
+  margin-bottom: 30px;
+}
+@media (min-width: 1001px) {
+  [data-area=dealer] {
+    flex: 0 1 30%;
+  }
+}
+@media (min-width: 541px) and (max-width:1000px) {
+  [data-area=dealer] {
+    flex: 0 1 47%;
+  }
+}
+@media screen and (max-width:540px) {
+  [data-area=dealer] {
+    flex: 1 0 100%;
+  }
+}
+[data-area=dealer] article {
+  padding: 30px;
+  box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+[data-area=dealer] article header {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #cfcfcf;
+  margin-bottom: 15px;
+}
+[data-area=dealer] article address {
+  margin-bottom: 15px;
+  color: #00489c;
+}
+[data-area=dealer] article footer {
+  color: #00489c;
+}
+[data-area=dealer] article footer a {
+  color: #00489c;
+  border-bottom: 1px dashed #00489c;
+  line-height: 1.6;
+}
+.cta-button {
+  position: fixed;
+  display: none;
+  width: 60px;
+  height: 60px;
+  bottom: 30%;
+  right: 0;
+  background-image: url(../img/icons/tel.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50%;
+  border: 2px solid #00489c;
+  border-right: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin: 0;
+  outline: none;
+  padding: 30px;
+  box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, .3);
+  background-color: #fff;
+  cursor: pointer;
+  opacity: .5;
+  z-index: 100;
+}
+@media screen {
+  .cta-button {
+    display: block!important;
+  }
+}
+.cta {
+  position: absolute;
+  display: block;
+  top: calc(-100% - 95px);
+  right: 0;
+  left: 0;
+  z-index: 8;
+  background-image: linear-gradient(262deg, #709be7, #00489c);
+  z-index: 100;
+  opacity: 0;
+  overflow: hidden;
+}
+.cta--open {
+  top: 95px;
+  opacity: 1;
+}
+.cta-circles {
+  position: absolute;
+  display: block;
+  bottom: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color:
+  rgba(255,255,255,.1);
+}
+.cta-circles:before {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 0;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  background-color:
+  rgba(255,255,255,.1);
+}
+.cta-circles:after {
+  content: '';
+  position: absolute;
+  display: block;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color:
+  rgba(255,255,255,.1);
+}
+.cta .cta__input {
+  width: 100%;
+}
+.cta__input strong {
+  color: #fff;
+}
+.cta__input [type=submit] {
+  padding: 5px 0;
+  width: 100%;
+}
+.cta [type=tel] {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  height: auto;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #fff;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 650px) {
+  .cta__phones {
+    display: none;
+  }
+  .cta__input {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .cta__input [type=tel],
+  .cta__input [type=submit] {
+    width: 200px;
+    margin: 0 0 0 10px;
+  }
+}
+.cta__phones {
+  width: 100%
+}
+.cta__phones ul li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.cta__phones ul li {
+  margin-bottom: 10px;
+}
+.cta__phones ul li,
+.cta__phones ul li a {
+  color: #fff;
+}
+.cta__phones ul li a {
+  border-bottom: 1px dashed #fff;
+  display: inline-block;
+  line-height: 1;
 }
