@@ -231,7 +231,7 @@ h6 {
             flex-direction: column;
   }
   .col {
-    -webkit-box-flex: 1;
+    /* -webkit-box-flex: 1; */
         -ms-flex: 1 0 100%;
             flex: 1 0 100%;
     margin-bottom: 15px;
@@ -7620,6 +7620,7 @@ footer.footer {
   width: 100%;
   max-width: 1440px;
   padding: 0 150px;
+  margin: 0 auto;
 }
 .flex-row {
   position: relative;
@@ -7962,6 +7963,10 @@ footer.footer {
   background: transparent;
   color: #fff;
 }
+.input--white input,
+.input--white label {
+  color: #4d4d4d;
+}
 .individual .component {
   max-width: calc(100% / 4 - 10px);
 }
@@ -8177,4 +8182,44 @@ footer.footer {
   border-bottom: 1px dashed #fff;
   display: inline-block;
   line-height: 1;
+}
+.search-page {
+  background: url(../img/mebel-bg.png) top left no-repeat;
+  background-size: auto;
+  background-size: cover;
+  padding: 30px 0 60px 0;
+}
+.search-page h1 {
+  color: #fff;
+}
+.search-response {
+  font-size: 14px;
+  color: #cfcfcf;
+  margin-bottom: 30px;
+}
+.search-article {
+  margin-bottom: 30px;
+}
+.search-article a {
+  font-size: 20px;
+  line-height: 1.4;
+  color: #fff;
+  text-decoration: underline;
+}
+.search-article header {
+  margin-bottom: 15px;
+}
+.search-article p {
+  color: #fff;
+  clear: both;
+}
+.search-article img {
+  float: left;
+  margin-right: 15px;
+}
+@media screen and (max-width: 650px) {
+  .search-article img {
+    width: 100%;
+    float: none;
+  }
 }
