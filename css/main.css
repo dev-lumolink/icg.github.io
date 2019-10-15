@@ -4161,8 +4161,8 @@ section.courses {
   }
 
   .slider-wrapper .owl-nav {
-    left: -40px;
-    right: -40px;
+    left: -30px;
+    right: -30px;
   }
 
   .brends-page .banners .owl-nav {
@@ -6418,6 +6418,11 @@ section.courses {
   }
 }
 
+[data-action=get-price] {
+  position: relative;
+  margin-top: 30px;
+}
+
 @media screen and (max-width: 450px) {
   .course-page .course__tab {
     width: 100%;
@@ -6710,6 +6715,7 @@ section.courses {
 
 .service__choice .service__text {
   line-height: 1.38;
+  margin-top: 30px;
 }
 
 .service__choice .service__text p {
@@ -7190,25 +7196,37 @@ section.courses {
   padding-bottom: 60px;
 }
 
-.mebel__portfolio .slider__item img {
-  width: 100%;
+.mebel__portfolio .slider__item {
+  position: relative;
+  padding: 120px 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  font-size: 20px;
+  color: #fff;
 }
-
-.mebel__portfolio .text__container {
+.mebel__portfolio .portfolio__text {
+  position: relative;
+  padding: 30px;
+}
+.mebel__portfolio .portfolio__text:before {
+  content: '';
   position: absolute;
-  bottom: 60px;
+  display: block;
+  top: 0;
   left: 0;
   right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: rgba(0, 72, 156, .4);
+  backdrop-filter: blur(10px);
 }
-
-.mebel__portfolio .text__inner {
-  max-width: 1140px;
-  margin: 0 auto;
-}
-
-.mebel__portfolio .text__inner .mainbtn {
-  max-width: 500px;
-  padding: 20px;
+.mebel__portfolio .portfolio__text:after {
+  content: attr(title);
+  color: #fff;
+  text-shadow: 1px 1px 0 #000;
+  position: relative;
+  z-index: 9;
 }
 
 .mebel__head .main-title {
