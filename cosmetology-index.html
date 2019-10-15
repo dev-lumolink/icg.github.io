@@ -1,39 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>ICG Group</title>
-
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link href="css/datepicker.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/owl.carousel.min.css">
   <link rel="stylesheet" href="css/main.css">
-
 </head>
+
 <body>
-
   <div class="wrapper cosmetology-page">
-
     <header class="header">
-
       <div class="container">
-
         <div class="header__menu">
           <div class="header__burger">
-
           </div>
-
           <div class="header__popup">
-
             <div class="header__wrapper">
               <a href="#" class="header__close">
-
               </a>
-
               <nav class="header__nav">
                 <ul class="header__list">
                   <li class="header__item">
@@ -62,12 +53,10 @@
                   </li>
                 </ul>
               </nav>
-
               <div class="header__contacts">
                 <div class="header__text">
                   ICG В СОЦИАЛЬНЫХ СЕТЯХ
                 </div>
-
                 <ul class="header__social-list">
                   <li class="header__social header__social--vk">
                     <a href="#"></a>
@@ -80,9 +69,7 @@
                   </li>
                 </ul>
               </div>
-
             </div>
-
           </div>
         </div>
         <div class="header__logo">
@@ -91,13 +78,13 @@
         <div class="header__cities">
           <ul class="cities__list">
             <li class="cities__name">
-                Москва
+              Москва
             </li>
             <li class="cities__name">
-                Санкт-Петербург
+              Санкт-Петербург
             </li>
             <li class="cities__name">
-                Екатеринбург
+              Екатеринбург
             </li>
           </ul>
           <ul class="phone__list">
@@ -112,23 +99,50 @@
             </li>
           </ul>
         </div>
-
         <div class="header__search">
           <div class="search__icon">
-
+          </div>
+          <div class="search__popup">
+            <form action="" method="POST" class="search__form">
+              <input type="text" placeholder="Поиск" class="search__field" id="search__field">
+              <input type="submit" class="search__submit" value="">
+            </form>
           </div>
         </div>
       </div>
-
+      <!-- call to action form -->
+      <form action="POST" class="cta">
+        <div class="cta-circles"></div>
+        <div class="container">
+          <div class="cta__phones">
+            <ul>
+              <li>
+                Москва&nbsp;<a href="">+7 495 229 37 70</a>
+              </li>
+              <li>
+                Санкт-Петербург&nbsp;<a href="">+7 495 229 37 70</a>
+              </li>
+              <li>
+                Екатеринбург&nbsp;<a href="">+7 495 229 37 70</a>
+              </li>
+            </ul>
+          </div>
+          <div class="cta__input">
+            <input type="tel" name="" id="" required placeholder="Заказать обратный звонок" />
+            <input type="submit" value="Перезвоните мне" class="mainbtn mainbtn--white">
+          </div>
+        </div>
+      </form>
+      <!-- call to action form -->
     </header>
-
+    <!-- brands -->
     <section class="brends">
       <div class="container">
         <ul class="brends__list owl-carousel">
           <li class="brends__item">
             <a href="#" class="brends__link--desktop">IONTO Comed</a>
             <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
-          </li>            
+          </li>
           <li class="brends__item">
             <a href="#" class="brends__link--desktop">Suda</a>
             <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
@@ -138,200 +152,242 @@
             <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
           <li class="brends__item">
-              <a href="#" class="brends__link--desktop">MyStyle</a>
-              <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
+            <a href="#" class="brends__link--desktop">MyStyle</a>
+            <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
           <li class="brends__item">
-              <a href="#" class="brends__link--desktop">Bernand Cassiere</a>
-              <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
+            <a href="#" class="brends__link--desktop">Bernand Cassiere</a>
+            <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
           <li class="brends__item">
-              <a href="#" class="brends__link--desktop">Profillers</a>
-              <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
+            <a href="#" class="brends__link--desktop">Profillers</a>
+            <a href="#" class="brends__link--mobile"><img src="img/icons/mobile-brend.svg" alt=""></a>
           </li>
         </ul>
       </div>
     </section>
-
-    <nav class="breadcrumbs">
+    <!-- breadcrumbs -->
+    <div class="breadcrumbs">
       <div class="container">
-        <a href="index.html" class="breadcrumbs__link">Главная</a>
-        <a href="cosmetology-index.html" class="breadcrumbs__link">Эстетическая медицина</a>
+        <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="#">
+              <span itemprop="name">главная</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+            <a itemprop="item" href="#">
+              <span itemprop="name">косметология</span></a>
+            <meta itemprop="position" content="2" />
+          </li>
+        </ol>
       </div>
-    </nav>
-
-    <section class=cosmetology-directions>
-
+    </div>
+    <!-- directions -->
+    <section class="cosmetology-directions">
       <div class="container">
         <div class="main-title">
           Эстетическая медицина
         </div>
-
         <div class="direction__list owl-carousel">
           <a href="cosmetology.html" class="direction__item">
-
             <div class="direction__photo">
-                <img src="img/cosmetology-b.png" srcset="img/cosmetology-b@2x.png 900w, img/cosmetology-b@3x.png 1200w" alt="">
-
-
-            </div>
-
-            <div class="direction__desc">
-                <div class="direction__title">
-                    Оборудование
-                  </div>
-      
-                  <div class="direction__btn mainbtn">
-                    Узнать больше
-                  </div>
-            </div>            
-          </a>
-          <a href="cosmetology.html" class="direction__item">
-
-            <div class="direction__photo">
-                <img src="img/cosmetology-b.png" srcset="img/cosmetology-b@2x.png 900w, img/cosmetology-b@3x.png 1200w" alt="">
-
-
-            </div>
-
-            <div class="direction__desc">
-                <div class="direction__title">
-                    Лазеры
-                  </div>
-      
-                  <div class="direction__btn mainbtn">
-                    Узнать больше
-                  </div>
-            </div>            
-          </a>
-
-          <a href="cosmetology.html" class="direction__item">
-
-              <div class="direction__photo">
-                  <img src="img/cosmetology-b.png" srcset="img/cosmetology-b@2x.png 900w, img/cosmetology-b@3x.png 1200w" alt="">
-  
-  
+              <div class="image-container">
+                <div class="image-hint" style="background-image: url('img/new1.jpg');">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis deleniti eius soluta dolorum,
+                  temporibus quisquam exercitationem maxime dignissimos pariatur ab, at porro quidem totam neque iste
+                  voluptates! Nostrum, neque!</div> <!-- Ограничение 230 -->
+                <img src="img/cosmetology-b.png" alt=""> <!-- max-width: 360px; max-height: 400px -->
               </div>
-  
-              <div class="direction__desc">
-                  <div class="direction__title">
-                      Филлеры
-                    </div>
-        
-                    <div class="direction__btn mainbtn">
-                      Узнать больше
-                    </div>
-              </div>            
-            </a>
+            </div>
+            <div class="direction__desc">
+              <div class="direction__title">
+                Оборудование
+              </div>
+              <div class="direction__btn mainbtn">
+                Узнать больше
+              </div>
+            </div>
+          </a>
+          <a href="cosmetology.html" class="direction__item">
+            <div class="direction__photo">
+              <div class="image-container">
+                <div class="image-hint" style="background-image: url('img/new1.jpg');">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis deleniti eius soluta dolorum,
+                  temporibus quisquam exercitationem maxime dignissimos pariatur ab, at porro quidem totam neque iste
+                  voluptates! Nostrum, neque!</div> <!-- Ограничение 230 -->
+                <img src="img/cosmetology-b.png" alt=""> <!-- max-width: 360px; max-height: 400px -->
+              </div>
+            </div>
+            <div class="direction__desc">
+              <div class="direction__title">
+                Лазеры
+              </div>
+              <div class="direction__btn mainbtn">
+                Узнать больше
+              </div>
+            </div>
+          </a>
+          <a href="cosmetology.html" class="direction__item">
+            <div class="direction__photo">
+              <div class="image-container">
+                <div class="image-hint" style="background-image: url('img/new1.jpg');">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis nobis deleniti eius soluta dolorum,
+                  temporibus quisquam exercitationem maxime dignissimos pariatur ab, at porro quidem totam neque iste
+                  voluptates! Nostrum, neque!</div> <!-- Ограничение 230 -->
+                <img src="img/cosmetology-b.png" alt=""> <!-- max-width: 360px; max-height: 400px -->
+              </div>
+            </div>
+            <div class="direction__desc">
+              <div class="direction__title">
+                Филлеры
+              </div>
+              <div class="direction__btn mainbtn">
+                Узнать больше
+              </div>
+            </div>
+          </a>
         </div>
       </div>
-
     </section>
-
-
+    <!-- complex -->
     <section class="complex">
-        <div class="container">
-            <div class="main-title">
-                    Комплексные решения
-            </div>
-
-            <div class="complex__list">
-
-                <div class="complex__left">
-
-                    <div class="complex__photo">
-                        <img src="img/cosmetology-s.png" srcset="img/cosmetology-s@2x.png 900w, img/cosmetology-s@3x.png 1200w" alt="">
-
-                    </div>
-
-                    <div class="complex__photo">
-                        <img src="img/cosmetology-s.png" srcset="img/cosmetology-s@2x.png 900w, img/cosmetology-s@3x.png 1200w" alt="">
-
-                    </div>
-
-
-                </div>
-
-                <div class="complex__right">
-                    <div class="complex__photo">
-                        <img src="img/cosmetology-b.png" srcset="img/cosmetology-b@2x.png 900w, img/cosmetology-b@3x.png 1200w" alt="">
-
-                    </div>
-
-                </div>
-            </div>
+      <div class="container">
+        <div class="main-title">
+          Комплексные решения
         </div>
+        <div class="complex__list">
+          <div class="complex__left">
+            <a href="" class="complex__photo">
+              <div class="image-container">
+                <div class="image-hint" style="background-image: url('img/new1.jpg');">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In iusto dolorum, nisi fuga ratione ad provident inventore accusamus quia accusantium reprehenderit dicta numquam enim dolores commodi ut nesciunt vel tempore.</div>
+                <img src="img/cosmetology-s@2x.png" alt="">
+              </div>
+            </a>
+            <a href="" class="complex__photo">
+              <div class="image-container">
+                <div class="image-hint" style="background-image: url('img/new1.jpg');">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. In iusto dolorum, nisi fuga ratione ad provident inventore accusamus quia accusantium reprehenderit dicta numquam enim dolores commodi ut nesciunt vel tempore.</div>
+                <img src="img/cosmetology-s@2x.png" alt="">
+              </div>
+            </a>
+          </div>
+          <div class="complex__right">
+            <a href="" class="complex__photo">
+              <div class="image-container">
+                <div class="image-hint" style="background-image: url('img/new1.jpg');">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque perferendis eveniet ullam, quasi nisi soluta similique, nam nulla suscipit optio illum tempora rerum impedit molestias quis ea adipisci eaque necessitatibus velit. Voluptatibus, ad corporis! Soluta eligendi dignissimos quae rerum sit incidunt itaque alias, cupiditate quasi voluptatum, laboriosam maiores ullam iste!</div>
+                <img src="img/cosmetology-b@2x.png" alt="">
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
-
+    <!-- form -->
     <section class="individual">
-        <div class="container">
-            <div class="main-title">
-                Нужны индивидуальные условия?
-            </div>
-            <form action="" class="individual__form">
-                <input type="text" class="individual__input" placeholder="Имя">
-                <input type="text" class="individual__input" placeholder="Фамилия">
-                <input type="email" class="individual__input" placeholder="E-mail">
-                <input type="submit" class="individual__input individual__btn" value="Обсудить условия"> 
-
-            </form>
+      <div class="container">
+        <div class="main-title">
+          Нужны индивидуальные условия?
         </div>
+        <form action="POST" class="individual__form">
+          <input type="text" class="individual__input" placeholder="Имя" required>
+          <input type="text" class="individual__input" placeholder="Фамилия" required>
+          <input type="email" class="individual__input" placeholder="E-mail" required>
+          <input type="submit" class="individual__input individual__btn" value="Обсудить условия">
+        </form>
+      </div>
     </section>
-
-
+    <!-- contacts form -->
     <section class="contacts">
-
       <div class="container">
         <div class="main-title">
           Свяжитесь с нами
         </div>
-
-        <div class="contacts__form">
-          <label>
-            <span class="contacts__text">Оставьте ваш телефон чтобы мы перезвонили</span>
-            <input type="text" class="contacts__field contacts__field--half contacts__field--phone" placeholder="8 900 123-45-56">
-          </label>
-
-          <div class="contacts__text contacts__text--icon">Или пишите нам, наши менеджеры свяжутся с вами в ближайшее время:</div>
-
+        <form method="post" action="" enctype="multipart/form-data" class="contacts__form" id="contacts">
           <input type="text" class="contacts__field contacts__field--half" placeholder="Имя">
           <input type="text" class="contacts__field contacts__field--half" placeholder="Ваш город">
-          <input type="text" class="contacts__field contacts__field--half" placeholder="Телефон">
-          <input type="text" class="contacts__field contacts__field--half" placeholder="Направление">
-          <input type="text" class="contacts__field contacts__field--half" placeholder="Email">
+          <input type="tel" class="contacts__field contacts__field--half contacts__field--phonemask phone-2"
+            placeholder="Телефон" required>
+          <input type="text" class="contacts__field contacts__field--half" id="form-direction"
+            placeholder="Направление">
+          <input type="email" class="contacts__field contacts__field--half" placeholder="Email" required>
           <input type="text" class="contacts__field contacts__field--half" placeholder="Бренд">
-          <textarea name="" id="" cols="30" rows="1" class="contacts__field contacts__field--big" placeholder="Сообщение"></textarea>
-
+          <textarea name="" id="" cols="30" rows="3" class="contacts__field contacts__field--big"
+            placeholder="Сообщение"></textarea>
           <div class="contacts__checking">
             <div class="contacts__personal">
               <label for="personal-checked" class="personal__checked">Согласие на обработку персональных данных</label>
-              <input type="checkbox" id="personal-checked" name="personal-personal-checked" class="form__checked" checked>
+              <input type="checkbox" id="personal-checked" name="personal-personal-checked" class="form__checked"
+                checked required>
               <span class="form__checkmark form__checkmark--checked">
               </span>
             </div>
-            <input type="submit" class="mainbtn contacts__btn" value="Отправить заявку">
+            <input type="submit" for="contacts" class="mainbtn mainbtn--blue contacts__btn" value="Отправить заявку">
           </div>
-
-
+        </form>
+      </div>
+    </section>
+  </div>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="flex-container">
+      <div class="icg-copy">
+        ICG GROUP
+      </div>
+      <div class="flex-row">
+        <div class="flex-col">
+          <div class="footer__menu menu--main">
+            <strong>Меню</strong>
+            <ul>
+              <li><a href="">о компании</a></li>
+              <li><a href="">учебный центр icg</a></li>
+              <li><a href="">icg мебель</a></li>
+              <li><a href="">новости</a></li>
+              <li><a href="">акции</a></li>
+              <li><a href="">сервис</a></li>
+              <li><a href="">написать нам</a></li>
+              <li><a href="">в магазин icg</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex-col flex--double">
+          <div class="footer__menu menu--brands">
+            <strong>Бренды</strong>
+            <ul>
+              <li><a href="">IONTO Comed</a></li>
+              <li><a href="">Suda</a></li>
+              <li><a href="">Creativellooda</a></li>
+              <li><a href="">MyStyle</a></li>
+              <li><a href="">Bernand Cassiere</a></li>
+              <li><a href="">Profillers</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="flex-col">
+          <div class="footer__menu menu--social">
+            <strong>icg в&nbsp;социальных&nbsp;сетях</strong>
+            <ul class="header__social-list">
+              <li class="header__social header__social--vk">
+                <a href="#"></a>
+              </li>
+              <li class="header__social header__social--fb">
+                <a href="#"></a>
+              </li>
+              <li class="header__social header__social--inst">
+                <a href="#"></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-
-    </section>
-
-
-  </div>
-
-  <footer class="footer">
-
-    ICG Group 2019
-
+    </div>
   </footer>
-
-  <script src="js/jquery-3.4.1.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.maskedinput.js"></script>
+  <!-- cta button -->
+  <button class="cta-button"></button>
+  <!-- cta button -->
   <script src="js/main.js"></script>
-  <script src="js/cosmetology-index.js"></script>
-
 </body>
+
 </html>

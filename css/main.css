@@ -233,7 +233,8 @@ h6 {
   .col {
     /* -webkit-box-flex: 1; */
         -ms-flex: 1 0 100%;
-            flex: 1 0 100%;
+            -webkit-box-flex: 1;
+                flex: 1 0 100%;
     margin-bottom: 15px;
   }
 }
@@ -257,6 +258,11 @@ h6 {
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 20px;
+}
+@media screen and (max-width: 650px) {
+  .top-slider__title {
+    font-size: 32px;
+  }
 }
 .top-slider__subtitle {
   font-size: 32px;
@@ -289,13 +295,14 @@ h6 {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
 }
 .image-hint {
   position: absolute;
   display: block;
   padding: 60px;
   border-radius: 10px;
-  font-size: 20px;
+  font-size: 100%;
   line-height: 1.2;
   background-repeat: no-repeat;
   background-position: center center;
@@ -308,6 +315,7 @@ h6 {
   opacity: 0;
   overflow: hidden;
   z-index: 9;
+  cursor: pointer;
 }
 .image-hint:before {
   content: '';
@@ -319,6 +327,7 @@ h6 {
   bottom: 0;
   z-index: -1;
   background-color: rgba(0, 73, 156, 0.824);
+  cursor: pointer;
 }
 @media (min-width:1024px) {
   .image-container:hover .image-hint {
@@ -326,7 +335,9 @@ h6 {
   }
 }
 .image-container:hover {
-  box-shadow: 0 0 100px -50px
+  -webkit-box-shadow: 0 0 100px -50px
+  rgba(0,0,0,.5);
+          box-shadow: 0 0 100px -50px
   rgba(0,0,0,.5);
 }
 
@@ -5348,6 +5359,8 @@ section.courses {
 }
 
 .complex__photo {
+  position: relative;
+  display: block;
   margin-bottom: 30px;
   border-radius: 5px;
   -webkit-box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
@@ -6047,6 +6060,14 @@ section.courses {
   text-align: left;
   color: #595f6f;
 }
+@media screen and (min-width: 1000px) {
+  .course__features dd,
+  .course__features dt {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+}
 .course__teacher .teacher__name {
   margin: 30px 0 10px;
 }
@@ -6233,9 +6254,12 @@ section.courses {
   margin-bottom: 20px;
   position: relative;
   display: none;
+  max-height: 400px;
   min-height: 400px;
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
-
 .course__desc--active {
   display: block;
 }
@@ -7540,6 +7564,10 @@ section.courses {
   width: 100%;
 }
 
+.direction__list .owl-stage-outer {
+  overflow: visible;
+}
+
 .direction__item {
   -ms-flex-preferred-size: calc(33% - 13px);
   flex-basis: calc(33% - 13px);
@@ -7550,6 +7578,7 @@ section.courses {
   margin-bottom: 15px;
   display: inline-block;
   position: relative;
+  cursor: pointer;
 }
 
 .direction__photo img {
@@ -7585,8 +7614,10 @@ section.courses {
 }
 
 .direction__btn {
+  position: relative;
   padding: 10px 20px;
   color: #00489c;
+  z-index: 9;
 }
 
 footer.footer {
@@ -8002,31 +8033,45 @@ footer.footer {
   margin-bottom: 60px;
 }
 [data-area=dealers] {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 [data-area=dealer] {
   margin-bottom: 30px;
 }
 @media (min-width: 1001px) {
   [data-area=dealer] {
-    flex: 0 1 30%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 30%;
+            flex: 0 1 30%;
   }
 }
 @media (min-width: 541px) and (max-width:1000px) {
   [data-area=dealer] {
-    flex: 0 1 47%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 47%;
+            flex: 0 1 47%;
   }
 }
 @media screen and (max-width:540px) {
   [data-area=dealer] {
-    flex: 1 0 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
   }
 }
 [data-area=dealer] article {
   padding: 30px;
-  box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
 [data-area=dealer] article header {
@@ -8066,7 +8111,8 @@ footer.footer {
   margin: 0;
   outline: none;
   padding: 30px;
-  box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, .3);
+  -webkit-box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, .3);
+          box-shadow: 20px 20px 40px 0 rgba(0, 0, 0, .3);
   background-color: #fff;
   cursor: pointer;
   opacity: .5;
@@ -8154,8 +8200,12 @@ footer.footer {
     display: none;
   }
   .cta__input {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   .cta__input [type=tel],
   .cta__input [type=submit] {
@@ -8167,9 +8217,16 @@ footer.footer {
   width: 100%
 }
 .cta__phones ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .cta__phones ul li {
   margin-bottom: 10px;
@@ -8222,4 +8279,4 @@ footer.footer {
     width: 100%;
     float: none;
   }
-}
+}}
