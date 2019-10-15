@@ -5590,9 +5590,7 @@ section.courses {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  justify-content: space-between;
   position: relative;
 }
 
@@ -5636,6 +5634,15 @@ section.courses {
   left: 0;
   right: 50%;
   margin-right: 15px;
+}
+
+.sales-page .sales-page__left {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  background-color: #fff;
+  z-index: 10;
 }
 
 .sales-page__left img {
