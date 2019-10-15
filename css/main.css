@@ -920,16 +920,12 @@ section.courses {
 
 .cities__name:before {
   content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
+  display: inline-block;
+  position: relative;
   width: 7px;
   height: 9px;
   background: url(../img/icons/locate.svg) center center no-repeat;
   background-size: contain;
-  top: 50%;
-  margin-top: -5px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -2434,7 +2430,8 @@ section.courses {
   -ms-flex-line-pack: center;
       align-content: center;
   color: #595f6f;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 2;
 }
 .courses-page .calendar-warning a {
   color: #00489c;
