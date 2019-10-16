@@ -7909,6 +7909,8 @@ footer.footer {
 .component--button {
   position: relative;
   cursor: pointer;
+  border: none;
+  outline: none;
 }
 .button--stretch {
   display: block;
@@ -8361,4 +8363,30 @@ footer.footer {
     width: 100%;
     float: none;
   }
-}}
+}
+
+.pagination {
+  display: flex;
+  flex-flow: row wrap;
+  float: 1;
+  justify-content: flex-start;
+}
+.pagination li {}
+.pagination--white {
+  color: #0f358e;
+  border-color: #fff;
+  background-color: #fff;
+}
+.pagination li {
+  margin: 5px;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.pagination li a {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0 12px;
+  color: inherit;
+  background-color: #fff;
+}
