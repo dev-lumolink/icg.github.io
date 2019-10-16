@@ -8268,7 +8268,8 @@ footer.footer {
   padding: 5px 0;
   width: 100%;
 }
-.cta [type=tel] {
+.cta [type=tel],
+.cta [type=text] {
   width: 100%;
   background: transparent;
   border: none;
