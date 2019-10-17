@@ -5458,6 +5458,11 @@ section.courses {
   flex-basis: calc(25% - 22px);
   max-width: calc(25% - 22px);
 }
+.individual .compontent {
+  -ms-flex-preferred-size: calc(25% - 22px);
+  flex-basis: calc(25% - 22px);
+  max-width: calc(25% - 22px);
+}
 
 .individual__input::-webkit-input-placeholder {
   /* WebKit browsers */
@@ -5500,12 +5505,22 @@ section.courses {
     left: auto;
     right: 150px;
   }
+
+  .individual .component {
+    flex-basis: calc(25% - 22px);
+    max-width: calc(25% - 22px);
+  }
 }
 
 @media screen and (max-width: 1050px) {
   .cosmetology-page .owl-nav {
     right: 50px;
     top: 25px;
+  }
+
+  .individual .component {
+    flex-basis: calc(25% - 22px);
+    max-width: calc(25% - 22px);
   }
 
   .cosmetology-page .complex .container,
@@ -5524,7 +5539,8 @@ section.courses {
     flex-wrap: wrap;
   }
 
-  .individual__input {
+  .individual__input,
+  .individual .component {
     -ms-flex-preferred-size: calc(50% - 15px);
     flex-basis: calc(50% - 15px);
     max-width: calc(50% - 15px);
@@ -5563,7 +5579,8 @@ section.courses {
 }
 
 @media screen and (max-width: 500px) {
-  .individual__input {
+  .individual__input,
+  .individual .component {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
     max-width: 100%;
@@ -5977,6 +5994,11 @@ section.courses {
   z-index: 0;
 }
 
+.course-page .individual.step-1,
+.course-page .individual.step-2 {
+  padding-top: 60px;
+}
+
 .course-page .brends__list {
   padding-bottom: 9px;
 }
@@ -6031,7 +6053,7 @@ section.courses {
 .course-page .course__photos {
   position: relative;
   z-index: 99;
-  margin: 0 60px -200px 0;
+  margin: 0 60px -40px 0;
   flex: 0 1 40%;
 }
 
@@ -6189,17 +6211,22 @@ section.courses {
   left: 0;
 }
 
-.course__btns .cities__title:before {
+.course__payment .cities__title:before {
   display: none;
 }
 
-.course__btns select {
+.course__payment select {
   width: auto;
   text-align-last: center;
 }
 
 .course__payment {
   position: relative;
+}
+
+.payment-text {
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 .course__btn {
@@ -6325,18 +6352,18 @@ section.courses {
   display: block;
 }
 
-.course__support {
+/* .course__support {
   position: absolute;
   left: 50%;
   top: 15%;
-}
+} */
 
-@media (max-width:850px) {
+/* @media (max-width:850px) {
   .course__support {
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
   }
-}
+} */
 
 .course__support-title {
   font-size: 16px;
@@ -6350,9 +6377,10 @@ section.courses {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
 .course__support-item {
@@ -8055,6 +8083,36 @@ footer.footer {
   color: inherit;
   background: transparent;
 }
+
+.component--big.component--select {
+  border-radius: 5px;
+  box-shadow: 20px 20px 60px 0 rgba(0, 0, 0, 0.4);
+  margin-bottom: 20px;
+}
+
+.component--big.component--select select {
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.19;
+  padding: 15px 25px 15px;
+  text-align: center;
+  background: transparent;
+  z-index: 2;
+}
+.component--big.component--select label {
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  background-image: url(../img/icons/arrow-down.svg);
+  z-index: 0;
+}
+.component--select.component--white {
+  background-color: #fff;
+  color: #00489c;
+}
 .component--select select option {
   font-size: inherit;
   line-height: inherit;
@@ -8081,9 +8139,6 @@ footer.footer {
 .input--white input,
 .input--white label {
   color: #4d4d4d;
-}
-.individual .component {
-  max-width: calc(100% / 4 - 10px);
 }
 /* sliders */
 [data-slider="events"] article {
