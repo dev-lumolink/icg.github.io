@@ -7477,8 +7477,8 @@ section.courses {
   padding-bottom: 9px;
 }
 
-.newslist-page .news__tags {
-  margin-bottom: 40px;
+.news__tags {
+  margin: 20px 0;
 }
 
 .newslist-page .news__scroll {
