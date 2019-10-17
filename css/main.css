@@ -1582,6 +1582,7 @@ section.courses {
   max-width: calc(100% / 4);
   margin-bottom: 20px;
   z-index: 1;
+  transition: all linear 0s;
 }
 
 .service__item .banner__link {
@@ -5675,7 +5676,7 @@ section.courses {
 }
 
 .sales-page .individual .main-title {
-  margin-top: 160px;
+  margin-top: 60px;
 }
 
 .sales-page__news .main-title {
