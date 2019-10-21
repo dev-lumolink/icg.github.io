@@ -8364,6 +8364,7 @@ footer.footer {
             justify-content: flex-end;
   }
   .cta__input [type=tel],
+  .cta__input [type=text],
   .cta__input [type=submit] {
     width: 200px;
     margin: 0 0 0 10px;
