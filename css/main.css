@@ -2107,13 +2107,17 @@ section.courses {
   margin-bottom: 23px;
 }
 
+.cities__title select {
+  padding: 5px 0;
+}
+
 .cities__title:before {
   content: '';
   display: inline-block;
   background: url("../img/icons/locate.svg") center center no-repeat;
   background-size: contain;
   width: 12px;
-  height: 16px;
+  height: 25px;
   position: absolute;
   left: 0;
 }
@@ -4386,6 +4390,17 @@ section.courses {
 .education__areas {
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
+  display: none;
+}
+
+.education__tabs,
+.education__areas,
+.education__area {
+  width: 100%;
+}
+
+.education__areas--active {
+  display: flex;
 }
 
 .education__subject {

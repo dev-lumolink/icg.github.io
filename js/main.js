@@ -12547,6 +12547,7 @@ jQuery(document).ready(function (jQuery) {
     } else {
         jQuery('.reviews__slider').css('display', 'block');
     };
+    // tabs
     jQuery('.tabs > ul li a').on('click', function (e) {
         e.preventDefault();
         jQuery(this).parents('ul').find('a').removeClass('title--active');
@@ -12554,7 +12555,7 @@ jQuery(document).ready(function (jQuery) {
         jQuery('.tabs .tab').hide(0).parents('.tabs').find('.tab[data-tab="' + jQuery(this).data('tab') + '"]').show(0)
     });
     jQuery('.tabs .tab:first').show(0);
-
+    // iwannabeadealer
     jQuery('#dealer-btn').on('click', function () {
         var button = $(this);
         var body = jQuery("html, body");
@@ -12564,6 +12565,7 @@ jQuery(document).ready(function (jQuery) {
             $('section.contacts #form-direction').val('Дилер')
         });
     });
+    // cta
     jQuery('[type=tel]').mask('+7 (999) 999-99-99');
     jQuery('.cta-button').on('click', function () {
         jQuery('.cta').toggleClass('cta--open').find('[type=tel]').focus();
@@ -12575,8 +12577,18 @@ jQuery(document).ready(function (jQuery) {
             $(e.target).removeClass('cta--open');
         }, 2000)
     });
-
+    // scrollbar in course
     jQuery(".course__desc").mCustomScrollbar({
         scrollInertia: 100
+    });
+
+    // courses tabs
+    jQuery('.education__courses a').on('click', function (e) {
+        e.preventDefault();
+        jQuery(this).siblings().removeClass('education__name--active');
+        jQuery('.education__tabs [data-type]').removeClass('education__areas--active');
+
+        jQuery(this).addClass('education__name--active');
+        jQuery('.education__tabs').find('[data-type="'+ jQuery(this).data('type') +'"]').addClass('education__areas--active');
     });
 })
