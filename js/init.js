@@ -11,42 +11,42 @@ jQuery(document).ready(function (jQuery) {
             }).init(data)
         })
     };
-    if (document.getElementById('datepicker')) {
-            var arrayOfDates = [];
-            jQuery.each(window.courseDates, function (index, dates) {
-                var _dates = {
-                    from: new Date(dates.from).getDate(),
-                    to: new Date(dates.to).getDate()
-                };
-                var _month = {
-                    from: new Date(dates.from).getMonth('numeric') + 1,
-                    to: new Date(dates.to).getMonth('numeric') + 1
-                };
-                var _year = {
-                    from: new Date(dates.from).getFullYear('numeric'),
-                    to: new Date(dates.from).getFullYear('numeric')
-                }
-                var range = _dates.to - _dates.from;
-                for (var i = _dates.from; i <= _dates.to; i++) {
-                    arrayOfDates.push(new Date(_month.from + ' ' + i + ' ' + _year.from))
-                }
-            })
-            var picker = new Datepicker('#datepicker', {
-                within: (function () {
-                    return arrayOfDates
-                })(),
-                multiple: true,
-                separator: ', ',
-                min: arrayOfDates[0],
-                max: arrayOfDates[arrayOfDates.length - 1],
-                yearRange: 0,
-                weekStart: 1,
-                onChange: function (date) {
-                    jQuery('#number-of-courses').val(date.length);
-                    jQuery('#dates-of-courses').val(date);
-                }
-            });
-    }
+    // if (document.getElementById('datepicker')) {
+    //         var arrayOfDates = [];
+    //         jQuery.each(window.courseDates, function (index, dates) {
+    //             var _dates = {
+    //                 from: new Date(dates.from).getDate(),
+    //                 to: new Date(dates.to).getDate()
+    //             };
+    //             var _month = {
+    //                 from: new Date(dates.from).getMonth('numeric') + 1,
+    //                 to: new Date(dates.to).getMonth('numeric') + 1
+    //             };
+    //             var _year = {
+    //                 from: new Date(dates.from).getFullYear('numeric'),
+    //                 to: new Date(dates.from).getFullYear('numeric')
+    //             }
+    //             var range = _dates.to - _dates.from;
+    //             for (var i = _dates.from; i <= _dates.to; i++) {
+    //                 arrayOfDates.push(new Date(_month.from + ' ' + i + ' ' + _year.from))
+    //             }
+    //         })
+    //         var picker = new Datepicker('#datepicker', {
+    //             within: (function () {
+    //                 return arrayOfDates
+    //             })(),
+    //             multiple: true,
+    //             separator: ', ',
+    //             min: arrayOfDates[0],
+    //             max: arrayOfDates[arrayOfDates.length - 1],
+    //             yearRange: 0,
+    //             weekStart: 1,
+    //             onChange: function (date) {
+    //                 jQuery('#number-of-courses').val(date.length);
+    //                 jQuery('#dates-of-courses').val(date);
+    //             }
+    //         });
+    // }
     // fixed header
     jQuery(window).on('scroll', function () {
         if (window.pageYOffset > 200) {
