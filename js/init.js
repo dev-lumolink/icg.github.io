@@ -11,18 +11,9 @@ jQuery(document).ready(function (jQuery) {
             }).init(data)
         })
     };
-    // а этот на детальной странице курса
-    // course calendar
     if (document.getElementById('datepicker')) {
-        jQuery.ajax('js/events.json').done(function (data) {
-            var _data = jQuery.parseJSON(data);
-            var dates = _data.filter(function (item) {
-                return item.id == jQuery('#datepicker').data('course-id')
-            }).map(function (item) {
-                return item.dates
-            });
             var arrayOfDates = [];
-            jQuery.each(dates[0], function (index, dates) {
+            jQuery.each(window.courseDates, function (index, dates) {
                 var _dates = {
                     from: new Date(dates.from).getDate(),
                     to: new Date(dates.to).getDate()
@@ -37,7 +28,7 @@ jQuery(document).ready(function (jQuery) {
                 }
                 var range = _dates.to - _dates.from;
                 for (var i = _dates.from; i <= _dates.to; i++) {
-                    arrayOfDates.push(new Date(_month.from + '.' + i + '.' + _year.from))
+                    arrayOfDates.push(new Date(_month.from + ' ' + i + ' ' + _year.from))
                 }
             })
             var picker = new Datepicker('#datepicker', {
@@ -55,7 +46,6 @@ jQuery(document).ready(function (jQuery) {
                     jQuery('#dates-of-courses').val(date);
                 }
             });
-        });
     }
     // fixed header
     jQuery(window).on('scroll', function () {

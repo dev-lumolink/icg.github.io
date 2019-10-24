@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/datepicker.minimal.css">
     <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="libs/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.css">
+    <!-- <link rel="stylesheet" href="libs/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.css"> -->
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -195,7 +195,13 @@
                                                     data-course-id="1"
                                                     autocomplete="none"
                                                     aria-autocomplete="none"
-                                                    placeholder="Выберите дату">
+                                                    placeholder="Выберите дату"> <!-- Определить формат вывода даты -->
+                                                <script>
+                                                    window.courseDates = [
+                                                        {from: "2019-10-06T21:00:00.000Z",to: "2019-10-20T21:00:00.000Z"},
+                                                        {from: "2019-11-19T21:00:00.000Z",to: "2019-11-22T21:00:00.000Z"}
+                                                    ]
+                                                </script>
                                             </dt>
                                         </dl>
                                         <dl>
@@ -514,8 +520,9 @@
             </div>
         </div>
     </footer>
+    
     <script src="js/main.js"></script>
-
+    <script src="js/init.js"></script>
     <!-- templates -->
     <!-- <div class="course__btns">
         <div class="course__btn course__btn--full cities__title">
