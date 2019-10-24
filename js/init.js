@@ -8,7 +8,7 @@ jQuery(document).ready(function (jQuery) {
         new WIEDEMANN_CALENDAR_WIDGET({
             widget: 'calendar-widget',
             defaultState: {
-                eventID: '0'
+                eventID: '296'
             }
         }).init(data)
     })
