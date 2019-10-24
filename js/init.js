@@ -1,16 +1,17 @@
 jQuery(document).ready(function (jQuery) {
+    window.calendar = new CALENDAR({
+        el: '[data-entity="event-calendar"]'
+    });
     // вот этот скрипт желательно запускать только на страницах с календарем мероприятий
-    if (document.querySelector('[data-entity="event-calendar"]')) {
         // calendar widget
-        window.wiedemann_data_parser.jqFetch('js/events.json', function (data) {
-            window.wiedemann_calendar_widget = new WIEDEMANN_CALENDAR_WIDGET({
-                widget: 'calendar-widget',
-                defaultState: {
-                    eventID: '9'
-                }
-            }).init(data)
-        })
-    };
+    wiedemann_data_parser.jqFetch('classes/events.json', function (data) {
+        new WIEDEMANN_CALENDAR_WIDGET({
+            widget: 'calendar-widget',
+            defaultState: {
+                eventID: '0'
+            }
+        }).init(data)
+    })
     // if (document.getElementById('datepicker')) {
     //         var arrayOfDates = [];
     //         jQuery.each(window.courseDates, function (index, dates) {

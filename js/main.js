@@ -11019,11 +11019,6 @@ var CALENDAR = function (options) {
     };
     this.init();
 };
-if (document.querySelector('[data-entity="event-calendar"]')) {
-    window.calendar = new CALENDAR({
-        el: '[data-entity="event-calendar"]'
-    });
-}
 /* * * * * * * * * * * * * * * * * * * * * * * *
  *                                             *
  * DEPENDENCIES: jQuery, wiedemann.data.parser *
