@@ -4902,7 +4902,6 @@ section.courses {
 .sales-courses__item {
   position: relative;
   overflow: hidden;
-  border: 1px solid #cfcfcf;
 }
 .sales-courses__item--discont:before {
   content: attr(data-percent);
