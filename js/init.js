@@ -540,6 +540,13 @@ jQuery(document).ready(function (jQuery) {
             $('section.contacts #form-direction').val('Дилер')
         });
     });
+    // edu_calendar click
+    jQuery('#education-calendar').on('click', function () {
+        var body = jQuery("html, body");
+        body.stop().animate({
+            scrollTop: $('section.courses').offset().top
+        }, 500, 'swing');
+    })
     // cta
     jQuery('[type=tel]').mask('+7 (999) 999-99-99');
     jQuery('.cta-button').on('click', function () {
