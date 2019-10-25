@@ -4,7 +4,7 @@ jQuery(document).ready(function (jQuery) {
     });
     // вот этот скрипт желательно запускать только на страницах с календарем мероприятий
         // calendar widget
-    wiedemann_data_parser.jqFetch('classes/events.json', function (data) {
+    wiedemann_data_parser.jqFetch('/classes/events.json', function (data) {
         new WIEDEMANN_CALENDAR_WIDGET({
             widget: 'calendar-widget',
             defaultState: {
@@ -380,14 +380,14 @@ jQuery(document).ready(function (jQuery) {
         if (!jQuery('.contacts__form').find('[required]:valid')) jQuery('.contacts__form input[type="submit"]').prop('disabled', true);
     });
     // courses
-    jQuery(".education__subject").on('click', function (e) {
+    jQuery(".education__title").on('click', function (e) {
         e.preventDefault();
-        if (jQuery(this).siblings(".education__content").css('display') == 'none') {
-            jQuery(this).find(".control").css('transform', 'rotate(180deg)');
+        if (jQuery(this).parents('.education__area').find(".education__content").css('display') == 'none') {
+            jQuery(this).siblings(".control").css('transform', 'rotate(180deg)');
         } else {
-            jQuery(this).find(".control").css('transform', 'rotate(0deg)');
+            jQuery(this).siblings(".control").css('transform', 'rotate(0deg)');
         }
-        jQuery(this).siblings(".education__content").slideToggle();
+        jQuery(this).parents('.education__area').find(".education__content").slideToggle();
     });
     // mebel
     jQuery('.mebel__filter').on('click', function (e) {

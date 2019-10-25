@@ -11055,6 +11055,10 @@ if (jQuery && wiedemann_data_parser) {
                 image: document.querySelector('[data-entity="event-image"]'),
                 url: document.querySelector('[data-entity="event-url"]'),
                 that: document.querySelector('[data-entity="event-that"]')
+            },
+            education_tabs: {
+                city: document.querySelector('#education-city'),
+                calendar: document.querySelector('#education-calendar')
             }
         }
         // helpers
@@ -11289,6 +11293,24 @@ if (jQuery && wiedemann_data_parser) {
                 if (that.getSelectedValue(jQuery(this)) == "all") return;
                 that.eventSelect(jQuery(this));
             });
+            // edu_city_select
+            jQuery(this.DOM.education_tabs.city).on('change', function () {
+                jQuery(that.DOM.selectors.city).find('option[value="' + that.getSelectedValue(jQuery(this)) + '"]').prop('selected',true)
+                that.citySelect(jQuery(this))
+            });
+            // edu_calendar_click
+            jQuery(this.DOM.education_tabs.calendar).on('click', function (e) {
+                e.preventDefault();
+                if(jQuery(this).data('direction')) {
+                    var direction = jQuery(this).data('direction');
+                    
+                    that.directionSelect(jQuery(that.DOM.directions.list).find('[data-direction="'+ direction +'"]'));
+                    jQuery(that.DOM.selectors.level).find('option:nth-child(2)').prop('selected',true);
+                    that.levelSelect(jQuery(that.DOM.selectors.level));
+                    jQuery(that.DOM.selectors.event).find('option:nth-child(2)').prop('selected',true);
+                    that.eventSelect(jQuery(that.DOM.selectors.event))
+                }
+            })
             jQuery('[data-entity="event-calendar"]').trigger('refresh.owl.carousel')
         };
     }
