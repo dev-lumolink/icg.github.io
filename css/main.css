@@ -4550,7 +4550,7 @@ section.courses {
   color: #00489c;
 }
 
-.education__areas {
+.courses-page .education__areas {
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   display: none;

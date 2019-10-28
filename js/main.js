@@ -11143,7 +11143,7 @@ if (jQuery && wiedemann_data_parser) {
                 if (element == state.city) jQuery(that.DOM.selectors.city).find('option[value="' + element + '"]').attr('selected', true);
             });
             // levels
-            that.event[0] = that.defaulState[0];
+            that.event[0] = that.defaulState;
             this.citySelect('', that.event[0].city);
             // directions
             this.getDirections(that.event[0].city);
@@ -11264,16 +11264,12 @@ if (jQuery && wiedemann_data_parser) {
             // jQuery(container).appendTo(calendar.DOM_ELEMENT);
         }
         // begin
-        this.init = function () {
+        this.init = function (data) {
             // get default state
-            this.defaulState = (function () {
-                return that.dataParser.show('item', {
-                    from: 'id',
-                    value: that.params.defaultState.eventID
-                })
-            })();
+            that.defaulState = data[0];
+            that.createState(that.defaulState);
             // set default state
-            this.createState(this.defaulState[0]);
+            
             // event listeners
             // city selector
             jQuery(this.DOM.selectors.city).on('change', function () {

@@ -6,10 +6,7 @@ jQuery(document).ready(function (jQuery) {
         // calendar widget
     wiedemann_data_parser.jqFetch('classes/events.json', function (data) {
         new WIEDEMANN_CALENDAR_WIDGET({
-            widget: 'calendar-widget',
-            defaultState: {
-                eventID: '296'
-            }
+            widget: 'calendar-widget'
         }).init(data)
     })
     // if (document.getElementById('datepicker')) {
