@@ -4,11 +4,14 @@ jQuery(document).ready(function (jQuery) {
     });
     // вот этот скрипт желательно запускать только на страницах с календарем мероприятий
         // calendar widget
-    wiedemann_data_parser.jqFetch('classes/events.json', function (data) {
-        new WIEDEMANN_CALENDAR_WIDGET({
-            widget: 'calendar-widget'
-        }).init(data)
-    })
+    if (document.getElementById('calendar-widget'))
+    {
+        wiedemann_data_parser.jqFetch('classes/events.json', function (data) {
+            new WIEDEMANN_CALENDAR_WIDGET({
+                widget: 'calendar-widget'
+            }).init(data)
+        })
+    }
     // if (document.getElementById('datepicker')) {
     //         var arrayOfDates = [];
     //         jQuery.each(window.courseDates, function (index, dates) {
