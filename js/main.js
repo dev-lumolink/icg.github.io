@@ -11122,7 +11122,9 @@ if (jQuery && wiedemann_data_parser) {
                         return node;
                     },
                     setinside: function (ParentDOMElement, DOMnode, params) {
-                        ParentDOMElement.appendChild(this.set(DOMnode, params));
+                        if (ParentDOMElement) {
+                            ParentDOMElement.appendChild(this.set(DOMnode, params));
+                        }
                     },
                     clear: function (DOMnode) {
                         DOMnode.innerHTML = '';
