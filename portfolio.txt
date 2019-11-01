@@ -1,0 +1,13 @@
+<section class="mebel__portfolio">
+    <div class="service__slider owl-carousel">
+    <div class="slider__item" style="background-image: url('img/mebel-portfolio.png');">
+        <div class="flex-container">
+        <div class="row">
+            <div class="col col--6of12">
+            <div class="portfolio__text" title="Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum odio, ab eos nam sed nemo tempora nobis obcaecati iste id quae sapiente est cupiditate autem laborum necessitatibus accusantium, unde iure a. Nesciunt assumenda eaque facilis eligendi similique ea ipsam iure obcaecati accusantium praesentium, et nulla repellendus quidem vitae aliquid. Aut."></div>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</section>

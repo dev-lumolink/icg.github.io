@@ -6,7 +6,7 @@ jQuery(document).ready(function (jQuery) {
         // calendar widget
     if (document.getElementById('calendar-widget'))
     {
-        wiedemann_data_parser.jqFetch('classes/events.json', function (data) {
+        wiedemann_data_parser.jqFetch('/classes/events.json', function (data) {
             new WIEDEMANN_CALENDAR_WIDGET({
                 widget: 'calendar-widget'
             }).init(data)
