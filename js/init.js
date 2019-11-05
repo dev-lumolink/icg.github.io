@@ -389,6 +389,25 @@ jQuery(document).ready(function (jQuery) {
         }
         jQuery(this).parents('.education__area').find(".education__content").slideToggle();
     });
+    // toggle courses
+    jQuery(function(){
+        $('.courses-page .education__areas--active .education__course').hide();
+        var courses = $('.courses-page .education__areas--active .education__course')
+
+        for(var i = 0; i < 2; i++) {
+            $(courses[i]).show()
+        }
+
+        $('.courses-page .education__areas--active .education__btn a').on('click', function(e){
+            e.preventDefault();
+            $(this).toggleClass('opened').parents('.education__content').find('.education__course').toggle()
+            if($(this).hasClass('opened')) {
+                $(this).text('Спрятать все курсы')
+            } else {
+                $(this).text('Показать все курсы')
+            }
+        })
+    })
     // mebel
     jQuery('.mebel__filter').on('click', function (e) {
         e.preventDefault();
